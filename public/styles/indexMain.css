@@ -5,3 +5,9 @@ body {
 .displayNone {
     display: none;
 }
+
+.headerLink {
+    font-size: 20px;
+    padding-right: 16px;
+    display: inline-block;
+}

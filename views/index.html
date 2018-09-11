@@ -14,9 +14,14 @@
 <body>
 
     <div class="displayNone" id="vApp">
-        <header>
-            {{test}}
+        <header class="displayNone">
+            <div class="headerLinkCont">
+                <div class="headerLink" v-for="item in headerList">{{item}}</div>
+            </div>
         </header>
+        <div id="introSec">
+            <div>{{intTxtInfo}}</div>
+        </div>
     </div>
 
     <script src="/scripts/indexMain.js"></script>
