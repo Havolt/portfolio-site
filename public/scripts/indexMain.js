@@ -1,54 +1,49 @@
-if(typeof Vue === 'undefined') {
-    const newVue = document.createElement('script');
-    newVue.src="/scripts/vue.js";
-    document.body.appendChild(newVue);
-}
 
-
-
-onload = () => {
+//Place scripts needed to load after Vue here
+const scripts = ['introSec.js'];
 
 //Toggles if element has the displayNone class
 function toggleDisplay(el) {
     el.classList.toggle('displayNone');
 }
-//Initial functions when app is loaded
-function initFunctions() {
-    toggleDisplay(document.querySelector('#vApp'));
-    setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 10);
-}
 
-    const vueApp = new Vue({
-        el: '#vApp',
-        data: {
-            test: 'test data here',
-            intTxtAnimData: {
-                text: 'Hi. I\'m Mark. A Front End Web Developer'.split(''),
-                display: []
+const vueApp = new Vue({
+    el: '#vApp',
+    data: {
+        test: 'test data here',
+        intTxtAnimData: {
+            text: 'Hi. I\'m Mark. A Front End Web Developer.'.split(''),
+            display: []
 
-            },
-            headerList: [
-                'Home',
-                'About',
-                'Portfolio',
-                'Contact'
-            ]
         },
-        methods: {
-            intTxtAnimate: function(v) {
-                v.display.push(v.text[v.display.length]);
+        headerList: [
+            'Home',
+            'About',
+            'Portfolio',
+            'Contact'
+        ]
+    },
+    methods: {
+        intTxtAnimate: function(v) {
+            v.display.push(v.text[v.display.length]);
 
-                if(v.display.length !== v.text.length) {
-                    setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 40)
-                }
-            }
-        },
-        computed: {
-            intTxtInfo: function() {
-                return this.intTxtAnimData.display.join('');
+            if(v.display.length !== v.text.length) {
+                setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 25)
             }
         }
-    })
+    },
+    computed: {
+        intTxtInfo: function() {
+            return this.intTxtAnimData.display.join('');
+        }
+    }
+});
 
-    initFunctions();
-}
+//Initial functions when app is loaded
+(function initFunctions() {
+    console.log(scripts);
+    scriptLoad(scripts);
+    toggleDisplay(document.querySelector('#vApp'));
+    setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 10);
+})()
+
