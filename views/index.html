@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mark Fitzpatrick</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles/indexMain.css">
     <!--
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
@@ -14,14 +15,13 @@
 <body>
 
     <div class="displayNone" id="vApp">
-        <header class="displayNone">
-            <div class="headerLinkCont">
-                <div class="headerLink" v-for="item in headerList">{{item}}</div>
-            </div>
-        </header>
         <div class="introSec">
             <div class="introCard">
-                <div class="">{{intTxtInfo}}</div>
+                <div class="introImgCon">
+                    <img class="introImg" src="imgs/prof.jpg" alt="">
+                    <div class="introArrow fas fa-angle-double-right"></div>
+                </div>
+                <div class="introTxt">{{intTxtInfo}}</div>
             </div>
             <div class="introBio"></div>
         </div>

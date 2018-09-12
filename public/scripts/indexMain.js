@@ -12,7 +12,7 @@ const vueApp = new Vue({
     data: {
         test: 'test data here',
         intTxtAnimData: {
-            text: 'Hi. I\'m Mark. A Front End Web Developer.'.split(''),
+            text: 'Hi. I\'m Mark Fitzpatrick. A Front End Web Developer.'.split(''),
             display: []
 
         },

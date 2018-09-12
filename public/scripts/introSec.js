@@ -1,4 +1,4 @@
-console.log('loaded intro');
+console.log('loaded intro')
 
 Vue.component('intro-sec', {
     data: function () {
