@@ -1,36 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
+    background: #f7f7f7;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .introSec {
     display: inline-flex;
+    width: 100%;
+}
+
+.introCard {
+    width: 100%;
+}
+
+.introImgCon {
+    width: fit-content;
+    margin: 10vh auto 25px auto;
+}
+
+.introTxt {
+    font-size: 28px;
+    text-align: center;
+}
+
+.boldName {
+    font-weight: bold;
+}
+
+.introArrowCon {
+    display: inline-block;
+    height: 240px;
+    line-height: 240px;
+    padding-left: 10px;
+    vertical-align: top;
 }
 
 
 .introArrow {
-    display: inline-block;
-    font-size: 34px;
-    height: 220px;
-    line-height: 220px;
-    vertical-align: top;
-    padding-left: 10px;
-    color: rgb(117, 117, 117);
+    font-size: 38px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 3px rgb(53, 53, 53);
 }
 
-.introArrow:hover::before {
+@keyframes intArrowBounce {
+    from {padding-left: 0}
+    to {margin-left: 3px;
+        margin-right: -3px;}
+}
+
+.introArrow:hover {
+    animation: intArrowBounce 0.8s infinite;
     cursor: pointer;
+    color: rgb(231, 231, 231);
 }
 
 .introImg {
     display: inline-block;
-    width: 220px;
+    width: 240px;
     border-radius: 50%;
     border: 1px solid rgb(25, 141, 219);
 }
 
-.introTxt {
-    font-size: 20px;
+.introLinks {
+    font-size: 24px;
+    color: rgb(14, 96, 151);
 }
+
+.introLinks:hover {
+    cursor: pointer;
+}
+
 
 .displayNone {
     display: none;

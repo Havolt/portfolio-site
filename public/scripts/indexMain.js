@@ -10,32 +10,41 @@ function toggleDisplay(el) {
 const vueApp = new Vue({
     el: '#vApp',
     data: {
-        test: 'test data here',
         intTxtAnimData: {
-            text: 'Hi. I\'m Mark Fitzpatrick. A Front End Web Developer.'.split(''),
-            display: []
-
+            text1: 'Hi. I\'m'.split(''),
+            name: 'Mark Fitzpatrick'.split(''),
+            text2: '. A Front End Web Developer.'.split(''),
+            display1: [],
+            displayName: [],
+            display2: []
         },
-        headerList: [
-            'Home',
-            'About',
-            'Portfolio',
-            'Contact'
-        ]
+        introLinks: ['Portfolio', 'Contact']
     },
     methods: {
         intTxtAnimate: function(v) {
-            v.display.push(v.text[v.display.length]);
-
-            if(v.display.length !== v.text.length) {
-                setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 25)
+            if(v.display1.length !== v.text1.length) {
+                v.display1.push(v.text1[v.display1.length]);
+            } else if(v.displayName.length !== v.name.length) {
+                v.displayName.push(v.name[v.displayName.length]);
+            } else if(v.display2.length !== v.text2.length) {
+                v.display2.push(v.text2[v.display2.length]);
+            }else {
+                return;
             }
+            setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 25)
         }
     },
     computed: {
-        intTxtInfo: function() {
-            return this.intTxtAnimData.display.join('');
+        intTxtInfo1: function() {
+            return this.intTxtAnimData.display1.join('');
+        },
+        intTxtInfo2: function(){
+            return this.intTxtAnimData.display2.join('');
+        },
+        intTxtName: function(){
+            return this.intTxtAnimData.displayName.join('');
         }
+        
     }
 });
 

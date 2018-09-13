@@ -14,20 +14,36 @@
 </head>
 <body>
 
-    <div class="displayNone" id="vApp">
-        <div class="introSec">
-            <div class="introCard">
-                <div class="introImgCon">
-                    <img class="introImg" src="imgs/prof.jpg" alt="">
+<div class="displayNone" id="vApp">
+    <!--Entire site container-->
+    <div class="introSec">
+        <!--Extra container for site-->
+        <div class="introCard">
+            <!--Container for profile img section-->
+            <div class="introImgCon ">
+                <img class="introImg" src="imgs/prof.jpg" alt="">
+                <div class="introArrowCon">
                     <div class="introArrow fas fa-angle-double-right"></div>
                 </div>
-                <div class="introTxt">{{intTxtInfo}}</div>
             </div>
-            <div class="introBio"></div>
+            <!--Container for intro text-->
+            <div class="introTxt">{{intTxtInfo1}} 
+                <span class="boldName">{{intTxtName}}</span>
+            {{intTxtInfo2}} </div>
+            <!--Container for intro links-->
+            <div class="introLinksCon">
+                <div class="introLinks" v-for="item in introLinks">{{item}}</div>
+            </div>
         </div>
+        <!--Container for bio section-->
+        <div class="introBio dispalyNone"></div>
     </div>
-    <script src="/scripts/utility/scriptLoad.js"></script>
-    <script src="/scripts/utility/vueLoad.js"></script>
+</div>
+
+
+
+<script src="/scripts/utility/scriptLoad.js"></script>
+<script src="/scripts/utility/vueLoad.js"></script>
     
     
 </body>
