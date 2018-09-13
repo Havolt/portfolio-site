@@ -19,10 +19,14 @@ const vueApp = new Vue({
             display2: []
         },
         introLinks: ['Portfolio', 'Contact'],
-        linksVisible: false
+        linksVisible: false,
+        introCardHalf: false,
+        introCardFull: true,
+        rightArrowHide: false,
+        leftArrowHide: true
     },
     methods: {
-        intTxtAnimate: function(v) {
+         intTxtAnimate: function(v) {
             if(v.display1.length !== v.text1.length) {
                 v.display1.push(v.text1[v.display1.length]);
             } else if(v.displayName.length !== v.name.length) {
@@ -35,7 +39,20 @@ const vueApp = new Vue({
                 return;
             }
             setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 25)
+        },
+        showBio: function() {
+            if(!this.rightArrowHide){
+                this.introCardHalf = true;
+                this.introCardFull = false;
+            } else {
+                this.introCardHalf = false;
+                this.introCardFull = true;
+            }
+            this.rightArrowHide = !this.rightArrowHide
+            this.leftArrowHide= !this.leftArrowHide
+            
         }
+
     },
     computed: {
         intTxtInfo1: function() {
@@ -53,7 +70,6 @@ const vueApp = new Vue({
 
 //Initial functions when app is loaded
 (function initFunctions() {
-    console.log(scripts);
     scriptLoad(scripts);
     toggleDisplay(document.querySelector('#vApp'));
     setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 10);

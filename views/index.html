@@ -18,12 +18,13 @@
     <!--Entire site container-->
     <div class="introSec">
         <!--Extra container for site-->
-        <div class="introCard">
+        <div v-bind:class="{introCardHalf: introCardHalf, introCardFull: introCardFull}" class="introCard">
             <!--Container for profile img section-->
             <div class="introImgCon ">
                 <img class="introImg" src="imgs/prof.jpg" alt="">
                 <div class="introArrowCon">
-                    <div class="introArrow fas fa-angle-double-right"></div>
+                    <div v-bind:class="{displayNone: rightArrowHide}" @click="showBio" class="introArrow fas fa-angle-double-right"></div>
+                    <div v-bind:class="{displayNone: leftArrowHide}" @click="showBio" class="introArrow fas fa-angle-double-left"></div>
                 </div>
             </div>
             <!--Container for intro text-->
@@ -36,7 +37,7 @@
             </div>
         </div>
         <!--Container for bio section-->
-        <div class="introBio dispalyNone"></div>
+        <div class="introBio displayNone"></div>
     </div>
 </div>
 

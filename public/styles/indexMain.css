@@ -25,6 +25,8 @@ body {
 .introTxt {
     font-size: 28px;
     text-align: center;
+    width: 90%;
+    margin: 0 5%;
 }
 
 .boldName {
@@ -104,6 +106,23 @@ body {
     cursor: pointer;
 }
 
+/* Animations section */
+
+@keyframes halfIntroAn {
+    from{width: 100%}
+    to{width:50%};
+}
+@keyframes fullIntroAn {
+    from{width: 50%}
+    to{width: 100%};
+}
+
+.introCardHalf {
+    animation: halfIntroAn 1s forwards;
+}
+.introCardFull {
+    animation: fullIntroAn 1s forwards;
+}
 
 .displayNone {
     display: none;
