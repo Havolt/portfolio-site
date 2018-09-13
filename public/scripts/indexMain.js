@@ -23,7 +23,12 @@ const vueApp = new Vue({
         introCardHalf: false,
         introCardFull: true,
         rightArrowHide: false,
-        leftArrowHide: true
+        leftArrowHide: true,
+        //Bio Section
+        bioVisible: false,
+        aboutTitle: 'About Me',
+        aboutPara: 'I\'ve always had a strong interest in programming since I started delving into the code of The Elder Scrolls III: Morrowind. I have a bachelor\'s degree in multimedia. I have a strong interest in front-end development but in the past few years I\'ve been delving into Node.js. When I\'m making websites I can be found running, reading or making video games.'
+        
     },
     methods: {
          intTxtAnimate: function(v) {
@@ -44,9 +49,12 @@ const vueApp = new Vue({
             if(!this.rightArrowHide){
                 this.introCardHalf = true;
                 this.introCardFull = false;
+                setTimeout(() => {this.bioVisible = true}, 800);
+                ;
             } else {
                 this.introCardHalf = false;
                 this.introCardFull = true;
+                this.bioVisible = false;
             }
             this.rightArrowHide = !this.rightArrowHide
             this.leftArrowHide= !this.leftArrowHide

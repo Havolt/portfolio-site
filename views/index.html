@@ -18,7 +18,7 @@
     <!--Entire site container-->
     <div class="introSec">
         <!--Extra container for site-->
-        <div v-bind:class="{introCardHalf: introCardHalf, introCardFull: introCardFull}" class="introCard">
+        <div v-bind:class="{introCardHalf, introCardFull}" class="introCard">
             <!--Container for profile img section-->
             <div class="introImgCon ">
                 <img class="introImg" src="imgs/prof.jpg" alt="">
@@ -37,7 +37,10 @@
             </div>
         </div>
         <!--Container for bio section-->
-        <div class="introBio displayNone"></div>
+        <div v-bind:class="{bioVisible, displayNone: !bioVisible}" class="introBio">
+            <div class="aboutMeTitle">{{aboutTitle}}</div>
+            <div class="aboutMePara">{{aboutPara}}</div>
+        </div>
     </div>
 </div>
 
