@@ -26,8 +26,23 @@ const vueApp = new Vue({
         leftArrowHide: true,
         //Bio Section
         bioVisible: false,
+        bioVisibleSk: false,
         aboutTitle: 'About Me',
-        aboutPara: 'I\'ve always had a strong interest in programming since I started delving into the code of The Elder Scrolls III: Morrowind. I have a bachelor\'s degree in multimedia. I have a strong interest in front-end development but in the past few years I\'ve been delving into Node.js. When I\'m making websites I can be found running, reading or making video games.'
+        aboutPara: ' I hold a bachelor\'s degree in multimedia and have a passion for front-end web development but in the past few years I\'ve been delving into back-end with Node.js. I\'ve always had a strong interest in programming since I started delving into the code of The Elder Scrolls III: Morrowind. When I\'m making websites I can be found running, reading or making video games.',
+        skillList: [
+            {
+                icon: 'fas fa-mobile',
+                desc: 'Focus on Responsive Design'
+            },
+            {
+                icon: 'fas fa-palette',
+                desc: 'Beautifully Designed Sites'
+            },
+            {
+                icon: 'fas fa-code',
+                desc: 'Strong Programming Skills'
+            }
+        ]
         
     },
     methods: {
@@ -50,11 +65,13 @@ const vueApp = new Vue({
                 this.introCardHalf = true;
                 this.introCardFull = false;
                 setTimeout(() => {this.bioVisible = true}, 800);
+                setTimeout(() => {this.bioVisibleSk = true}, 1200);
                 ;
             } else {
                 this.introCardHalf = false;
                 this.introCardFull = true;
                 this.bioVisible = false;
+                this.bioVisibleSk = false;
             }
             this.rightArrowHide = !this.rightArrowHide
             this.leftArrowHide= !this.leftArrowHide

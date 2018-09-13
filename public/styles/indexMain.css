@@ -92,7 +92,7 @@ body {
 }
 
 .aboutMeTitle {
-    margin-top: 10vh;
+    margin-top: 13vh;
     font-size: 34px;
     font-weight: bold;
     text-align:center;
@@ -104,6 +104,26 @@ body {
     margin: 20px auto;
     font-size: 18px;
     color: rgb(56, 56, 56);
+}
+
+.skillsContain {
+    padding-top: 20px;
+}
+
+.skillItems{
+    vertical-align: top;
+    text-align: center;
+    font-size: 18px;
+    color: rgb(102, 102, 102);
+    display: inline-block;
+    width: 30%;
+    margin: 0 1.5%;
+}
+
+.skillItems > i {
+    margin-bottom: 10px;
+    font-size: 76px;
+    color: rgb(0, 90, 150);
 }
 
 /* Animations section */
@@ -151,12 +171,18 @@ body {
 /* Bio Animations */
 
 @keyframes bioVisAn {
-    from{margin-top: -100%}
-    to{margin-top: 0}
+    from{margin-top: -10%;
+        opacity: 0;}
+    to{margin-top: 0;
+        opacity: 1;}
 }
 
 .bioVisible {
     animation: bioVisAn 0.5s forwards;
+}
+
+.bioVisibleSk {
+    animation: bioVisAn 0.8s forwards;
 }
 
 .displayNone {
