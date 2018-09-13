@@ -31,7 +31,7 @@
                 <span class="boldName">{{intTxtName}}</span>
             {{intTxtInfo2}} </div>
             <!--Container for intro links-->
-            <div class="introLinksCon">
+            <div v-bind:class="{linksVisible}" class="introLinksCon">
                 <div class="introLinks" v-for="item in introLinks">{{item}}</div>
             </div>
         </div>

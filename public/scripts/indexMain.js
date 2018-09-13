@@ -18,7 +18,8 @@ const vueApp = new Vue({
             displayName: [],
             display2: []
         },
-        introLinks: ['Portfolio', 'Contact']
+        introLinks: ['Portfolio', 'Contact'],
+        linksVisible: false
     },
     methods: {
         intTxtAnimate: function(v) {
@@ -29,6 +30,8 @@ const vueApp = new Vue({
             } else if(v.display2.length !== v.text2.length) {
                 v.display2.push(v.text2[v.display2.length]);
             }else {
+                console.log(this.linksVisible);
+                this.linksVisible = true;
                 return;
             }
             setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 25)
