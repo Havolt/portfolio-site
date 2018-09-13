@@ -24,9 +24,12 @@ const vueApp = new Vue({
         introCardFull: true,
         rightArrowHide: false,
         leftArrowHide: true,
+        arrowAllowClick: true,
         //Bio Section
         bioVisible: false,
         bioVisibleSk: false,
+        bioVisibleRev: true,
+        bioVisibleRevSk: true,
         aboutTitle: 'About Me',
         aboutPara: ' I hold a bachelor\'s degree in multimedia and have a passion for front-end web development but in the past few years I\'ve been delving into back-end with Node.js. I\'ve always had a strong interest in programming since I started delving into the code of The Elder Scrolls III: Morrowind. When I\'m making websites I can be found running, reading or making video games.',
         skillList: [
@@ -60,21 +63,35 @@ const vueApp = new Vue({
             }
             setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 25)
         },
+        //toggle display of bio section
         showBio: function() {
-            if(!this.rightArrowHide){
-                this.introCardHalf = true;
-                this.introCardFull = false;
-                setTimeout(() => {this.bioVisible = true}, 800);
-                setTimeout(() => {this.bioVisibleSk = true}, 1200);
-                ;
-            } else {
-                this.introCardHalf = false;
-                this.introCardFull = true;
-                this.bioVisible = false;
-                this.bioVisibleSk = false;
+            if(this.arrowAllowClick) {
+                this.arrowAllowClick = false;
+                if(!this.rightArrowHide){
+                    this.introCardHalf = true;
+                    this.introCardFull = false;
+                    this.bioVisibleRev = false;
+                    this.bioVisibleRevSk = false;
+                    setTimeout(() => {this.bioVisible = true}, 600);
+                    setTimeout(() => {
+                        this.bioVisibleSk = true;
+                        this.arrowAllowClick = true;
+                    }, 1000);
+                    ;
+                } else {
+                    setTimeout(() => {
+                        this.bioVisible = false;
+                        this.introCardHalf = false;
+                        this.introCardFull = true;
+                        this.bioVisibleSk = false;
+                        this.arrowAllowClick = true;
+                    }, 600);
+                    setTimeout(() => {this.bioVisibleRev = true}, 300);
+                    this.bioVisibleRevSk = true;
+                }
+                this.rightArrowHide = !this.rightArrowHide
+                this.leftArrowHide= !this.leftArrowHide
             }
-            this.rightArrowHide = !this.rightArrowHide
-            this.leftArrowHide= !this.leftArrowHide
             
         }
 

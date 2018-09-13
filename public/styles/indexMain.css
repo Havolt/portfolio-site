@@ -135,7 +135,7 @@ body {
 }
 
 .introArrow:hover {
-    animation: intArrowBounce 0.8s infinite;
+    animation: intArrowBounce 0.8s alternate infinite;
     cursor: pointer;
     color: rgb(231, 231, 231);
 }
@@ -162,10 +162,10 @@ body {
 }
 
 .introCardHalf {
-    animation: halfIntroAn 1s forwards;
+    animation: halfIntroAn 0.6s forwards;
 }
 .introCardFull {
-    animation: fullIntroAn 1s forwards;
+    animation: fullIntroAn 0.6s forwards;
 }
 
 /* Bio Animations */
@@ -177,12 +177,27 @@ body {
         opacity: 1;}
 }
 
+@keyframes bioVisRevAn {
+    from{margin-top: 0%;
+        opacity: 1;}
+    to{margin-top: -10%;
+        opacity: 0;}
+}
+
 .bioVisible {
     animation: bioVisAn 0.5s forwards;
 }
 
 .bioVisibleSk {
     animation: bioVisAn 0.8s forwards;
+}
+
+.bioVisibleRev {
+    animation: bioVisRevAn 0.4s forwards;
+}
+
+.bioVisibleRevSk {
+    animation: bioVisRevAn 0.4s forwards;
 }
 
 .displayNone {

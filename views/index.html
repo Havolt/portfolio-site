@@ -37,11 +37,11 @@
             </div>
         </div>
         <!--Container for bio section-->
-        <div v-bind:class="{bioVisible, displayNone: !bioVisible}" class="introBio">
+        <div v-bind:class="{bioVisible: bioVisible , bioVisibleRev: bioVisibleRev , displayNone: !bioVisible}" class="introBio">
             <div class="aboutMeTitle">{{aboutTitle}}</div>
             <div class="aboutMePara">{{aboutPara}}</div>
 
-            <div v-bind:class="{bioVisibleSk, displayNone: !bioVisibleSk}" class="skillsContain">
+            <div v-bind:class="{bioVisibleSk: bioVisibleSk , bioVisibleRevSk: bioVisibleRevSk , displayNone: !bioVisibleSk}" class="skillsContain">
                 <div class="skillItems" v-for="item in skillList">
                     <i v-bind:class="item.icon"></i>
                     <div>{{item.desc}}</div>
