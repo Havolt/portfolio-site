@@ -126,6 +126,21 @@ body {
     color: rgb(0, 90, 150);
 }
 
+
+.introLinksFakeBorder {
+    height: 2px;
+}
+
+.introLinkTxt {
+    width: fit-content;
+}
+
+/* Links section */
+
+.intLinkUnderline {
+    text-decoration: underline;
+}
+
 /* Animations section */
 
 @keyframes intArrowBounce {
@@ -198,6 +213,17 @@ body {
 
 .bioVisibleRevSk {
     animation: bioVisRevAn 0.4s forwards;
+}
+
+@keyframes linkFakeBorderAn {
+    from{width: 0%;}
+    to{width: 100%;}
+}
+
+
+.introLinksFakeBorder:hover {
+    background: rgb(32, 114, 168);
+    animation: linkFakeBorderAn 0.5s forwards;
 }
 
 .displayNone {

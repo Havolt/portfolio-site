@@ -18,13 +18,37 @@ const vueApp = new Vue({
             displayName: [],
             display2: []
         },
-        introLinks: ['Portfolio', 'Contact'],
+        introLinks: [{
+            text: 'Portfolio',
+            place: 0,
+            classes: {
+                intLinkUnderline: false
+            },
+            func: (pos) => {
+                return vueApp.portfolioFunc(pos);
+            }
+        }, {
+            text: 'Contact',
+            place: 1,
+            classes: {
+                intLinkUnderline: false
+            },
+            func: (pos) => {
+                this.bool = true;
+                return vueApp.contactFunc(pos);
+            }
+        }],
         linksVisible: false,
         introCardHalf: false,
         introCardFull: true,
         rightArrowHide: false,
         leftArrowHide: true,
         arrowAllowClick: true,
+
+        //Links Section
+        portfolioBool: false,
+        contactBool: false,
+        
         //Bio Section
         bioVisible: false,
         bioVisibleSk: false,
@@ -57,7 +81,6 @@ const vueApp = new Vue({
             } else if(v.display2.length !== v.text2.length) {
                 v.display2.push(v.text2[v.display2.length]);
             }else {
-                console.log(this.linksVisible);
                 this.linksVisible = true;
                 return;
             }
@@ -92,7 +115,31 @@ const vueApp = new Vue({
                 this.rightArrowHide = !this.rightArrowHide
                 this.leftArrowHide= !this.leftArrowHide
             }
-            
+        },
+        intLinksUnder: (pos, arr) => {
+            for(let i = 0; i < arr.length; i++) {
+                if(i == pos) {
+                    arr[i].classes.intLinkUnderline = true;
+                } else {
+                    arr[i].classes.intLinkUnderline = false;
+                }
+            }
+        },
+        portfolioFunc: (pos) => {
+            if(vueApp.bioVisible) {
+                vueApp.showBio();
+            }
+            vueApp.intLinksUnder(pos, vueApp.introLinks);
+           
+
+
+        },
+        contactFunc: (pos) => {
+            if(vueApp.bioVisible) {
+                vueApp.showBio();
+            }
+            vueApp.intLinksUnder(pos, vueApp.introLinks);
+ 
         }
 
     },
@@ -106,6 +153,7 @@ const vueApp = new Vue({
         intTxtName: function(){
             return this.intTxtAnimData.displayName.join('');
         }
+
         
     }
 });
