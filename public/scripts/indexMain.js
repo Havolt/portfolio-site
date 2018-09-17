@@ -45,6 +45,12 @@ const vueApp = new Vue({
         leftArrowHide: true,
         arrowAllowClick: true,
 
+        //Minimize Section
+        downArrowHide: true,
+        minIntroImg: false,
+        minIntroArrowCon: false,
+        minIntroImgCon : false,
+
         //Links Section
         portfolioBool: false,
         contactBool: false,
@@ -119,6 +125,30 @@ const vueApp = new Vue({
                 this.leftArrowHide= !this.leftArrowHide
             }
         },
+        removeIntTxt: (v) => {
+            let cont = false;
+            if(v.display1.length > 0 && v.display2.length == v.display1.length) {
+                v.display1.pop();
+                cont = true;
+            }
+            if(v.display2.length > 0) {
+                v.display2.pop();
+                cont = true;
+            }
+            if(cont == true) {
+                setTimeout(() => {vueApp.removeIntTxt(v)}, 15);
+            }
+        },
+        minimizeIntro: () => {
+            vueApp.removeIntTxt(vueApp.intTxtAnimData);
+            vueApp.minIntroImgCon = true;
+            vueApp.minIntroImg = true;
+            vueApp.rightArrowHide = true;
+            vueApp.leftArrowHide = true;
+            vueApp.downArrowHide = false;
+            vueApp.minIntroArrowCon = true;
+            
+        },
         intLinksUnder: (pos, arr) => {
             for(let i = 0; i < arr.length; i++) {
                 if(i == pos) {
@@ -132,6 +162,7 @@ const vueApp = new Vue({
             if(vueApp.bioVisible) {
                 vueApp.showBio();
             }
+            vueApp.minimizeIntro();
             vueApp.intLinksUnder(pos, vueApp.introLinks);
             vueApp.portfolioBool = true;
             vueApp.contactBool = false;

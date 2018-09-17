@@ -22,17 +22,20 @@
             <!--Extra container for site-->
             <div v-bind:class="{introCardHalf, introCardFull}" class="introCard">
                 <!--Container for profile img section-->
-                <div class="introImgCon ">
-                    <img class="introImg" src="imgs/prof.jpg" alt="">
-                    <div class="introArrowCon">
+                <div v-bind:class="{minIntroImgCon}" class="introImgCon ">
+                    <img v-bind:class="{minIntroImg}" class="introImg" src="imgs/prof.jpg" alt="">
+                    <div v-bind:class="{minIntroArrowCon}" class="introArrowCon">
                         <div v-bind:class="{displayNone: rightArrowHide}" @click="showBio" class="introArrow fas fa-angle-double-right"></div>
                         <div v-bind:class="{displayNone: leftArrowHide}" @click="showBio" class="introArrow fas fa-angle-double-left"></div>
+                        <div v-bind:class="{displayNone: downArrowHide}" @click="" class="introArrowMin fas fa-angle-double-down"></div>
                     </div>
                 </div>
                 <!--Container for intro text-->
-                <div class="introTxt">{{intTxtInfo1}} 
+                <div class="introTxt">
+                    <span >{{intTxtInfo1}}</span>
                     <span class="boldName">{{intTxtName}}</span>
-                {{intTxtInfo2}} </div>
+                    <span >{{intTxtInfo2}}</span>
+                </div>
                 <!--Container for intro links-->
                 <div v-bind:class="{linksVisible}" class="introLinksCon">
                     <div class="introLinks" v-for="item in introLinks">
