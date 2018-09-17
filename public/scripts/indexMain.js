@@ -70,7 +70,7 @@ const vueApp = new Vue({
                 desc: 'Strong Programming Skills'
             }
         ],
-        portItems: [{name: 'Offline Hacking', img: '',  
+        portItems: [{name: 'Offline Hacking', img: '/imgs/port-oh.jpg',  
                     link: '', desc: 'placeholder text goes here'}
         ]
         

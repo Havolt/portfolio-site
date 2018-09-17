@@ -58,9 +58,18 @@
             <!--Section for displaying portfolio-->
             <div v-bind:class="{displayNone: !portfolioBool}" class="portSec">
                 <div class="portItems">
-                    <div v-for="item in portItems"></div>
+                    <div class="portItemsCon" v-for="item in portItems">
+                        <div class="portItemContents">
+                            <div class="portItemImg">
+                                <img v-bind:src="item.img" alt="">
+                                <div class="portImgHover">
+                                    <div class="portImgGo">View {{item.name}}</div>
+                                </div>
+                            </div>
+                            <div class="portItemName">{{item.name}}</div>
+                        </div>
+                    </div>
                 </div>
-                <h1>LOL</h1>
             </div>
             <!--Section for displaying contact-->
             <div v-bind:class="{displayNone: !contactBool}" class="contSec">

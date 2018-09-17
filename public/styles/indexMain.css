@@ -144,7 +144,71 @@ body {
 /* Data Section */
 
 .dataSec {
-    
+    width: 90%;
+    margin: 5px 5% 5px 5%;
+}
+
+.portItems {
+    width: 100%;
+}
+
+.portItemsCon {
+    box-shadow: 0px 2px 4px rgb(105, 105, 105);
+    width: 44%;
+    height: fit-content;
+    height: 100%;
+}
+
+.portItemImg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.portItemImg > img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display:block;
+}
+
+.portImgHover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(36, 36, 99, 0.7);
+    opacity: 0;
+}
+
+.portImgGo {
+    width: 80%;
+    padding: 10px 0;
+    background: #f7f7f7;
+    border-radius: 2px;
+    vertical-align: middle;
+    font-size: 20px;
+    margin: 20% auto;
+    text-align: center;
+}
+
+.portImgGo:hover {
+    cursor: pointer;
+    color: rgb(25, 141, 219);
+}
+
+.portImgHover:hover {
+    opacity: 1;
+ }
+
+.portItemName {
+    padding: 10px 0;
+    font-size: 24px;
+    text-indent: 14px;
+    position: relative;
+    z-index: 100;
 }
 
 /* Animations section */
