@@ -146,41 +146,30 @@ const vueApp = new Vue({
                 setTimeout(() => {vueApp.removeIntTxt(v)}, 15);
             }
         },
-        minimizeIntro: () => {
-            vueApp.removeIntTxt(vueApp.intTxtAnimData);
-            vueApp.minIntroImgCon = true;
-            vueApp.minIntroImg = true;
-            vueApp.rightArrowHide = true;
-            vueApp.leftArrowHide = true;
-            vueApp.downArrowHide = false;
-            vueApp.minIntroArrowCon = true;
-            vueApp.mIntLinks = true;
-
-            vueApp.maxIntroImgCon = false;
-            vueApp.maxIntroImg = false;
-            vueApp.maxIntroArrowCon = false;
-            vueApp.maxIntLinks = false;
+        toggleIntro: (min, max) => {
             
-        },
-        maximizeIntro: () => {
-            vueApp.intTxtAnimate(vueApp.intTxtAnimData);
-            vueApp.minIntroImgCon = false;
-            vueApp.minIntroImg = false;
-            vueApp.rightArrowHide = false;
+            vueApp.minIntroImgCon = min;
+            vueApp.minIntroImg = min;
+            vueApp.rightArrowHide = min;
             vueApp.leftArrowHide = true;
-            vueApp.downArrowHide = true;
-            vueApp.minIntroArrowCon = false;
-            vueApp.mIntLinks = false;
-            vueApp.portfolioBool = false;
-            vueApp.contactBool = false;
+            vueApp.downArrowHide = max;
+            vueApp.minIntroArrowCon = min;
+            vueApp.mIntLinks = min;
 
-            //maximize
-            vueApp.maxIntroImgCon = true;
-            vueApp.maxIntroImg = true;
-            vueApp.maxIntroArrowCon = true;
-            vueApp.maxIntLinks = true;
+            if(max) {
+                vueApp.portfolioBool = false;
+                vueApp.contactBool = false;
+                vueApp.intTxtAnimate(vueApp.intTxtAnimData);
+                vueApp.intLinksUnder(99, vueApp.introLinks);
+            } else {
+                vueApp.removeIntTxt(vueApp.intTxtAnimData);
+            }
 
-            vueApp.intLinksUnder(99, vueApp.introLinks);
+            vueApp.maxIntroImgCon = max;
+            vueApp.maxIntroImg = max;
+            vueApp.maxIntroArrowCon = max;
+            vueApp.maxIntLinks = max;
+            
         },
         intLinksUnder: (pos, arr) => {
             for(let i = 0; i < arr.length; i++) {
@@ -195,7 +184,7 @@ const vueApp = new Vue({
             if(vueApp.bioVisible) {
                 vueApp.showBio();
             }
-            vueApp.minimizeIntro();
+            vueApp.toggleIntro(true, false);
             vueApp.intLinksUnder(pos, vueApp.introLinks);
             vueApp.portfolioBool = true;
             vueApp.contactBool = false;
@@ -207,6 +196,7 @@ const vueApp = new Vue({
             if(vueApp.bioVisible) {
                 vueApp.showBio();
             }
+            vueApp.toggleIntro(true, false);
             vueApp.intLinksUnder(pos, vueApp.introLinks);
             vueApp.contactBool = true;
             vueApp.portfolioBool = false;

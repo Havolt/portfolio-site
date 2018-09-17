@@ -27,7 +27,7 @@
                     <div v-bind:class="{minIntroArrowCon, maxIntroArrowCon}" class="introArrowCon">
                         <div v-bind:class="{displayNone: rightArrowHide}" @click="showBio" class="introArrow fas fa-angle-double-right"></div>
                         <div v-bind:class="{displayNone: leftArrowHide}" @click="showBio" class="introArrow fas fa-angle-double-left"></div>
-                        <div v-bind:class="{displayNone: downArrowHide}" @click="maximizeIntro" class="introArrowMin fas fa-angle-double-down"></div>
+                        <div v-bind:class="{displayNone: downArrowHide}" @click="toggleIntro(false, true)" class="introArrowMin fas fa-angle-double-down"></div>
                     </div>
                 </div>
                 <!--Container for intro text-->
