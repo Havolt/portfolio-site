@@ -55,7 +55,7 @@ const vueApp = new Vue({
         bioVisibleRev: true,
         bioVisibleRevSk: true,
         aboutTitle: 'About Me',
-        aboutPara: ' I hold a bachelor\'s degree in multimedia and have a passion for front-end web development but in the past few years I\'ve been delving into back-end with Node.js. I\'ve always had a strong interest in programming since I started delving into the code of The Elder Scrolls III: Morrowind. When I\'m making websites I can be found running, reading or making video games.',
+        aboutPara: ' I hold a bachelor\'s degree in multimedia and have a passion for front-end web development but in the past few years I\'ve been delving into back-end with Node.js. I\'ve always had a strong interest in programming since I started delving into the code of The Elder Scrolls III: Morrowind. When I\'m not making websites I can be found running, reading or making video games.',
         skillList: [
             {
                 icon: 'fas fa-mobile',
@@ -69,6 +69,9 @@ const vueApp = new Vue({
                 icon: 'fas fa-code',
                 desc: 'Strong Programming Skills'
             }
+        ],
+        portItems: [{name: 'Offline Hacking', img: '',  
+                    link: '', desc: 'placeholder text goes here'}
         ]
         
     },
@@ -130,6 +133,8 @@ const vueApp = new Vue({
                 vueApp.showBio();
             }
             vueApp.intLinksUnder(pos, vueApp.introLinks);
+            vueApp.portfolioBool = true;
+            vueApp.contactBool = false;
            
 
 
@@ -139,6 +144,8 @@ const vueApp = new Vue({
                 vueApp.showBio();
             }
             vueApp.intLinksUnder(pos, vueApp.introLinks);
+            vueApp.contactBool = true;
+            vueApp.portfolioBool = false;
  
         }
 

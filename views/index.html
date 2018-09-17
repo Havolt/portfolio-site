@@ -16,40 +16,55 @@
 
 <div class="displayNone" id="vApp">
     <!--Entire site container-->
-    <div class="introSec">
-        <!--Extra container for site-->
-        <div v-bind:class="{introCardHalf, introCardFull}" class="introCard">
-            <!--Container for profile img section-->
-            <div class="introImgCon ">
-                <img class="introImg" src="imgs/prof.jpg" alt="">
-                <div class="introArrowCon">
-                    <div v-bind:class="{displayNone: rightArrowHide}" @click="showBio" class="introArrow fas fa-angle-double-right"></div>
-                    <div v-bind:class="{displayNone: leftArrowHide}" @click="showBio" class="introArrow fas fa-angle-double-left"></div>
+    <div class="siteSec">
+        <!--Entire intro container-->
+        <div class="introSec">
+            <!--Extra container for site-->
+            <div v-bind:class="{introCardHalf, introCardFull}" class="introCard">
+                <!--Container for profile img section-->
+                <div class="introImgCon ">
+                    <img class="introImg" src="imgs/prof.jpg" alt="">
+                    <div class="introArrowCon">
+                        <div v-bind:class="{displayNone: rightArrowHide}" @click="showBio" class="introArrow fas fa-angle-double-right"></div>
+                        <div v-bind:class="{displayNone: leftArrowHide}" @click="showBio" class="introArrow fas fa-angle-double-left"></div>
+                    </div>
+                </div>
+                <!--Container for intro text-->
+                <div class="introTxt">{{intTxtInfo1}} 
+                    <span class="boldName">{{intTxtName}}</span>
+                {{intTxtInfo2}} </div>
+                <!--Container for intro links-->
+                <div v-bind:class="{linksVisible}" class="introLinksCon">
+                    <div class="introLinks" v-for="item in introLinks">
+                        <div  v-bind:value="this.place" v-bind:class="item.classes" @click="item.func(item.place)">{{item.text}}<div class="introLinksFakeBorder"></div></div>
+                    </div> 
                 </div>
             </div>
-            <!--Container for intro text-->
-            <div class="introTxt">{{intTxtInfo1}} 
-                <span class="boldName">{{intTxtName}}</span>
-            {{intTxtInfo2}} </div>
-            <!--Container for intro links-->
-            <div v-bind:class="{linksVisible}" class="introLinksCon">
-                <div class="introLinks" v-for="item in introLinks">
-                    <div  v-bind:value="this.place" v-bind:class="item.classes" @click="item.func(item.place)">{{item.text}}<div class="introLinksFakeBorder"></div></div>
-                    
+            <!--Container for bio section-->
+            <div v-bind:class="{bioVisible: bioVisible , bioVisibleRev: bioVisibleRev , displayNone: !bioVisible}" class="introBio">
+                <div class="aboutMeTitle">{{aboutTitle}}</div>
+                <div class="aboutMePara">{{aboutPara}}</div>
+
+                <div v-bind:class="{bioVisibleSk: bioVisibleSk , bioVisibleRevSk: bioVisibleRevSk , displayNone: !bioVisibleSk}" class="skillsContain">
+                    <div class="skillItems" v-for="item in skillList">
+                        <i v-bind:class="item.icon"></i>
+                        <div>{{item.desc}}</div>
+                    </div>
                 </div>
-                
             </div>
         </div>
-        <!--Container for bio section-->
-        <div v-bind:class="{bioVisible: bioVisible , bioVisibleRev: bioVisibleRev , displayNone: !bioVisible}" class="introBio">
-            <div class="aboutMeTitle">{{aboutTitle}}</div>
-            <div class="aboutMePara">{{aboutPara}}</div>
-
-            <div v-bind:class="{bioVisibleSk: bioVisibleSk , bioVisibleRevSk: bioVisibleRevSk , displayNone: !bioVisibleSk}" class="skillsContain">
-                <div class="skillItems" v-for="item in skillList">
-                    <i v-bind:class="item.icon"></i>
-                    <div>{{item.desc}}</div>
+        <!--Section for displaying content-->
+        <div class="dataSec">
+            <!--Section for displaying portfolio-->
+            <div v-bind:class="{displayNone: !portfolioBool}" class="portSec">
+                <div class="portItems">
+                    <div v-for="item in portItems"></div>
                 </div>
+                <h1>LOL</h1>
+            </div>
+            <!--Section for displaying contact-->
+            <div v-bind:class="{displayNone: !contactBool}" class="contSec">
+                <h1>KEK</h1>
             </div>
         </div>
     </div>

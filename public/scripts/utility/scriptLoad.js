@@ -1,5 +1,4 @@
 function scriptLoad(items) {
-    console.log(items)
     if(typeof items === 'object'){
         items.map((el) => {
             const newScr = document.createElement('script');
