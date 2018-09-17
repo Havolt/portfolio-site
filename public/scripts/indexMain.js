@@ -52,6 +52,12 @@ const vueApp = new Vue({
         minIntroImgCon : false,
         mIntLinks: false,
 
+        //maximize Section
+        maxIntroImg: false,
+        maxIntroArrowCon: false,
+        maxIntroImgCon : false,
+        maxIntLinks: false,
+
         //Links Section
         portfolioBool: false,
         contactBool: false,
@@ -149,7 +155,32 @@ const vueApp = new Vue({
             vueApp.downArrowHide = false;
             vueApp.minIntroArrowCon = true;
             vueApp.mIntLinks = true;
+
+            vueApp.maxIntroImgCon = false;
+            vueApp.maxIntroImg = false;
+            vueApp.maxIntroArrowCon = false;
+            vueApp.maxIntLinks = false;
             
+        },
+        maximizeIntro: () => {
+            vueApp.intTxtAnimate(vueApp.intTxtAnimData);
+            vueApp.minIntroImgCon = false;
+            vueApp.minIntroImg = false;
+            vueApp.rightArrowHide = false;
+            vueApp.leftArrowHide = true;
+            vueApp.downArrowHide = true;
+            vueApp.minIntroArrowCon = false;
+            vueApp.mIntLinks = false;
+            vueApp.portfolioBool = false;
+            vueApp.contactBool = false;
+
+            //maximize
+            vueApp.maxIntroImgCon = true;
+            vueApp.maxIntroImg = true;
+            vueApp.maxIntroArrowCon = true;
+            vueApp.maxIntLinks = true;
+
+            vueApp.intLinksUnder(99, vueApp.introLinks);
         },
         intLinksUnder: (pos, arr) => {
             for(let i = 0; i < arr.length; i++) {

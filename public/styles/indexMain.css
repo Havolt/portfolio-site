@@ -51,6 +51,7 @@ body {
 }
 
 
+
 .introImg {
     display: inline-block;
     width: 240px;
@@ -234,22 +235,34 @@ body {
 
 /* Minimized intro section */
 
+
+
 .introArrowMin {
-    font-size: 22px;
+    font-size: 24px;
     color: rgb(255, 255, 255);
     text-shadow: 0px 0px 2px rgb(53, 53, 53);
 }
 
+@keyframes intArrowBounceMin {
+    from {transform: translateY(0px);}
+      to {transform: translateY(5px);}
+}
+
+.introArrowMin:hover {
+    animation: intArrowBounceMin 0.8s alternate infinite;
+    cursor: pointer;
+    color: rgb(231, 231, 231);
+}
+
 @keyframes mIntImgConAn {
     from{margin: 10vh auto 25px auto;}
-    to{margin: 2vh auto 4px auto}
+    to{margin: 2vh auto 4px auto;}
 }
 
 .minIntroImgCon {
     animation: mIntImgConAn 1s forwards;
 }
 
-/***********************************************************************/
 
 @keyframes mIntLinksAn {
     from{font-size: 28px; margin-top: 0px;}
@@ -277,6 +290,48 @@ body {
 .minIntroArrowCon {
     animation: mIntArwConAn 1s forwards;
 }
+
+/***********************************************************************/
+/* Maximize Intro Section */
+
+@keyframes mxIntImgConAn {
+    from{margin: 2vh auto 4px auto;}
+    to{margin: 10vh auto 25px auto;}
+}
+
+.maxIntroImgCon {
+    animation: mxIntImgConAn 1s forwards;
+}
+
+@keyframes mxIntImgAn {
+    from{width: 100px; }
+    to{width: 240px; }  
+}
+
+.maxIntroImg {
+    animation: mxIntImgAn 1s forwards;
+}
+
+@keyframes mxIntArwConAn {
+    from{height: 100px; line-height: 100px; }
+    to {height: 240px; line-height: 240px; }
+    
+}
+
+.maxIntroArrowCon {
+    animation: mxIntArwConAn 1s forwards;
+}
+
+@keyframes maxIntLinksAn {
+    from{font-size: 20px; margin-top: -28px;}
+    to{font-size: 28px; margin-top: 0px;}  
+}
+
+.maxIntLinks {
+    animation: maxIntLinksAn 1s forwards;
+}
+
+
 
 /* Animations section */
 
