@@ -58,32 +58,6 @@ body {
     border: 1px solid rgb(25, 141, 219);
 }
 
-.introLinksCon {
-    margin-top:26px;
-    opacity: 0;
-}
-
-.introLinks {
-    font-size: 28px;
-    color: rgb(31, 134, 202);
-    display: inline-block;
-    width: 25%;
-    text-align: center;
-    user-select: none;
-}
-
-.introLinks:nth-child(1){
-    margin-left: 25%;
-}
-
-.introLinks:nth-child(2){
-    margin-right: 25%;
-}
-
-.introLinks:hover {
-    color: rgb(32, 114, 168);
-    cursor: pointer;
-}
 
 /* Bio section */
 
@@ -126,19 +100,65 @@ body {
     color: rgb(0, 90, 150);
 }
 
+/* Links section */
+
+
+.introLinksCon {
+    opacity: 0;
+}
+
+.introLinksAll {
+    font-size: 28px;
+    margin-top: 0px;
+}
+
+.introLinks {
+    color: rgb(31, 134, 202);
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    user-select: none;
+}
+
+.introLinks:nth-child(1){
+    margin-left: 25%;
+}
+
+.introLinks:nth-child(2){
+    margin-right: 25%;
+}
+
+.introLinks:hover {
+    color: rgb(32, 114, 168);
+}
 
 .introLinksFakeBorder {
     height: 2px;
 }
 
 .introLinkTxt {
+    margin: 0 auto;
     width: fit-content;
+    position: relative;
 }
 
-/* Links section */
+.introLinkTxt:hover {
+    cursor: pointer;
+}
 
-.intLinkUnderline {
-    text-decoration: underline;
+@keyframes linkFakeBorderAn {
+    from{width: 0%;}
+    to{width: 100%;}
+}
+
+.intLinkUnderline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 20;
+    background: rgb(31, 134, 202);
+    height: 2px;
+    animation: linkFakeBorderAn 2s forwards;
 }
 
 /* Data Section */
@@ -222,11 +242,22 @@ body {
 
 @keyframes mIntImgConAn {
     from{margin: 10vh auto 25px auto;}
-    to{margin: 2vh auto}
+    to{margin: 2vh auto 4px auto}
 }
 
 .minIntroImgCon {
     animation: mIntImgConAn 1s forwards;
+}
+
+/***********************************************************************/
+
+@keyframes mIntLinksAn {
+    from{font-size: 28px; margin-top: 0px;}
+    to{font-size: 20px; margin-top: -28px;}
+}
+
+.mIntLinks {
+    animation: mIntLinksAn 1s forwards;
 }
 
 @keyframes mIntImgAn {
@@ -337,10 +368,6 @@ body {
 }
 
 
-.introLinksFakeBorder:hover {
-    background: rgb(32, 114, 168);
-    animation: linkFakeBorderAn 0.5s forwards;
-}
 
 .displayNone {
     display: none;

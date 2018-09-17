@@ -50,6 +50,7 @@ const vueApp = new Vue({
         minIntroImg: false,
         minIntroArrowCon: false,
         minIntroImgCon : false,
+        mIntLinks: false,
 
         //Links Section
         portfolioBool: false,
@@ -147,6 +148,7 @@ const vueApp = new Vue({
             vueApp.leftArrowHide = true;
             vueApp.downArrowHide = false;
             vueApp.minIntroArrowCon = true;
+            vueApp.mIntLinks = true;
             
         },
         intLinksUnder: (pos, arr) => {

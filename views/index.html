@@ -38,9 +38,13 @@
                 </div>
                 <!--Container for intro links-->
                 <div v-bind:class="{linksVisible}" class="introLinksCon">
-                    <div class="introLinks" v-for="item in introLinks">
-                        <div  v-bind:value="this.place" v-bind:class="item.classes" @click="item.func(item.place)">{{item.text}}<div class="introLinksFakeBorder"></div></div>
-                    </div> 
+                    <div class="introLinksAll" v-bind:class="{mIntLinks}">
+                        <div class="introLinks" v-for="item in introLinks">
+                            <div  v-bind:value="this.place" >
+                                <div v-bind:class="item.classes" class="introLinkTxt" @click="item.func(item.place)">{{item.text}} </div>
+                            <div class="introLinksFakeBorder"></div></div>
+                        </div> 
+                    </div>
                 </div>
             </div>
             <!--Container for bio section-->
