@@ -166,7 +166,7 @@ body {
 
 .dataSec {
     width: 90%;
-    margin: 25px 5% 5px 5%;
+    margin: 30px 5% 5px 5%;
 }
 
 .portItems {
@@ -202,17 +202,19 @@ body {
     top: 0;
     background: rgba(36, 36, 99, 0.7);
     opacity: 0;
+    text-align: center;
 }
 
 .portImgGo {
     width: 80%;
-    padding: 10px 0;
     background: #f7f7f7;
     border-radius: 2px;
+    padding: 2% 0;
+    font-size: 24px;
     vertical-align: middle;
-    font-size: 20px;
-    margin: 20% auto;
+    display: inline-block;
     text-align: center;
+    margin: 0 auto;
 }
 
 .portImgGo:hover {
@@ -224,12 +226,34 @@ body {
     opacity: 1;
  }
 
+ .portImgHover::after{
+    content: '';
+    display: inline-block;
+    width: 0px;
+    height: 100%;
+    vertical-align: middle;
+}
+
 .portItemName {
-    padding: 10px 0;
-    font-size: 24px;
+    padding: 8px 0;
+    font-size: 28px;
     text-indent: 14px;
     position: relative;
     z-index: 100;
+    font-weight: bold;
+}
+
+
+
+.portItemDesc {
+    border-top: 1px solid rgb(150, 150, 150);
+    padding-top: 4px;
+    width: 96%;
+    margin: 0 auto;
+    color: rgb(68, 68, 68);
+    font-size: 18px;
+    margin-bottom: 10px;
+    height: 140px;
 }
 
 

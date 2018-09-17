@@ -84,7 +84,7 @@ const vueApp = new Vue({
             }
         ],
         portItems: [{name: 'Offline Hacking', img: '/imgs/port-oh.jpg',  
-                    link: '', desc: 'placeholder text goes here'}
+                    link: '', desc: ''}
         ]
         
     },
