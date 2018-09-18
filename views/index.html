@@ -81,8 +81,8 @@
                     <div class="portMenu">
                         <div v-for="item in portMenu.items()">
                             <div v-if="item.activated" class="fas fa-circle portMenuIcon"></div>
-                            <div v-else class="far fa-circle portMenuIcon"></div>
-                            </div>
+                            <div @click="changeMenuPos(item.val)" v-else class="far fa-circle portMenuIcon"></div>
+                        </div>
                     </div>
                 </div>
             </div>

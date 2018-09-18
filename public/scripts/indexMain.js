@@ -101,7 +101,8 @@ const vueApp = new Vue({
             link: ''},
             {name: 'Previous Portfolio', img: '/imgs/port-p.jpg',
             link: ''}   
-        ]
+        ],
+        menuCurrPos : 0
         
         
     },
@@ -216,6 +217,9 @@ const vueApp = new Vue({
             vueApp.contactBool = true;
             vueApp.portfolioBool = false;
  
+        },
+        changeMenuPos: (pos) => {
+            vueApp.menuCurrPos = pos*2;
         }
 
     },
@@ -231,18 +235,17 @@ const vueApp = new Vue({
         },
         portMenu: function() {
             const newOb = {};
-            newOb.currPos = 0;
-            newOb.length = this.portItemsAll.length;
             newOb.items = () => {
-                let newArr = [];
-                for(let i = 0; i < this.portMenu.length/2; i++) {
-                    const newOb = {};
-                    if(this.portMenu.currPos/2 == i){
-                        newOb.activated = true;
+                const newArr = [];
+                for(let i = 0; i < this.portItemsAll.length/2; i++){
+                    const newObj = {};
+                    if(i == this.menuCurrPos/2) {
+                        newObj.activated = true;
                     } else {
-                        newOb.activated = false;
+                        newObj.activated = false;
                     }
-                    newArr.push(newOb);
+                    newObj.val = i;
+                    newArr.push(newObj)
                 }
                 return newArr;
             };
@@ -250,7 +253,8 @@ const vueApp = new Vue({
         },
         portItemsCurr: function(){
             let itemArr = [];
-            for(let i = this.portMenu.currPos; i < this.portMenu.currPos + 2; i++){
+            for(let i = this.menuCurrPos; i < this.menuCurrPos + 2; i++){
+                console.log(i)
                 itemArr.push(this.portItemsAll[i]);
             }
             return itemArr;
