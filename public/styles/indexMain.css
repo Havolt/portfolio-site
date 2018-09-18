@@ -166,7 +166,7 @@ body {
 
 .dataSec {
     width: 90%;
-    margin: 10vh 5% 5px 5%;
+    margin: 8vh 5% 5px 5%;
 }
 
 .portItems {
@@ -237,7 +237,7 @@ body {
 }
 
 .portItemName {
-    padding: 22px 0;
+    padding: 24px 0;
     font-size: 28px;
     text-indent: 14px;
     position: relative;

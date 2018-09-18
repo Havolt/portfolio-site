@@ -89,10 +89,19 @@ const vueApp = new Vue({
             link: ''},
             {name: 'To Do', img: '/imgs/port-td.jpg',
             link: ''},
-            {name: 'Tetris', img: '/imgs/port-td.jpg',
+            {name: 'Tetris', img: '/imgs/port-t.jpg',
             link: ''},
-            {name: 'No Context Creepy', img: '/imgs/port-t.jpg',
+            {name: 'No Context Creepy', img: '/imgs/port-ncc.jpg',
+            link: ''},
+            {name: 'Wikipedia Search', img: '/imgs/port-wa.jpg',
+            link: ''},
+            {name: 'Checkers', img: '/imgs/port-d.jpg',
+            link: ''},
+            {name: 'Calculator', img: '/imgs/port-c.jpg',
+            link: ''},
+            {name: 'Previous Portfolio', img: '/imgs/port-p.jpg',
             link: ''}
+            
         ],
         portItemsPos: 0
         
