@@ -100,10 +100,8 @@ const vueApp = new Vue({
             {name: 'Calculator', img: '/imgs/port-c.jpg',
             link: ''},
             {name: 'Previous Portfolio', img: '/imgs/port-p.jpg',
-            link: ''}
-            
-        ],
-        portItemsPos: 0
+            link: ''}   
+        ]
         
         
     },
@@ -207,8 +205,6 @@ const vueApp = new Vue({
             vueApp.intLinksUnder(pos, vueApp.introLinks);
             vueApp.portfolioBool = true;
             vueApp.contactBool = false;
-           
-
 
         },
         contactFunc: (pos) => {
@@ -233,9 +229,28 @@ const vueApp = new Vue({
         intTxtName: function(){
             return this.intTxtAnimData.displayName.join('');
         },
+        portMenu: function() {
+            const newOb = {};
+            newOb.currPos = 0;
+            newOb.length = this.portItemsAll.length;
+            newOb.items = () => {
+                let newArr = [];
+                for(let i = 0; i < this.portMenu.length/2; i++) {
+                    const newOb = {};
+                    if(this.portMenu.currPos/2 == i){
+                        newOb.activated = true;
+                    } else {
+                        newOb.activated = false;
+                    }
+                    newArr.push(newOb);
+                }
+                return newArr;
+            };
+            return newOb;
+        },
         portItemsCurr: function(){
             let itemArr = [];
-            for(let i = this.portItemsPos; i < this.portItemsPos + 2; i++){
+            for(let i = this.portMenu.currPos; i < this.portMenu.currPos + 2; i++){
                 itemArr.push(this.portItemsAll[i]);
             }
             return itemArr;

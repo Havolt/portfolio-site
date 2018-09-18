@@ -77,6 +77,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="portItemsMenu">
+                    <div class="portMenu">
+                        <div v-for="item in portMenu.items()">
+                            <div v-if="item.activated" class="fas fa-circle portMenuIcon"></div>
+                            <div v-else class="far fa-circle portMenuIcon"></div>
+                            </div>
+                    </div>
+                </div>
             </div>
             <!--Section for displaying contact-->
             <div v-bind:class="{displayNone: !contactBool}" class="contSec">

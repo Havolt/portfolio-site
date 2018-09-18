@@ -258,6 +258,25 @@ body {
     height: 140px;
 }
 
+.portItemsMenu {
+    width: fit-content;
+    margin: 40px auto 0 auto;
+}
+
+.portMenu {
+    display: inline-flex;
+    font-size: 24px;
+    color: rgb(42, 105, 148);
+}
+
+.portMenuIcon {
+    margin: 0px 12px;
+}
+
+.portMenuIcon:hover {
+    cursor: pointer;
+}
+
 
 /* Minimized intro section */
 
