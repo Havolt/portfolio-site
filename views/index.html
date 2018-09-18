@@ -88,7 +88,26 @@
             </div>
             <!--Section for displaying contact-->
             <div v-bind:class="{displayNone: !contactBool}" class="contSec">
-                <h1>KEK</h1>
+                <div class="contactInfo">
+                    <div class="contactItem" v-for="item in contactInfo">
+                        <a v-bind:href="item.link">
+                            <div class="contactIcon" v-bind:class="item.icon"></div>
+                            <div class="contactText">{{item.text}}</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contactForm">
+                    <form action="">
+                        <div  class="formLabel">Name</div>
+                        <input name="name" class="formInput" placeholder="Vlad III" type="text">
+                        <div class="formLabel">Email</div>
+                        <input class="formInput" type="email" placeholder="vladIII@wallachia.com">
+                        <div class="formLabel">Message</div>
+                        <textarea class="formTextArea" name="" id="" placeholder="Let's work together"></textarea>
+                        <input class="formButton" type="button" value="Send">
+                    </form>
+                </div>
+                
             </div>
         </div>
     </div>

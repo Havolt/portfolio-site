@@ -85,8 +85,7 @@ const vueApp = new Vue({
             }
         ],
         portItemsAll: [
-            {name: 'Offline Hacking', img: '/imgs/port-oh.jpg',  
-            link: ''},
+            
             {name: 'To Do', img: '/imgs/port-td.jpg',
             link: ''},
             {name: 'Tetris', img: '/imgs/port-t.jpg',
@@ -95,6 +94,8 @@ const vueApp = new Vue({
             link: ''},
             {name: 'Wikipedia Search', img: '/imgs/port-wa.jpg',
             link: ''},
+            {name: 'Offline Hacking', img: '/imgs/port-oh.jpg',  
+            link: ''},
             {name: 'Checkers', img: '/imgs/port-d.jpg',
             link: ''},
             {name: 'Calculator', img: '/imgs/port-c.jpg',
@@ -102,7 +103,19 @@ const vueApp = new Vue({
             {name: 'Previous Portfolio', img: '/imgs/port-p.jpg',
             link: ''}   
         ],
-        menuCurrPos : 0
+        menuCurrPos : 0,
+        contactInfo: [
+            {
+                icon : 'far fa-envelope',
+                text : 'markfitz815@gmail.com',
+                link : 'mailto:markfitz815@gmail.com'
+            },
+            {
+                icon : 'fas fa-phone',
+                text : '(00353) 87 104 2845',
+                link : 'tel:00353871042845'
+            }
+        ]
         
         
     },
