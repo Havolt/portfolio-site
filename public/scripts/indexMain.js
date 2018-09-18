@@ -44,6 +44,7 @@ const vueApp = new Vue({
         rightArrowHide: false,
         leftArrowHide: true,
         arrowAllowClick: true,
+        portImgAnimate: false,
 
         //Minimize Section
         downArrowHide: true,
@@ -83,9 +84,18 @@ const vueApp = new Vue({
                 desc: 'Strong Programming Skills'
             }
         ],
-        portItems: [{name: 'Offline Hacking', img: '/imgs/port-oh.jpg',  
-                    link: '', desc: ''}
-        ]
+        portItemsAll: [
+            {name: 'Offline Hacking', img: '/imgs/port-oh.jpg',  
+            link: ''},
+            {name: 'To Do', img: '/imgs/port-td.jpg',
+            link: ''},
+            {name: 'Tetris', img: '/imgs/port-td.jpg',
+            link: ''},
+            {name: 'No Context Creepy', img: '/imgs/port-t.jpg',
+            link: ''}
+        ],
+        portItemsPos: 0
+        
         
     },
     methods: {
@@ -213,6 +223,13 @@ const vueApp = new Vue({
         },
         intTxtName: function(){
             return this.intTxtAnimData.displayName.join('');
+        },
+        portItemsCurr: function(){
+            let itemArr = [];
+            for(let i = this.portItemsPos; i < this.portItemsPos + 2; i++){
+                itemArr.push(this.portItemsAll[i]);
+            }
+            return itemArr;
         }
 
         

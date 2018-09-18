@@ -65,10 +65,10 @@
             <!--Section for displaying portfolio-->
             <div v-bind:class="{displayNone: !portfolioBool}" class="portSec">
                 <div class="portItems">
-                    <div class="portItemsCon" v-for="item in portItems">
+                    <div class="portItemsCon" v-for="item in portItemsCurr">
                         <div class="portItemContents">
                             <div class="portItemImg">
-                                <img v-bind:src="item.img" alt="">
+                                <img v-bind:class="{portImgAnimate}" v-bind:src="item.img" alt="">
                                 <div class="portImgHover">
                                     <div class="portImgGo">View {{item.name}}</div>
                                 </div>
