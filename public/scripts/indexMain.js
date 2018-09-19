@@ -55,6 +55,8 @@ const vueApp = new Vue({
             fadeOutRight: false,
             fadeInRight: false
         },
+        portTouchList: [],
+        checkingSwipe: false,
 
         //Contact Section
         contactFadeIn: false, 
@@ -319,7 +321,65 @@ const vueApp = new Vue({
             }, 600)
  
         },
+        changeMenuPosTouch: (e) => {
+            
+            vueApp.portTouchList.push(e.targetTouches[0].clientX)
+            if(vueApp.portTouchList.length > 7) {
+                vueApp.changeMenuPosTouchCheck(vueApp.portTouchList);
+                vueApp.checkingSwipe = true;
+            } else if(vueApp.portTouchList.length == 1) {
+                setTimeout(() => {
+                    vueApp.portTouchList = [];
+                }, 500)
+            }
+        },
+        changeMenuPosTouchCheck: (arr) => {
+
+            console.log(vueApp.menuCurrPos+1)
+            
+            let prevPos;
+            let direction;
+            let fullSwipe = true;
+            let counter = 0;
+
+            arr.map((el) => {
+                if(prevPos == undefined) {
+                    prevPos = el;
+                    counter++;
+                } else if (counter == 1) {
+                    if(el > prevPos) { direction = -1;
+                    } else { direction = 1;}
+                    prevPos = el;
+                    counter++;
+                } else {
+                    if(direction == 1) {
+                        if(el > prevPos) {
+                            fullSwipe = false;
+                        }
+                    }
+                    else if(direction == -1) {
+                        if(el < prevPos) {
+                            fullSwipe = false;
+                        }
+                    }
+                } 
+            })
+
+            if(fullSwipe) {
+                if((direction == 1) && ((vueApp.menuCurrPos*2) < vueApp.portItemsAll.length+1)) {
+                    vueApp.changeMenuPos((vueApp.menuCurrPos/2)+1)
+                }
+                else if((direction == -1) && (vueApp.menuCurrPos > 0)) {
+                    vueApp.changeMenuPos((vueApp.menuCurrPos/2)-1)
+                }
+            }
+            vueApp.portTouchList = [];
+            vueApp.checkingSwipe = false;
+        },
         changeMenuPos: (pos) => {
+
+            console.log(pos)
+            
 
             vueApp.portItemClass.fadeOutLeft = false;
             vueApp.portItemClass.fadeOutRight = false;
@@ -333,6 +393,7 @@ const vueApp = new Vue({
             }
             setTimeout(() => {
                 vueApp.menuCurrPos = pos * 2;
+                console.log(pos)
             },400);
             setTimeout(() => {
                 if(vueApp.portItemClass.fadeOutLeft == true) {
