@@ -150,7 +150,15 @@ const vueApp = new Vue({
                 link: 'https://twitter.com/jetsetfitz',
                 target: '_blank'
             }
-        ]
+        ],
+        commentWarn: false,
+        emailWarn: false,
+        nameWarn: false,
+        formValues: {
+            name: '',
+            email: '',
+            comment: ''
+        }
         
         
     },
@@ -269,6 +277,21 @@ const vueApp = new Vue({
                 vueApp.contactFadeIn = false;
                 vueApp.portFadeIn = true;
             }, 600)
+            
+
+        },
+        submitHandler: function(e) {
+            const emailRx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            const nameRx = /.{3,}/g
+            const commentRx = /.{10,}/g
+
+            let nameCheck = nameRx.test(String(this.formValues.name).toLowerCase());
+            let emailCheck = emailRx.test(String(this.formValues.email).toLowerCase());
+            let commentCheck = commentRx.test(String(this.formValues.comment).toLowerCase());
+
+            nameCheck ? this.nameWarn = false : this.nameWarn = true;
+            emailCheck ? this.emailWarn = false : this.emailWarn = true;
+            commentCheck ? this.commentWarn = false : this.commentWarn = true;
             
 
         },
