@@ -47,7 +47,12 @@ const vueApp = new Vue({
 
         //Portfolio Section
         portFadeIn: false, 
+        portFadeOut: false,
         portImgAnimate: false,
+
+        //Contact Section
+        contactFadeIn: false, 
+        contactFadeOut: false,
 
         //Minimize Section
         downArrowHide: true,
@@ -222,10 +227,15 @@ const vueApp = new Vue({
             }
             vueApp.toggleIntro(true, false);
             vueApp.intLinksUnder(pos, vueApp.introLinks);
-            vueApp.portfolioBool = true;
-            vueApp.contactBool = false;
-            vueApp.contactFadeIn = false;
-            vueApp.portFadeIn = true;
+            vueApp.contactFadeOut = true;
+            vueApp.portFadeOut = false;
+            setTimeout(() => {
+                vueApp.contactBool = false;
+                vueApp.portfolioBool = true;
+                vueApp.contactFadeIn = false;
+                vueApp.portFadeIn = true;
+            }, 600)
+            
 
         },
         contactFunc: (pos) => {
@@ -234,10 +244,14 @@ const vueApp = new Vue({
             }
             vueApp.toggleIntro(true, false);
             vueApp.intLinksUnder(pos, vueApp.introLinks);
-            vueApp.contactBool = true;
-            vueApp.portfolioBool = false;
-            vueApp.portFadeIn = false;
-            vueApp.contactFadeIn = true;
+            vueApp.portFadeOut = true;
+            vueApp.contactFadeOut = false;
+            setTimeout(() => {
+                vueApp.portfolioBool = false;
+                vueApp.contactBool = true;
+                vueApp.portFadeIn = false;
+                vueApp.contactFadeIn = true;
+            }, 600)
  
         },
         changeMenuPos: (pos) => {
