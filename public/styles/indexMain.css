@@ -418,8 +418,10 @@ body {
 }
 
 .contactInfo {
+    vertical-align: top;
     margin: 0 0.5%;
     width: 48%;
+    padding-top: 20px;
     display: inline-block;
 }
 

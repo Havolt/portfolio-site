@@ -90,7 +90,7 @@
             <div v-bind:class="{displayNone: !contactBool, contactFadeIn, contactFadeOut}" class="contSec">
                 <div class="contactInfo">
                     <div class="contactItem" v-for="item in contactInfo">
-                        <a v-bind:href="item.link">
+                        <a v-bind:href="item.link" v-bind:target="item.target">
                             <div class="contactIcon" v-bind:class="item.icon"></div>
                             <div class="contactText">{{item.text}}</div>
                         </a>

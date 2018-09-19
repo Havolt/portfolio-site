@@ -122,12 +122,33 @@ const vueApp = new Vue({
             {
                 icon : 'far fa-envelope',
                 text : 'markfitz815@gmail.com',
-                link : 'mailto:markfitz815@gmail.com'
+                link : 'mailto:markfitz815@gmail.com',
+                target: '_self'
             },
             {
                 icon : 'fas fa-phone',
                 text : '(00353) 87 104 2845',
-                link : 'tel:00353871042845'
+                link : 'tel:00353871042845',
+                target: '_self'
+                
+            },
+            {
+                icon: 'fab fa-github',
+                text: 'Github',
+                link: 'https://github.com/Havolt',
+                target: '_blank'
+            },
+            {
+                icon: 'fab fa-linkedin',
+                text: 'LinkedIn',
+                link: 'https://www.linkedin.com/in/mark-fitzpatrick-491419100/',
+                target: '_blank'
+            },
+            {
+                icon: 'fab fa-twitter',
+                text: 'Twitter',
+                link: 'https://twitter.com/jetsetfitz',
+                target: '_blank'
             }
         ]
         
@@ -276,7 +297,6 @@ const vueApp = new Vue({
 
             if((pos*2) > vueApp.menuCurrPos) {
                 vueApp.portItemClass.fadeOutLeft = true;
-                console.log('ffs')
             } else {
                 vueApp.portItemClass.fadeOutRight = true;
             }
@@ -290,8 +310,6 @@ const vueApp = new Vue({
                     vueApp.portItemClass.fadeInLeft = true;
                 }
             }, 450)
-        
-            
 
         }
 
