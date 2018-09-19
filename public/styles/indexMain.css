@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+body {
+    overflow: hidden;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -172,7 +176,15 @@ body {
 .dataSec {
     width: 90%;
     margin: 8vh 5% 5px 5%;
+    
 }
+
+.dataSec > div {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Portfolio Section */
 
 .portItems {
     width: 100%;
@@ -207,7 +219,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    background: rgba(36, 36, 99, 0.7);
+    background: rgba(92, 92, 92, 0.7);
     opacity: 0;
     text-align: center;
 }
@@ -280,6 +292,118 @@ body {
 
 .portMenuIcon:hover {
     cursor: pointer;
+}
+
+@keyframes dataFadeInAn {
+    from{transform: translateX(50%); opacity: 0;}
+    to{transform: translateX(0); opacity: 1;}
+}
+
+@keyframes dataFadeOutAn {
+    from{transform: translateX(-50%); opacity: 1;}
+    to{transform: translateX(0); opacity: 0;}
+}
+
+.portFadeIn {
+    animation: dataFadeInAn 1.5s forwards;
+}
+
+.portFadeOut {
+    animation: dataFadeOutAn 0.5s forwards;
+}
+
+
+/* Contact Section */
+
+.contactFadeIn {
+    animation: dataFadeInAn 1.5s forwards;
+}
+
+.contactFadeOut {
+    animation: dataFadeOutAn 0.5s forwards;
+}
+
+.contSec {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contactForm {
+    display: inline-block;
+    width: 48%;
+    margin: 0 0.5%;
+}
+
+.formInput {
+    text-indent: 4px;
+    padding: 3px 0;
+    width: 100%;
+    font-size: 24px;
+    border: 1px solid rgb(182, 181, 181);
+    border-radius: 2px;
+    margin-bottom: 4px;
+    box-sizing:border-box
+}
+
+.formInput::placeholder { 
+    color: rgb(218, 218, 218);
+}
+
+.formLabel {
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+.formTextArea {
+    padding: 4px 0;
+    width: 100%;
+    font-size: 24px;
+    border: 1px solid rgb(182, 181, 181);
+    border-radius: 2px;
+    height: 150px;
+    margin-bottom: 4px;
+    text-indent: 4px;
+    box-sizing:border-box
+}
+
+.formTextArea::placeholder { 
+    color: rgb(218, 218, 218);
+}
+
+.formButton {
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid rgb(182, 181, 181);
+    box-shadow: 0px 2px 2px rgb(236, 236, 236);
+    background: white;
+    padding: 6px 0;
+}
+
+.formButton:hover {
+    cursor: pointer;
+    background: rgb(240, 240, 240);
+}
+
+.contactInfo {
+    margin: 0 0.5%;
+    width: 48%;
+    display: inline-block;
+}
+
+.contactItem {
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contactItem > a:hover {
+    cursor: pointer;
+    color: rgb(25, 141, 219);
+}
+
+.contactItem > a > div {
+    margin-right: 10px;
+    display: inline-block;
 }
 
 
@@ -435,85 +559,6 @@ body {
     animation: hideInfTxt 0.5s forwards;
 }
 
-/* Contact Section */
-
-.contSec {
-    display: inline-flex;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.contactForm {
-    width: 100%;
-}
-
-.formInput {
-    text-indent: 4px;
-    padding: 3px 0;
-    width: 100%;
-    font-size: 24px;
-    border: 1px solid rgb(182, 181, 181);
-    border-radius: 2px;
-    margin-bottom: 4px;
-}
-
-.formInput::placeholder { 
-    color: rgb(218, 218, 218);
-}
-
-.formLabel {
-    font-size: 20px;
-    margin-bottom: 2px;
-}
-
-.formTextArea {
-    padding: 4px 0;
-    width: 100%;
-    font-size: 24px;
-    border: 1px solid rgb(182, 181, 181);
-    border-radius: 2px;
-    height: 150px;
-    margin-bottom: 4px;
-    text-indent: 4px;
-}
-
-.formTextArea::placeholder { 
-    color: rgb(218, 218, 218);
-}
-
-.formButton {
-    width: 100%;
-    font-size: 20px;
-    border: 1px solid rgb(182, 181, 181);
-    box-shadow: 0px 2px 2px rgb(236, 236, 236);
-    background: white;
-    padding: 6px 0;
-}
-
-.formButton:hover {
-    cursor: pointer;
-    background: rgb(240, 240, 240);
-}
-
-.contactInfo {
-    width: 100%;
-}
-
-.contactItem {
-    width: 100%;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.contactItem > a:hover {
-    cursor: pointer;
-    color: rgb(25, 141, 219);
-}
-
-.contactItem > a > div {
-    margin-right: 10px;
-    display: inline-block;
-}
 
 /* Bio Animations */
 

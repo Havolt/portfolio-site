@@ -63,14 +63,14 @@
         <!--Section for displaying content-->
         <div class="dataSec">
             <!--Section for displaying portfolio-->
-            <div v-bind:class="{displayNone: !portfolioBool}" class="portSec">
+            <div v-bind:class="{displayNone: !portfolioBool, portFadeIn, portFadeIn}" class="portSec">
                 <div class="portItems">
                     <div class="portItemsCon" v-for="item in portItemsCurr">
                         <div class="portItemContents">
                             <div class="portItemImg">
                                 <img v-bind:class="{portImgAnimate}" v-bind:src="item.img" alt="">
                                 <div class="portImgHover">
-                                    <div class="portImgGo">View {{item.name}}</div>
+                                    <a v-bind:href="item.link"><div class="portImgGo">View {{item.name}}</div></a>
                                 </div>
                             </div>
                             <div class="portItemName">{{item.name}}</div>
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <!--Section for displaying contact-->
-            <div v-bind:class="{displayNone: !contactBool}" class="contSec">
+            <div v-bind:class="{displayNone: !contactBool, contactFadeIn, contactFadeOut}" class="contSec">
                 <div class="contactInfo">
                     <div class="contactItem" v-for="item in contactInfo">
                         <a v-bind:href="item.link">
@@ -99,9 +99,9 @@
                 <div class="contactForm">
                     <form action="">
                         <div  class="formLabel">Name</div>
-                        <input name="name" class="formInput" placeholder="Vlad III" type="text">
+                        <input name="name" class="formInput" placeholder="Kuros" type="text">
                         <div class="formLabel">Email</div>
-                        <input class="formInput" type="email" placeholder="vladIII@wallachia.com">
+                        <input class="formInput" type="email" placeholder="kuros@piedup.com">
                         <div class="formLabel">Message</div>
                         <textarea class="formTextArea" name="" id="" placeholder="Let's work together"></textarea>
                         <input class="formButton" type="button" value="Send">

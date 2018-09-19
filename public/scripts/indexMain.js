@@ -44,6 +44,9 @@ const vueApp = new Vue({
         rightArrowHide: false,
         leftArrowHide: true,
         arrowAllowClick: true,
+
+        //Portfolio Section
+        portFadeIn: false, 
         portImgAnimate: false,
 
         //Minimize Section
@@ -87,21 +90,21 @@ const vueApp = new Vue({
         portItemsAll: [
             
             {name: 'To Do', img: '/imgs/port-td.jpg',
-            link: ''},
+            link: '/port/to-do'},
             {name: 'Tetris', img: '/imgs/port-t.jpg',
-            link: ''},
+            link: '/port/tetris'},
             {name: 'No Context Creepy', img: '/imgs/port-ncc.jpg',
-            link: ''},
+            link: '/port/no-context-creepy'},
             {name: 'Wikipedia Search', img: '/imgs/port-wa.jpg',
-            link: ''},
+            link: '/port/wikipedia-search'},
             {name: 'Offline Hacking', img: '/imgs/port-oh.jpg',  
-            link: ''},
+            link: '/port/offline-hacking'},
             {name: 'Checkers', img: '/imgs/port-d.jpg',
-            link: ''},
+            link: '/port/checkers'},
             {name: 'Calculator', img: '/imgs/port-c.jpg',
-            link: ''},
+            link: '/port/calculator'},
             {name: 'Previous Portfolio', img: '/imgs/port-p.jpg',
-            link: ''}   
+            link: '/port/previous-portfolio'}   
         ],
         menuCurrPos : 0,
         contactInfo: [
@@ -190,6 +193,8 @@ const vueApp = new Vue({
             if(max) {
                 vueApp.portfolioBool = false;
                 vueApp.contactBool = false;
+                vueApp.portFadeIn = false;
+                vueApp.contactFadeIn = false;
                 vueApp.intTxtAnimate(vueApp.intTxtAnimData);
                 vueApp.intLinksUnder(99, vueApp.introLinks);
             } else {
@@ -219,6 +224,8 @@ const vueApp = new Vue({
             vueApp.intLinksUnder(pos, vueApp.introLinks);
             vueApp.portfolioBool = true;
             vueApp.contactBool = false;
+            vueApp.contactFadeIn = false;
+            vueApp.portFadeIn = true;
 
         },
         contactFunc: (pos) => {
@@ -229,6 +236,8 @@ const vueApp = new Vue({
             vueApp.intLinksUnder(pos, vueApp.introLinks);
             vueApp.contactBool = true;
             vueApp.portfolioBool = false;
+            vueApp.portFadeIn = false;
+            vueApp.contactFadeIn = true;
  
         },
         changeMenuPos: (pos) => {
