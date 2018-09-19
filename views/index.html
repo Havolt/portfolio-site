@@ -64,7 +64,7 @@
         <div class="dataSec">
             <!--Section for displaying portfolio-->
             <div v-bind:class="{displayNone: !portfolioBool, portFadeIn, portFadeOut}" class="portSec">
-                <div class="portItems">
+                <div v-bind:class="portItemClass" class="portItems">
                     <div class="portItemsCon" v-for="item in portItemsCurr">
                         <div class="portItemContents">
                             <div class="portItemImg">

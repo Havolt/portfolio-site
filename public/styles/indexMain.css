@@ -294,6 +294,39 @@ body {
     cursor: pointer;
 }
 
+@keyframes fadeOutLeftAn {
+    from{transform: translateX(0%); opacity: 1;}
+    to{transform: translateX(-5%); opacity: 0;}
+}
+@keyframes fadeOutRightAn {
+    from{transform: translateX(0%); opacity: 1;}
+    to{transform: translateX(5%); opacity: 0;}
+}
+@keyframes fadeInLeftAn {
+    from{transform: translateX(-5%); opacity: 0;}
+    to{transform: translateX(0%); opacity: 1;}
+}
+@keyframes fadeInRightAn {
+    from{transform: translateX(5%); opacity: 0;}
+    to{transform: translateX(0%); opacity: 1;}
+}
+
+.fadeOutLeft {
+    animation: fadeOutLeftAn 0.5s;
+}
+
+.fadeOutRight {
+    animation: fadeOutRightAn 0.5s;
+}
+
+.fadeInLeft {
+    animation: fadeInLeftAn 0.5s;
+}
+
+.fadeInRight {
+    animation: fadeInRightAn 0.5s;
+}
+
 @keyframes dataFadeInAn {
     from{transform: translateY(-30px); opacity: 0;}
     to{transform: translateY(0); opacity: 1;}
