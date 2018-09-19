@@ -154,6 +154,7 @@ const vueApp = new Vue({
         commentWarn: false,
         emailWarn: false,
         nameWarn: false,
+        formShake: false,
         formValues: {
             name: '',
             email: '',
@@ -271,6 +272,10 @@ const vueApp = new Vue({
             vueApp.intLinksUnder(pos, vueApp.introLinks);
             vueApp.contactFadeOut = true;
             vueApp.portFadeOut = false;
+            vueApp.portItemClass.fadeOutLeft = false,
+            vueApp.portItemClass.fadeInLeft = false,
+            vueApp.portItemClass.fadeOutRight = false,
+            vueApp.portItemClass.fadeInRight = false
             setTimeout(() => {
                 vueApp.contactBool = false;
                 vueApp.portfolioBool = true;
@@ -292,6 +297,9 @@ const vueApp = new Vue({
             nameCheck ? this.nameWarn = false : this.nameWarn = true;
             emailCheck ? this.emailWarn = false : this.emailWarn = true;
             commentCheck ? this.commentWarn = false : this.commentWarn = true;
+            if(!nameCheck || !emailCheck || !commentCheck) { 
+                return false;
+            }
             
 
         },

@@ -100,14 +100,14 @@
                     <form  @submit.prevent="submitHandler">
                         <div class="formLabel">Name</div>
                         <div v-bind:class="{displayNone: !nameWarn}" class="formWarning">*Enter a valid name</div>
-                        <input v-model="formValues.name" name="name" class="formInput" placeholder="Kuros" type="text">
+                        <input v-model="formValues.name" v-bind:class="{formBorderWarning: nameWarn}" name="name" class="formInput" placeholder="Kuros" type="text">
                         <div class="formLabel">Email</div>
                         <div v-bind:class="{displayNone: !emailWarn}" class="formWarning">*Enter a email</div>
-                        <input v-model="formValues.email" class="formInput" name="email" type="email" placeholder="kuros@piedup.com">
+                        <input v-model="formValues.email" v-bind:class="{formBorderWarning: emailWarn}" class="formInput" name="email" type="email" placeholder="kuros@piedup.com">
                         <div class="formLabel">Message</div>
                         <div v-bind:class="{displayNone: !commentWarn}" class="formWarning">*Enter a longer message</div>
-                        <textarea v-model="formValues.comment" class="formTextArea" name="message" placeholder="Let's work together"></textarea>
-                        <input class="formButton" type="submit" value="Send">
+                        <textarea v-model="formValues.comment" v-bind:class="{formBorderWarning: commentWarn}" class="formTextArea" name="message" placeholder="Let's work together"></textarea>
+                        <input  class="formButton" type="submit" value="Send">
                     </form>
                 </div>
                 
