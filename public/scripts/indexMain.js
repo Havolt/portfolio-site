@@ -10,7 +10,7 @@ function toggleDisplay(el) {
 const vueApp = new Vue({
     el: '#vApp',
     data: {
-        scrollAllow : true,
+        scrollAllow : false,
         intTxtAnimData: {
             text1: 'Hi. I\'m'.split(''),
             name: 'Mark Fitzpatrick'.split(''),
@@ -162,25 +162,47 @@ const vueApp = new Vue({
             name: '',
             email: '',
             comment: ''
-        }
+        },
+        touchList: [],
+        touchAllow: true
         
         
     },
     methods: {
-        scrollHandler: function(e) {
+        scrollHandler: function(e, touchInp) {
             if(this.scrollAllow) {
-                if((!this.portfolioBool && !this.contactBool) && e.wheelDeltaY < 0) {
-                    this.portfolioFunc(0);
-                } else if(!this.contactBool && e.wheelDeltaY < 0) {
-                    this.contactFunc(1)
-                } else if ((!this.contactBool && this.portfolioBool) && e.wheelDeltaY > 0) {
-                    this.toggleIntro(false, true);
-                } else if (this.contactBool && e.wheelDeltaY > 0) {
-                    this.portfolioFunc(0);
+                if(e.wheelDeltaY < 0 || touchInp == 1) {
+                    if(!this.portfolioBool && !this.contactBool)  {
+                        this.portfolioFunc(0);
+                    }
+                    else if(!this.contactBool && this.portfolioBool) {
+                        this.contactFunc(1)
+                    }
+                } else if(e.wheelDeltaY > 0 || touchInp == -1)  {
+                    if(!this.contactBool && this.portfolioBool ) {
+                        this.toggleIntro(false, true);
+                    } else if(this.contactBool && !this.portfolioBool) {
+                        this.portfolioFunc(0);
+                    }
                 } else { return }
                 this.scrollAllow = false;
                 setTimeout(() => {vueApp.scrollAllow = true;}, 1500)
             }
+        },
+        touchHandler: function(e) {
+            if(this.touchAllow){
+                if(this.touchList.length < 8) {
+                    this.touchList.push(e.touches[0].clientY);
+                }
+                else {
+                    this.touchAllow = false;
+                    this.changeMenuPosTouchCheck(this.touchList, 'general');
+                }
+                if(this.touchList.length == 1) {
+                    setTimeout(()=>{vueApp.touchList = []; vueApp.touchAllow = true;},400)
+                }
+            }
+            
         },
         intTxtAnimate: function(v) {
             if(v.display1.length !== v.text1.length) {
@@ -341,7 +363,7 @@ const vueApp = new Vue({
             
             vueApp.portTouchList.push(e.targetTouches[0].clientX)
             if(vueApp.portTouchList.length > 7) {
-                vueApp.changeMenuPosTouchCheck(vueApp.portTouchList);
+                vueApp.changeMenuPosTouchCheck(vueApp.portTouchList, 'menu');
                 vueApp.checkingSwipe = true;
             } else if(vueApp.portTouchList.length == 1) {
                 setTimeout(() => {
@@ -349,10 +371,7 @@ const vueApp = new Vue({
                 }, 500)
             }
         },
-        changeMenuPosTouchCheck: (arr) => {
-
-            console.log(vueApp.menuCurrPos+1)
-            
+        changeMenuPosTouchCheck: (arr, context) => {
             let prevPos;
             let direction;
             let fullSwipe = true;
@@ -369,33 +388,37 @@ const vueApp = new Vue({
                     counter++;
                 } else {
                     if(direction == 1) {
-                        if(el > prevPos) {
-                            fullSwipe = false;
-                        }
+                        if(el > prevPos) { fullSwipe = false;}
                     }
                     else if(direction == -1) {
-                        if(el < prevPos) {
-                            fullSwipe = false;
-                        }
+                        if(el < prevPos) {fullSwipe = false;}
                     }
                 } 
             })
 
             if(fullSwipe) {
-                if((direction == 1) && ((vueApp.menuCurrPos*2) < vueApp.portItemsAll.length+1)) {
-                    vueApp.changeMenuPos((vueApp.menuCurrPos/2)+1)
+                if((direction == 1) && ((vueApp.menuCurrPos*2) < vueApp.portItemsAll.length+1) && context == 'menu') {
+                    vueApp.changeMenuPos((vueApp.menuCurrPos/2)+1);
                 }
-                else if((direction == -1) && (vueApp.menuCurrPos > 0)) {
-                    vueApp.changeMenuPos((vueApp.menuCurrPos/2)-1)
+                else if((direction == -1) && (vueApp.menuCurrPos > 0) && context == 'menu') {
+                    vueApp.changeMenuPos((vueApp.menuCurrPos/2)-1);
                 }
+                else if(direction == 1 && context == 'general') {
+                    console.log('up')
+                    vueApp.scrollHandler('', 1);
+                }
+                else if(direction == -1 && context == 'general') {
+                    console.log('down')
+                    vueApp.scrollHandler('', -1);
+                }
+                
             }
-            vueApp.portTouchList = [];
-            vueApp.checkingSwipe = false;
+            if(context == 'general') {
+                vueApp.portTouchList = [];
+                vueApp.checkingSwipe = false;
+            }
         },
         changeMenuPos: (pos) => {
-
-            console.log(pos)
-            
 
             vueApp.portItemClass.fadeOutLeft = false;
             vueApp.portItemClass.fadeOutRight = false;
@@ -467,5 +490,6 @@ const vueApp = new Vue({
     scriptLoad(scripts);
     toggleDisplay(document.querySelector('#vApp'));
     setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 10);
+    setTimeout(() => {vueApp.scrollAllow = true;}, 1500);
 })()
 
