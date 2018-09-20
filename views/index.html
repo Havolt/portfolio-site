@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<div class="displayNone" id="vApp">
+<div @wheel="scrollHandler" class="displayNone" id="vApp">
     <!--Entire site container-->
     <div class="siteSec">
         <!--Entire intro container-->
@@ -102,7 +102,7 @@
                         <div v-bind:class="{displayNone: !nameWarn}" class="formWarning">*Enter a valid name</div>
                         <input v-model="formValues.name" v-bind:class="{formBorderWarning: nameWarn}" name="name" class="formInput" placeholder="Kuros" type="text">
                         <div class="formLabel">Email</div>
-                        <div v-bind:class="{displayNone: !emailWarn}" class="formWarning">*Enter a email</div>
+                        <div v-bind:class="{displayNone: !emailWarn}" class="formWarning">*Enter a valid email</div>
                         <input v-model="formValues.email" v-bind:class="{formBorderWarning: emailWarn}" class="formInput" name="email" type="email" placeholder="kuros@piedup.com">
                         <div class="formLabel">Message</div>
                         <div v-bind:class="{displayNone: !commentWarn}" class="formWarning">*Enter a longer message</div>

@@ -10,6 +10,7 @@ function toggleDisplay(el) {
 const vueApp = new Vue({
     el: '#vApp',
     data: {
+        scrollAllow : true,
         intTxtAnimData: {
             text1: 'Hi. I\'m'.split(''),
             name: 'Mark Fitzpatrick'.split(''),
@@ -166,7 +167,22 @@ const vueApp = new Vue({
         
     },
     methods: {
-         intTxtAnimate: function(v) {
+        scrollHandler: function(e) {
+            if(this.scrollAllow) {
+                if((!this.portfolioBool && !this.contactBool) && e.wheelDeltaY < 0) {
+                    this.portfolioFunc(0);
+                } else if(!this.contactBool && e.wheelDeltaY < 0) {
+                    this.contactFunc(1)
+                } else if ((!this.contactBool && this.portfolioBool) && e.wheelDeltaY > 0) {
+                    this.toggleIntro(false, true);
+                } else if (this.contactBool && e.wheelDeltaY > 0) {
+                    this.portfolioFunc(0);
+                } else { return }
+                this.scrollAllow = false;
+                setTimeout(() => {vueApp.scrollAllow = true;}, 1500)
+            }
+        },
+        intTxtAnimate: function(v) {
             if(v.display1.length !== v.text1.length) {
                 v.display1.push(v.text1[v.display1.length]);
             } else if(v.displayName.length !== v.name.length) {
