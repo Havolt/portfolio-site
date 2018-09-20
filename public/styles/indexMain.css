@@ -341,6 +341,17 @@ body {
     to{transform: translateY(30px); opacity: 0;}
 }
 
+@keyframes dataFadeInRevAn {
+    from{transform: translateY(30px); opacity: 0;}
+    to{transform: translateY(0); opacity: 1;}
+}
+
+@keyframes dataFadeOutRevAn {
+    from{transform: translateY(0); opacity: 1;}
+    to{transform: translateY(-30px); opacity: 0;}
+}
+
+
 .portFadeIn {
     animation: dataFadeInAn 1.5s forwards;
 }
@@ -349,11 +360,19 @@ body {
     animation: dataFadeOutAn 0.5s forwards;
 }
 
+.portFadeOutRev {
+    animation: dataFadeOutRevAn 0.5s forwards;
+}
+
 
 /* Contact Section */
 
 .contactFadeIn {
     animation: dataFadeInAn 1.5s forwards;
+}
+
+.contactFadeInRev {
+    animation: dataFadeInRevAn 1.5s forwards;
 }
 
 .contactFadeOut {

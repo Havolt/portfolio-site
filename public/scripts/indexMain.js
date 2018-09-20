@@ -49,6 +49,7 @@ const vueApp = new Vue({
         //Portfolio Section
         portFadeIn: false, 
         portFadeOut: false,
+        portFadeOutRev: false,
         portImgAnimate: false,
         portItemClass: {
             fadeOutLeft: false,
@@ -62,6 +63,7 @@ const vueApp = new Vue({
         //Contact Section
         contactFadeIn: false, 
         contactFadeOut: false,
+        contactFadeInRev: false,
 
         //Minimize Section
         downArrowHide: true,
@@ -178,13 +180,14 @@ const vueApp = new Vue({
                     else if(!this.contactBool && this.portfolioBool) {
                         this.contactFunc(1)
                     }
+                    else {return}
                 } else if(e.wheelDeltaY > 0 || touchInp == -1)  {
                     if(!this.contactBool && this.portfolioBool ) {
                         this.toggleIntro(false, true);
                     } else if(this.contactBool && !this.portfolioBool) {
                         this.portfolioFunc(0);
-                    }
-                } else { return }
+                    } else {return}
+                } else {return }
                 this.scrollAllow = false;
                 setTimeout(() => {vueApp.scrollAllow = true;}, 1500)
             }
@@ -279,8 +282,10 @@ const vueApp = new Vue({
                     vueApp.contactBool = false;
                     vueApp.portFadeIn = false;
                     vueApp.contactFadeIn = false;
+                    vueApp.contactFadeInRev = false;
                     vueApp.contactFadeOut = false;
                     vueApp.portFadeOut = false;
+                    vueApp.portFadeOutRev = false;
                     vueApp.intTxtAnimate(vueApp.intTxtAnimData);
                     vueApp.intLinksUnder(99, vueApp.introLinks);
                 }, 500)
@@ -312,6 +317,7 @@ const vueApp = new Vue({
             vueApp.intLinksUnder(pos, vueApp.introLinks);
             vueApp.contactFadeOut = true;
             vueApp.portFadeOut = false;
+            vueApp.portFadeOutRev = false;
             vueApp.portItemClass.fadeOutLeft = false,
             vueApp.portItemClass.fadeInLeft = false,
             vueApp.portItemClass.fadeOutRight = false,
@@ -320,6 +326,7 @@ const vueApp = new Vue({
                 vueApp.contactBool = false;
                 vueApp.portfolioBool = true;
                 vueApp.contactFadeIn = false;
+                vueApp.contactFadeInRev = false;
                 vueApp.portFadeIn = true;
             }, 600)
             
@@ -349,13 +356,22 @@ const vueApp = new Vue({
             }
             vueApp.toggleIntro(true, false);
             vueApp.intLinksUnder(pos, vueApp.introLinks);
-            vueApp.portFadeOut = true;
+            if(!vueApp.portfolioBool) {
+                vueApp.portFadeOut = true;
+            } else {
+                vueApp.portFadeOutRev = true;
+            }
             vueApp.contactFadeOut = false;
             setTimeout(() => {
+                if(vueApp.portfolioBool) {
+                    vueApp.contactFadeInRev = true;
+                } else {
+                    vueApp.contactFadeIn = true;
+                }
                 vueApp.portfolioBool = false;
                 vueApp.contactBool = true;
                 vueApp.portFadeIn = false;
-                vueApp.contactFadeIn = true;
+                
             }, 600)
  
         },
@@ -404,14 +420,11 @@ const vueApp = new Vue({
                     vueApp.changeMenuPos((vueApp.menuCurrPos/2)-1);
                 }
                 else if(direction == 1 && context == 'general') {
-                    console.log('up')
                     vueApp.scrollHandler('', 1);
                 }
                 else if(direction == -1 && context == 'general') {
-                    console.log('down')
                     vueApp.scrollHandler('', -1);
                 }
-                
             }
             if(context == 'general') {
                 vueApp.portTouchList = [];
@@ -432,7 +445,6 @@ const vueApp = new Vue({
             }
             setTimeout(() => {
                 vueApp.menuCurrPos = pos * 2;
-                console.log(pos)
             },400);
             setTimeout(() => {
                 if(vueApp.portItemClass.fadeOutLeft == true) {
@@ -479,9 +491,7 @@ const vueApp = new Vue({
                 itemArr.push(this.portItemsAll[i]);
             }
             return itemArr;
-        }
-
-        
+        } 
     }
 });
 
