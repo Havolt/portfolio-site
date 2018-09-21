@@ -171,6 +171,15 @@ const vueApp = new Vue({
         
     },
     methods: {
+        preLoadPortImages: function() {
+            this.portItemsAll.map((el) => {
+                const imgLoad = new Image();
+                imgLoad.classList.add('displayNone');
+                imgLoad.src = el.img;
+                document.querySelector('.hImg').appendChild(imgLoad)
+            })
+            document.querySelector('#vApp').removeChild(document.querySelector('.hImg'));
+        },
         scrollHandler: function(e, touchInp) {
             if(this.scrollAllow) {
                 if(e.wheelDeltaY < 0 || touchInp == 1) {
@@ -499,6 +508,7 @@ const vueApp = new Vue({
 (function initFunctions() {
     scriptLoad(scripts);
     toggleDisplay(document.querySelector('#vApp'));
+    vueApp.preLoadPortImages()
     setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 10);
     setTimeout(() => {vueApp.scrollAllow = true;}, 1500);
 })()
