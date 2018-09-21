@@ -1,3 +1,10 @@
+(function() {
+    const fav =  document.createElement('link');
+    fav.href = '/imgs/favicon-mf.png';
+    fav.rel = 'shortcut icon';
+    document.getElementsByTagName('head')[0].appendChild(fav);
+})();
+
 function scriptLoad(items) {
     if(typeof items === 'object'){
         items.map((el) => {
