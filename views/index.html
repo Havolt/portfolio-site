@@ -96,7 +96,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="contactForm">
+                
+                <div  class="contactForm">
+                    <div v-bind:class="{contactComplete, displayNone: !contactComplete}">
+                        <div v-bind:class="{okText: contactComplete}">Message Recieved. I will be in touch soon.</div>
+                    </div>
                     <form  @submit.prevent="submitHandler">
                         <div class="formLabel">Name</div>
                         <div v-bind:class="{displayNone: !nameWarn}" class="formWarning">*Enter a valid name</div>
@@ -107,7 +111,7 @@
                         <div class="formLabel">Message</div>
                         <div v-bind:class="{displayNone: !commentWarn}" class="formWarning">*Enter a longer message</div>
                         <textarea v-model="formValues.comment" v-bind:class="{formBorderWarning: commentWarn}" class="formTextArea" name="message" placeholder="Let's work together"></textarea>
-                        <input  class="formButton" type="submit" value="Send">
+                        <input v-bind:class="{buttonDisabled}"  class="formButton" type="submit" value="Send">
                     </form>
                 </div>
                 

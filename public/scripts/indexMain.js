@@ -169,9 +169,9 @@ const vueApp = new Vue({
         touchAllow: true,
         touchCheckList: [],
         checkGen: false,
-        checkPort: false
-        
-        
+        checkPort: false,
+        buttonDisabled: false,
+        contactComplete: false
     },
     methods: {
         preLoadPortImages: function() {
@@ -346,6 +346,7 @@ const vueApp = new Vue({
             } 
             else {
                 console.log('ready for sending')
+                vueApp.buttonDisabled = true;
                 
                 fetch('/form', {
                     method: "POST", 
@@ -365,6 +366,7 @@ const vueApp = new Vue({
                 })
                 .then((res) => {
                     if(res.status == 200){
+                        vueApp.contactComplete = true;
                         console.log('Everything went fine');
                     }
                 })

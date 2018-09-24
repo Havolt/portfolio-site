@@ -416,6 +416,7 @@ body {
 
 
 
+
 .formTextArea {
     outline: none;
     padding: 4px 0;
@@ -483,6 +484,45 @@ body {
 .contactItem > a > div {
     margin-right: 10px;
     display: inline-block;
+}
+
+.buttonDisabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+}
+
+@keyframes conCompleteAn {
+    from{width: 0%}
+    to{width: 51%}
+}
+
+.contactComplete {
+    background: #f7f7f7;
+    position: absolute;
+    left: 48%;
+    top: 0;
+    height: 102%;
+    animation: conCompleteAn 1s forwards;
+    z-index: 100;
+}
+
+@keyframes okTextAn {
+    0%{margin-top: -200px; opacity: 0;}
+    80%{margin-top: -100px;opacity: 0;}
+    100%{margin-top: 0; opacity: 1;}
+
+}
+
+.okText {
+    background: rgb(96, 202, 26);
+    padding: 4px;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: 1s okTextAn forwards;
 }
 
 
