@@ -166,7 +166,10 @@ const vueApp = new Vue({
             comment: ''
         },
         touchList: [],
-        touchAllow: true
+        touchAllow: true,
+        touchCheckList: [],
+        checkGen: false,
+        checkPort: false
         
         
     },
@@ -200,21 +203,6 @@ const vueApp = new Vue({
                 this.scrollAllow = false;
                 setTimeout(() => {vueApp.scrollAllow = true;}, 1500)
             }
-        },
-        touchHandler: function(e) {
-            if(this.touchAllow){
-                if(this.touchList.length < 8) {
-                    this.touchList.push(e.touches[0].clientY);
-                }
-                else {
-                    this.touchAllow = false;
-                    this.changeMenuPosTouchCheck(this.touchList, 'general');
-                }
-                if(this.touchList.length == 1) {
-                    setTimeout(()=>{vueApp.touchList = []; vueApp.touchAllow = true;},400)
-                }
-            }
-            
         },
         intTxtAnimate: function(v) {
             if(v.display1.length !== v.text1.length) {
@@ -384,19 +372,84 @@ const vueApp = new Vue({
             }, 600)
  
         },
-        changeMenuPosTouch: (e) => {
+        touchHandler: function(e) {
+            if(!vueApp.checkGen){
+                if(this.touchList.length < 8) {
+                    this.touchList.push(e.touches[0].clientY);
+                }
+                else {
+                        vueApp.touchCheckList.push({arr: vueApp.touchList, ctx: 'general'});
+                        vueApp.checkGen = true
+                        if(vueApp.touchCheckList.length == 1){  
+                            setTimeout(() => {
+                                vueApp.touchSort();
+                            },50);
+                        }
+                    //this.touchAllow = false;
+                    //this.touchCheck(this.touchList, 'general');
+                }
+                if(this.touchList.length == 1) {
+                    setTimeout(()=>{
+                        vueApp.checkGen = false;
+                        vueApp.checkPort = false;
+                        vueApp.touchCheckList = [];
+                        vueApp.touchList = []
+                        vueApp.portTouchList = [];
+                    },400)
+                }
+            }
             
-            vueApp.portTouchList.push(e.targetTouches[0].clientX)
-            if(vueApp.portTouchList.length > 7) {
-                vueApp.changeMenuPosTouchCheck(vueApp.portTouchList, 'menu');
-                vueApp.checkingSwipe = true;
+        },
+        changeMenuPosTouch: (e) => {
+            if(!vueApp.checkPort) {
+                vueApp.portTouchList.push(e.targetTouches[0].clientX)
+                if(vueApp.portTouchList.length > 8) {
+                    vueApp.touchCheckList.push({arr: vueApp.portTouchList, ctx: 'menu'});
+                    vueApp.checkPort = true
+                    if(vueApp.touchCheckList.length == 1){  
+                        setTimeout(() => {
+                            vueApp.touchSort();
+                        },50);
+                    }
+                }
+                //vueApp.touchCheck(vueApp.portTouchList, 'menu');
+                //vueApp.checkingSwipe = true;
             } else if(vueApp.portTouchList.length == 1) {
                 setTimeout(() => {
+                    vueApp.checkGen = false;
+                    vueApp.checkPort = false;
+                    vueApp.touchCheckList = [];
+                    vueApp.touchList = []
                     vueApp.portTouchList = [];
-                }, 500)
+                }, 400)
             }
         },
-        changeMenuPosTouchCheck: (arr, context) => {
+        touchSort: function() {
+
+            if(vueApp.touchCheckList.length == 1) {
+                vueApp.touchCheck(vueApp.touchCheckList[0].arr, vueApp.touchCheckList[0].ctx);
+            } 
+            else {
+                let sizeArr = [];
+                vueApp.touchCheckList.map((el) => {
+                    let c;
+                    if(el.arr[0] < el.arr[el.arr.length-1]) {
+                        c = el.arr[el.arr.length-1] - el.arr[0];
+                    } else {
+                        c = el.arr[0] - el.arr[el.arr.length-1];
+                    }
+                    sizeArr.push(c);
+                })
+                if(sizeArr[0] > sizeArr[1]) {
+                    vueApp.touchCheck(vueApp.touchCheckList[0].arr, vueApp.touchCheckList[0].ctx);
+                }else {
+                    vueApp.touchCheck(vueApp.touchCheckList[1].arr, vueApp.touchCheckList[1].ctx);
+                }
+            }
+
+           
+        },
+        touchCheck: (arr, context) => {
             let prevPos;
             let direction;
             let fullSwipe = true;
@@ -435,10 +488,13 @@ const vueApp = new Vue({
                     vueApp.scrollHandler('', -1);
                 }
             }
-            if(context == 'general') {
-                vueApp.portTouchList = [];
-                vueApp.checkingSwipe = false;
-            }
+
+            vueApp.checkGen = false;
+            vueApp.checkPort = false;
+            vueApp.touchCheckList = [];
+            vueApp.touchList = []
+            vueApp.portTouchList = [];
+            
         },
         changeMenuPos: (pos) => {
 
