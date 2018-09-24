@@ -363,7 +363,11 @@ const vueApp = new Vue({
                         comment: this.formValues.comment
                     }), 
                 })
-                .then()
+                .then((res) => {
+                    if(res.status == 200){
+                        console.log('Everything went fine');
+                    }
+                })
             }
         },
         contactFunc: (pos) => {
