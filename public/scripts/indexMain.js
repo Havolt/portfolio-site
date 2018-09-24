@@ -343,9 +343,28 @@ const vueApp = new Vue({
             commentCheck ? this.commentWarn = false : this.commentWarn = true;
             if(!nameCheck || !emailCheck || !commentCheck) { 
                 return false;
+            } 
+            else {
+                console.log('ready for sending')
+                
+                fetch('/form', {
+                    method: "POST", 
+                    mode: "cors", 
+                    cache: "no-cache",
+                    credentials: "same-origin", 
+                    headers: {
+                        "Content-Type": "application/json; charset=utf-8",
+                    },
+                    redirect: "follow", 
+                    referrer: "no-referrer", 
+                    body: JSON.stringify({
+                        name: this.formValues.name,
+                        email: this.formValues.email,
+                        comment: this.formValues.comment
+                    }), 
+                })
+                .then()
             }
-            
-
         },
         contactFunc: (pos) => {
             if(vueApp.bioVisible) {
@@ -385,8 +404,6 @@ const vueApp = new Vue({
                                 vueApp.touchSort();
                             },50);
                         }
-                    //this.touchAllow = false;
-                    //this.touchCheck(this.touchList, 'general');
                 }
                 if(this.touchList.length == 1) {
                     setTimeout(()=>{
@@ -412,8 +429,6 @@ const vueApp = new Vue({
                         },50);
                     }
                 }
-                //vueApp.touchCheck(vueApp.portTouchList, 'menu');
-                //vueApp.checkingSwipe = true;
             } else if(vueApp.portTouchList.length == 1) {
                 setTimeout(() => {
                     vueApp.checkGen = false;
