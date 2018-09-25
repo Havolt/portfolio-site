@@ -23,7 +23,10 @@
                     </a>
                 </div>
             
-            <div class="headCurrItem"></div>
+            <div class="headInfo">
+                <div @click="toggleInfo" v-if="!infoOpen" class="headInfoIcon fa fa-book"></div>
+                <div @click="toggleInfo" v-else class="headInfoIcon fa fa-book-open"></div>
+            </div>
             <div class="headList"></div>
         </div>
     </div>

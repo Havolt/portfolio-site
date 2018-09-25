@@ -15,10 +15,11 @@ a{
 }
 
 .headContain {
-    display: inline-flex;
+    background: white;
+    display: flex;
     position: fixed;
     height: 56px;
-    margin-top: 4px;
+    padding-top: 4px;
 }
 
 .headContain > div {
@@ -36,7 +37,7 @@ a{
 
 .headContain {
     width: 100%;
-    border-bottom: 1px solid rgb(201, 201, 201);
+    border-bottom: 1px solid rgb(87, 87, 87);
 }
 
 .headPic {
@@ -53,10 +54,31 @@ a{
     font-size: 28px;
     font-weight: bold;
     display: table-cell;
+    text-indent: 4px;
     vertical-align: middle;
 }
 
-@media only screen and (min-width: 841px) {
+.headInfo {
+    text-align:center;
+    line-height: 67px;
+}
+
+.headInfoIcon {
+    color: black;
+    font-size: 28px;
+    text-align: center;
+    margin: 0 auto;  
+    padding: 8px 9px;
+    border-radius: 2px;
+}
+
+.headInfoIcon:hover {
+    color: black;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px grey;
+}
+
+@media only screen and (min-width: 845px) {
 
     .headTextShort{ 
         display: none;
@@ -65,7 +87,7 @@ a{
 }
 
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 845px) {
 
     .headTextLong{ 
         display: none;
