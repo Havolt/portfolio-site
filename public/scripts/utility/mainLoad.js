@@ -18,6 +18,6 @@ onload = () => {
         document.head.appendChild(styleS);
 
         let pathName = window.location.pathname.split('').splice(6).join('');
-        scriptLoad(['/port/portHeader.js'])
+        scriptLoad([`/port/${pathName}.js`,'/port/portHeader.js'])
     }
 }

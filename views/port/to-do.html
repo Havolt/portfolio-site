@@ -12,7 +12,6 @@
 
     <div id="vHead">
         <div class="headContain">
-            
                 <div class="headLogo">
                     <a href="/">
                         <div class="headPic">
@@ -25,15 +24,20 @@
             
             <div class="headInfo">
                 <div @click="toggleInfo" v-if="!infoOpen" class="headInfoIcon fa fa-book"></div>
-                <div @click="toggleInfo" v-else class="headInfoIcon fa fa-book-open"></div>
+                <div @click="toggleInfo" v-else class="headInfoIcon headInfoIconOpen fa fa-book-open"></div>
             </div>
             <div class="headList"></div>
+        </div>
+        <div v-bind:class="{headInfoOpen: infoOpen, headInfoClose: infoClose}" class="headInfoSec">
+            <div class="headInfoHeading">{{headInfoHeading}}</div>
+            <div class="headInfoPara">{{headInfoParagraph}}</div>
+            <div @click="toggleInfo" class="headInfoArrow fa fa-angle-up"></div>
         </div>
     </div>
 
 
     <script src="/scripts/utility/scriptLoad.js"></script>
-    <script src="/scripts/utility/vueLoad.js"></script>
+    <script src="/scripts/utility/mainLoad.js"></script>
     
 </body>
 </html>

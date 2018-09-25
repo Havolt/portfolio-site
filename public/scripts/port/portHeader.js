@@ -7,11 +7,21 @@ const vh = new Vue({
         logoNameFull: 'Mark Fitzpatrick',
         
         //Info Section
-        infoOpen: false
+        infoOpen: false,
+        infoClose: false,
+        headInfoHeading: '',
+        headInfoParagraph: ''
     },
     methods: {
         toggleInfo: function() {
             this.infoOpen = !this.infoOpen;
+            this.infoClose = !this.infoOpen;
         }
     }
-})
+});
+
+
+(function initSettings(){
+    vh.headInfoHeading = headInfoData.title;
+    vh.headInfoParagraph = headInfoData.paragraph;
+})();
