@@ -13,12 +13,15 @@ app.get('/', (req, res) => {
 });
 
 app.post('/form', (req, res) => {
-    console.log(req.body);
     let parseObj = JSON.stringify(req.body.name) + '\n' + JSON.stringify(req.body.email) + '\n' + JSON.stringify(req.body.comment) + '\n \n \n';
     fs.appendFile('comments.txt', parseObj, function(err) {
         if(err) throw err;
     })
     res.send({item: 'recieved'})
+})
+
+app.get('/port/to-do', (req, res) => {
+    res.sendFile(__dirname + '/views/port/to-do.html')
 })
 
 app.listen(port, () => {console.log(`Listening on port ${port}`)});

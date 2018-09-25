@@ -1,4 +1,3 @@
-
 //Place scripts needed to load after Vue here
 const scripts = ['introSec.js'];
 
@@ -367,7 +366,11 @@ const vueApp = new Vue({
                 .then((res) => {
                     if(res.status == 200){
                         vueApp.contactComplete = true;
-                        console.log('Everything went fine');
+                        setTimeout(() => {
+                            vueApp.formValues.name = '';
+                            vueApp.formValues.email = '';
+                            vueApp.formValues.comment = '';
+                        },400)
                     }
                 })
             }

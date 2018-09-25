@@ -1,0 +1,35 @@
+"Mark Fitzpatrick"
+"markfitz815@gmail.com"
+"<div class=\"okText\">Message Recieved. I will be in touch soon.</div>"
+ 
+ 
+"Mark Fitzpatrick"
+"markfitz815@gmail.com"
+"this is a message i am writing"
+ 
+ 
+"Mark Fitzpatrick"
+"markfitz815@gmail.com"
+"this is a message i am writing"
+ 
+ 
+"Mark Fitzpatrick"
+"markfitz815@gmail.com"
+"this is a message i am writing"
+ 
+ 
+"Mark Fitzpatrick"
+"markfitz815@gmail.com"
+"this is a message i am writing"
+ 
+ 
+"Mark Fitzpatrick"
+"markfitz815@gmail.com"
+"this is a message i am writing"
+ 
+ 
+"Mark Fitzpatrick"
+"markfitz815@gmail.com"
+"vueApp.formValues.name = '';\n                        vueApp.formValues.email = '';\n                        vueApp.formValues.comment = '';"
+ 
+ 
