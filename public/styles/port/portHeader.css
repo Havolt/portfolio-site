@@ -1,0 +1,74 @@
+body {
+    background: #f7f7f7;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.headContain {
+    display: inline-flex;
+    position: fixed;
+    height: 56px;
+    margin-top: 4px;
+}
+
+.headContain > div {
+    width: 32%;
+    margin: 0 auto;
+}
+
+.headLogo {
+    display: table;
+}
+
+.headLogo:hover {
+    cursor: pointer;
+}
+
+.headContain {
+    width: 100%;
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.headPic {
+    display: table-cell;
+
+}
+
+.headPic > img {
+    width: 52px;
+    border-radius: 50%;
+}
+
+.headText {
+    font-size: 28px;
+    font-weight: bold;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width: 841px) {
+
+    .headTextShort{ 
+        display: none;
+    }
+
+}
+
+
+@media only screen and (max-width: 840px) {
+
+    .headTextLong{ 
+        display: none;
+    }
+
+}

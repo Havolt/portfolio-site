@@ -2,6 +2,7 @@
 const vh = new Vue({
     el: '#vHead',
     data: {
-        test: 'moo'
+        logoName: 'Mark F',
+        logoNameFull: 'Mark Fitzpatrick'
     }
 })
