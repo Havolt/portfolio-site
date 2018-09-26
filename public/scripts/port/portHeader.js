@@ -14,12 +14,18 @@ const vh = new Vue({
             icon: '',
             paragraph: [],
             links: []
-        }
+        },
+
+        //Drop Down Section
+        dropDownBool: false
     },
     methods: {
         toggleInfo: function() {
             this.infoOpen = !this.infoOpen;
             this.infoClose = !this.infoOpen;
+        },
+        toggleDrop: function() {
+            this.dropDownBool = !this.dropDownBool;
         }
     }
 });
