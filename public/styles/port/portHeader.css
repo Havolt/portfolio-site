@@ -78,7 +78,6 @@ a{
 }
 
 .headInfoIcon:hover {
-    color: black;
     cursor: pointer;
     box-shadow: 0px 0px 2px grey;
 }
@@ -95,17 +94,17 @@ a{
 }
 
 .headInfoHeading {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
-    margin: 20px 0px;
+    margin: 42px 0px;
     
 }
 
 .headInfoPara {
-    margin-bottom: 30px;
+    font-size: 16px;
     width: 90%;
-    margin: 0px auto 30px auto;
+    margin: 0px auto 20px auto;
     text-align: left;
 }
 

@@ -30,7 +30,7 @@
         </div>
         <div v-bind:class="{headInfoOpen: infoOpen, headInfoClose: infoClose}" class="headInfoSec">
             <div class="headInfoHeading">{{headInfoHeading}}</div>
-            <div class="headInfoPara">{{headInfoParagraph}}</div>
+            <div v-for="item in headInfoParagraph"class="headInfoPara">{{item}}</div>
             <div @click="toggleInfo" class="headInfoArrow fa fa-angle-up"></div>
         </div>
     </div>

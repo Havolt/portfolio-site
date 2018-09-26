@@ -10,7 +10,7 @@ const vh = new Vue({
         infoOpen: false,
         infoClose: false,
         headInfoHeading: '',
-        headInfoParagraph: ''
+        headInfoParagraph: []
     },
     methods: {
         toggleInfo: function() {
@@ -22,6 +22,21 @@ const vh = new Vue({
 
 
 (function initSettings(){
-    vh.headInfoHeading = headInfoData.title;
-    vh.headInfoParagraph = headInfoData.paragraph;
+
+    let pathName = window.location.pathname.split('').splice(6).join('');
+
+    fetch("/scripts/port/portItemsInfo.json")
+    .then(response => response.json())
+    .then((json) => {
+        json.items.map((el) => {
+            if(el.route == pathName) {
+                console.log('yes!')
+                vh.headInfoHeading = el.name;
+                el.description.map((el) => {
+                    vh.headInfoParagraph.push(el);
+                })
+            }
+        })
+
+    });
 })();

@@ -1,0 +1,14 @@
+{
+    "items": [
+        {
+            "name" : "To-do",
+            "route": "to-do",
+            "icon" : "fas fa-list-ul",
+            "description": [
+                "This application is built using purely vanilla JavaScript. I wished to test my abilities to get around all the problems involved in creating a to-do list without relying on a framework.",
+                "Within the application the user has the ability to create new tasks, filter which ones they wish to see on screen depending on certain criteria and also the ability to remove tasks which are no longer wanted.",
+                "There is also the ability to favourite tasks which will highlight them and bring them to the top of the list. The checkboxes are used to mark a list item as completed."
+            ]
+        }
+    ]
+}
