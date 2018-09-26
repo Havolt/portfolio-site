@@ -9,6 +9,71 @@
                 "Within the application the user has the ability to create new tasks, filter which ones they wish to see on screen depending on certain criteria and also the ability to remove tasks which are no longer wanted.",
                 "There is also the ability to favourite tasks which will highlight them and bring them to the top of the list. The checkboxes are used to mark a list item as completed."
             ]
+        },
+        {
+            "name" : "Tetris",
+            "route": "tetris",
+            "icon" : "fas fa-gamepad",
+            "description": [
+                "Note: This game requires the use of a keyboard to play.",
+                "This is my own version of Tetris. It uses many of the elements seen in common variations of Tetris such as score multipliers for multiple stacks removed at once and the ability to rotate pieces.",
+                "There is a timer in the game, along with a list of controls and multiple difficulty levels. I have also implemented a pause timer. I hope you enjoy playing my rendition of this classic video game."
+            ]
+        },
+        {
+            "name" : "No Context Creepy",
+            "route": "nc-creepy",
+            "icon" : "fas fa-skull",
+            "description": [
+                "This application generates randomly selected creepy stories for the user's viewing pleasure.",
+                "To generate the stories the app utilizes a reddit API. It selects a random story from the website which contains set keywords aimed at finding relevant stories. There it also a few other conditions put in place to try and prevent stories that would be uninteresting from showing up.",
+                "I had to utilize and work around Reddit's comment section to turn user links into clickable ones and to remove some of the garbish values which show up. The user has the ability to select between short, long or all stories.",
+                "The previous 20 stories are saved to a list which the user can scroll through and the app sends requests and preloads data to avoid the user having to wait too long between stories."
+            ]
+        },
+        {
+            "name" : "Wikipedia Search",
+            "route": "wiki-search",
+            "icon" : "fab fa-wikipedia-w",
+            "description": [
+                "This Wikipedia search engine is created throug utilizing the Wikipedia API. When the user enters a search request then the app brings back the 20 most relevant results.",
+                "The results are shown within the own link which when clicked on will bring the user to the Wikipedia article. The link contains a brief description of the article. There is also a random article button for the adventurous user."
+            ]
+        },
+        {
+            "name" : "Offline Hacker",
+            "route": "offline-hacker",
+            "icon" : "far fa-keyboard",
+            "description": [
+                "Offline Hacker is my entry for the Js13kGames competition which is a JavaScript coding competition for HTML5 game developers which limits the size of the entered games to being below 13 kilobytes.",
+                "The genre of Offline Hacker would come under typing game. The aim of the game is to prevent the words that appear on screen from moving to the right hand side of the screen. To do this the player must type the words as fast as they can to destroy them.",
+                "The player will have three lives and as the user completes more and more words the game will keep getting faster. The game is drawn using canvas. I've tried to emulate the aesthetic of hacking as shown in terrible interpretations in film."
+            ]
+        },
+        {
+            "name" : "Checkers",
+            "route": "checkers",
+            "icon" : "fas fa-chess-board",
+            "description": [
+                "This is my attempt at making the board game checkers/draughts with JavaScript. It utilizes a lot of the most commen rules in checkers such as mandatory moves and multiple takes.",
+                "The bottom of the app displays who's current move it is and tells them if a mandatory take must be made. I hope you enjoy playing."
+            ]
+        },
+        {
+            "name" : "Calculator",
+            "route": "calculator",
+            "icon" : "fas fa-calculator",
+            "description": [
+                "This app is purely a simple calculator. It can string multiple operations together like most common modern calculators. It has the ability to work with decimal numbers and numbers and operations can be done by either utilizing the buttons on the calculator or through the use of they keyboard."
+            ]
+        },
+        {
+            "name" : "Previous Portfolio",
+            "route": "prev-portfolio",
+            "icon" : "fas fa-briefcase",
+            "description": [
+                "I utilized this old portfolio during most of 2018. I feel the layout is a bit dated now looking back at it but there are some items on it I feel would still hold up if they were given a more modern touch up with css."
+            ]
         }
     ]
 }

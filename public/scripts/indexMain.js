@@ -109,17 +109,17 @@ const vueApp = new Vue({
             {name: 'Tetris', img: '/imgs/port-t.jpg',
             link: '/port/tetris'},
             {name: 'No Context Creepy', img: '/imgs/port-ncc.jpg',
-            link: '/port/no-context-creepy'},
+            link: '/port/nc-creepy'},
             {name: 'Wikipedia Search', img: '/imgs/port-wa.jpg',
             link: '/port/wikipedia-search'},
-            {name: 'Offline Hacking', img: '/imgs/port-oh.jpg',  
-            link: '/port/offline-hacking'},
+            {name: 'Offline Hacker', img: '/imgs/port-oh.jpg',  
+            link: '/port/offline-hacker'},
             {name: 'Checkers', img: '/imgs/port-d.jpg',
             link: '/port/checkers'},
             {name: 'Calculator', img: '/imgs/port-c.jpg',
             link: '/port/calculator'},
             {name: 'Previous Portfolio', img: '/imgs/port-p.jpg',
-            link: '/port/previous-portfolio'}   
+            link: '/port/prev-portfolio'}   
         ],
         menuCurrPos : 0,
         contactInfo: [
