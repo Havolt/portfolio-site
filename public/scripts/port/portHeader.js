@@ -12,7 +12,8 @@ const vh = new Vue({
         headInfo: {
             heading: '',
             icon: '',
-            paragraph: []
+            paragraph: [],
+            links: []
         }
     },
     methods: {
@@ -39,6 +40,9 @@ const vh = new Vue({
                 el.description.map((el) => {
                     vh.headInfo.paragraph.push(el);
                 })
+            }
+            else {
+                vh.headInfo.links.push(el);
             }
         })
 

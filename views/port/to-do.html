@@ -33,10 +33,17 @@
                         <div class="headListMainTxtText">{{headInfo.heading}}</div>
                         <div class="headListMainTxtArrow fas fa-sort-down"></div>
                     </div>
+                    <div class="headListDrop">
+                        <div class="headListDropItem" v-for="item in headInfo.links">
+                            <a v-bind:href="item.route">
+                                <div v-bind:class="item.icon" class="headListDropIcon"></div>
+                                <div class="headListDropText">{{item.name}}</div>
+                            </a> 
+                        </div>
+                    </div>
                 </div>
-                <div class="headListDrop"></div>
-
                 </div>
+                
             </div>
         
             <div v-bind:class="{headInfoOpen: infoOpen, headInfoClose: infoClose}" class="headInfoSec">
