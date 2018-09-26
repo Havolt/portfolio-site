@@ -9,8 +9,11 @@ const vh = new Vue({
         //Info Section
         infoOpen: false,
         infoClose: false,
-        headInfoHeading: '',
-        headInfoParagraph: []
+        headInfo: {
+            heading: '',
+            icon: '',
+            paragraph: []
+        }
     },
     methods: {
         toggleInfo: function() {
@@ -31,9 +34,10 @@ const vh = new Vue({
         json.items.map((el) => {
             if(el.route == pathName) {
                 console.log('yes!')
-                vh.headInfoHeading = el.name;
+                vh.headInfo.heading = el.name;
+                vh.headInfo.icon = el.icon;
                 el.description.map((el) => {
-                    vh.headInfoParagraph.push(el);
+                    vh.headInfo.paragraph.push(el);
                 })
             }
         })

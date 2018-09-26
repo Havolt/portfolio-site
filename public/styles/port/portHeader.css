@@ -47,7 +47,8 @@ a{
 }
 
 .headPic > img {
-    width: 52px;
+    padding-top: 2px;
+    width: 48px;
     border-radius: 50%;
 }
 
@@ -139,6 +140,44 @@ a{
     animation: headInfoCloseAn 1s;
 }
 
+
+.headListMain {
+    width: 90%;
+    font-size: 18px;
+    margin: 14px auto;
+    border-radius: 2px;
+    position: relative;
+}
+
+.headListMain:hover {
+    box-shadow: 0px 0px 2px grey;
+    cursor: pointer;
+}
+
+.headListMainTxt {
+    padding: 6px;
+}
+
+.headListMainTxt > div {
+    display: inline-block;
+}
+
+.headListMainTxtIcon {
+    color: rgb(33, 115, 168);
+}
+
+.headListMainTxtArrow {
+    position: absolute;
+    right: 8px;
+    top: 12%;
+    font-size: 20px;
+}
+
+.headListDrop {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
 
 @media only screen and (min-width: 845px) {
 
