@@ -751,14 +751,7 @@ body {
         width: 80%;
     }
 
-    @keyframes introImgConSmallAn {
-        from{ width: 240px}
-        to{ width: 60px}
-    }
-
-    .introImgConSmall > img {
-        animation: 1s introImgConSmallAn forwards;
-    }
+    
 
     @keyframes mxIntArwConAn {
         from{height: 30px; line-height: 30px; }
@@ -770,16 +763,16 @@ body {
         animation: mxIntArwConAn 1s forwards;
     }
 
-    @keyframes mIntArwConAn {
-        from {height: 240px; line-height: 240px; }
-        to{height: 30px; line-height: 30px; }
-    }
-    
-    .minIntroArrowCon {
-        animation: mIntArwConAn 1s forwards;
+    @keyframes introImgConSmallAn {
+        from{ width: 240px}
+        to{ width: 60px}
     }
 
-    
+    .introImgConSmall > img {
+        margin: -3vh auto 20px auto;
+        animation: 1s introImgConSmallAn forwards;
+    }
+
 
     .introArrowSmall {
         padding-left: 2px;

@@ -48,6 +48,8 @@ const vueApp = new Vue({
         introArrowSmall : false,
         introLinkSmall: false,
         boldNameSmall: false,
+        removingLetters: false,
+        addingLetters: false,
 
         //Portfolio Section
         portFadeIn: false, 
@@ -211,17 +213,25 @@ const vueApp = new Vue({
             }
         },
         intTxtAnimate: function(v) {
-            if(v.display1.length !== v.text1.length) {
-                v.display1.push(v.text1[v.display1.length]);
-            } else if(v.displayName.length !== v.name.length) {
-                v.displayName.push(v.name[v.displayName.length]);
-            } else if(v.display2.length !== v.text2.length) {
-                v.display2.push(v.text2[v.display2.length]);
-            }else {
-                this.linksVisible = true;
-                return;
+            
+            if(!vueApp.removingLetters){
+                vueApp.addingLetters = true;
+                if(v.display1.length !== v.text1.length) {
+                    v.display1.push(v.text1[v.display1.length]);
+                } else if(v.displayName.length !== v.name.length) {
+                    v.displayName.push(v.name[v.displayName.length]);
+                } else if(v.display2.length !== v.text2.length) {
+                    v.display2.push(v.text2[v.display2.length]);
+                }else {
+                    this.linksVisible = true;
+                    vueApp.addingLetters = false;
+                    return;
+                }
+                setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 25)
             }
-            setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 25)
+            else {
+                setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 25)
+            }
         },
         //toggle display of bio section
         showBio: function(fromArrow) {
@@ -267,18 +277,31 @@ const vueApp = new Vue({
             }
         },
         removeIntTxt: (v) => {
-            let cont = false;
-            if(v.display1.length > 0 && v.display2.length == v.display1.length) {
-                v.display1.pop();
-                cont = true;
+            
+            
+            if(!vueApp.addingLetters) {
+                vueApp.removingLetters = true;
+                let cont = false;
+                if(v.display1.length > 0 && v.display2.length == v.display1.length) {
+                    v.display1.pop();
+                    cont = true;
+                }
+                if(v.display2.length > 0) {
+                    v.display2.pop();
+                    cont = true;
+                }
+                if(cont == true) {
+                    setTimeout(() => {vueApp.removeIntTxt(v)}, 15);
+                }
+                else {
+                    vueApp.removingLetters = false;
+                }
             }
-            if(v.display2.length > 0) {
-                v.display2.pop();
-                cont = true;
-            }
-            if(cont == true) {
+            else {
                 setTimeout(() => {vueApp.removeIntTxt(v)}, 15);
             }
+            
+            
         },
         toggleIntro: (min, max) => {
             
