@@ -726,7 +726,56 @@ body {
 
     .portItemName {
         font-size: 22px;
-        
+    }
+
+    .contactInfo {
+        display: block;
+        width: 90%;
+        padding-top: 0;
+    }
+
+    .contactForm {
+        display: block;
+        width: 90%;
+    }
+
+    .contactItem {
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 4px;
+        text-align: center;
+    }
+
+    .formInput { 
+        font-size: 18px;
+    }
+
+    .formTextArea {
+        font-size: 18px;
+        height: 100px;
+    }
+
+    .formButton {
+        font-size: 20px;
+    }
+
+    .contactIconSmall {
+        display: inline-block;
+        width: 33.33%;
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .contactIconSmall a>div:nth-child(2) {
+        display: none;
+    }
+
+    .contactInfo > div:nth-child(3) {
+        text-align: right;
+    }
+
+    .contactInfo > div:nth-child(5) {
+        text-align: left;
     }
 
 }

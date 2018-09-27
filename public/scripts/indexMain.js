@@ -139,18 +139,21 @@ const vueApp = new Vue({
             {
                 icon: 'fab fa-github',
                 text: 'Github',
+                isIcon: 'contactIconSmall',
                 link: 'https://github.com/Havolt',
                 target: '_blank'
             },
             {
                 icon: 'fab fa-linkedin',
                 text: 'LinkedIn',
+                isIcon: 'contactIconSmall',
                 link: 'https://www.linkedin.com/in/mark-fitzpatrick-491419100/',
                 target: '_blank'
             },
             {
                 icon: 'fab fa-twitter',
                 text: 'Twitter',
+                isIcon: 'contactIconSmall',
                 link: 'https://twitter.com/jetsetfitz',
                 target: '_blank'
             }
