@@ -44,6 +44,10 @@ const vueApp = new Vue({
         rightArrowHide: false,
         leftArrowHide: true,
         arrowAllowClick: true,
+        introImgConSmall : false,
+        introArrowSmall : false,
+        introLinkSmall: false,
+        boldNameSmall: false,
 
         //Portfolio Section
         portFadeIn: false, 
@@ -220,10 +224,16 @@ const vueApp = new Vue({
             setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 25)
         },
         //toggle display of bio section
-        showBio: function() {
+        showBio: function(fromArrow) {
+            console.log(fromArrow)
             if(this.arrowAllowClick) {
                 this.arrowAllowClick = false;
                 if(!this.rightArrowHide){
+                    vueApp.removeIntTxt(vueApp.intTxtAnimData);
+                    this.boldNameSmall = true;
+                    this.introImgConSmall = true;
+                    this.introArrowSmall = true;
+                    this.introLinkSmall = true;
                     this.introCardHalf = true;
                     this.introCardFull = false;
                     this.bioVisibleRev = false;
@@ -233,9 +243,16 @@ const vueApp = new Vue({
                         this.bioVisibleSk = true;
                         this.arrowAllowClick = true;
                     }, 1000);
-                    ;
+                    
                 } else {
                     setTimeout(() => {
+                        if(fromArrow) {
+                            vueApp.intTxtAnimate(vueApp.intTxtAnimData)
+                        }
+                        this.boldNameSmall = false;
+                        this.introImgConSmall = false;
+                        this.introArrowSmall = false;
+                        this.introLinkSmall = false;
                         this.bioVisible = false;
                         this.introCardHalf = false;
                         this.introCardFull = true;
@@ -267,6 +284,7 @@ const vueApp = new Vue({
             
             vueApp.minIntroImgCon = min;
             vueApp.minIntroImg = min;
+            
             vueApp.rightArrowHide = min;
             vueApp.leftArrowHide = true;
             vueApp.downArrowHide = max;

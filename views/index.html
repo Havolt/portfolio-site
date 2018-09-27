@@ -20,24 +20,24 @@
             <!--Extra container for site-->
             <div v-bind:class="{introCardHalf, introCardFull}" class="introCard">
                 <!--Container for profile img section-->
-                <div v-bind:class="{minIntroImgCon, maxIntroImgCon}" class="introImgCon ">
+                <div v-bind:class="{minIntroImgCon, maxIntroImgCon, introImgConSmall}" class="introImgCon">
                     <img v-bind:class="{minIntroImg, maxIntroImg}" class="introImg" src="imgs/prof.jpg" alt="">
-                    <div v-bind:class="{minIntroArrowCon, maxIntroArrowCon}" class="introArrowCon">
+                    <div v-bind:class="{minIntroArrowCon, maxIntroArrowCon, introArrowSmall}" class="introArrowCon">
                         <div v-bind:class="{displayNone: rightArrowHide}" @click="showBio" class="introArrow fas fa-angle-double-right"></div>
-                        <div v-bind:class="{displayNone: leftArrowHide}" @click="showBio" class="introArrow fas fa-angle-double-left"></div>
+                        <div v-bind:class="{displayNone: leftArrowHide}" @click="showBio(true)" class="introArrow fas fa-angle-double-left"></div>
                         <div v-bind:class="{displayNone: downArrowHide}" @click="toggleIntro(false, true)" class="introArrowMin fas fa-angle-double-down"></div>
                     </div>
                 </div>
                 <!--Container for intro text-->
                 <div class="introTxt">
                     <span >{{intTxtInfo1}}</span>
-                    <span class="boldName">{{intTxtName}}</span>
+                    <span v-bind:class="{boldNameSmall}" class="boldName">{{intTxtName}}</span>
                     <span >{{intTxtInfo2}}</span>
                 </div>
                 <!--Container for intro links-->
                 <div v-bind:class="{linksVisible}" class="introLinksCon">
                     <div class="introLinksAll" v-bind:class="{mIntLinks, maxIntLinks}">
-                        <div class="introLinks" v-for="item in introLinks">
+                        <div v-bind:class="{introLinkSmall}" class="introLinks" v-for="item in introLinks">
                             <div v-bind:value="this.place" >
                                 <div v-bind:class="item.classes" class="introLinkTxt" @click="item.func(item.place)">{{item.text}} </div>
                             <div class="introLinksFakeBorder"></div></div>

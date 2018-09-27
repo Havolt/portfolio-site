@@ -724,6 +724,88 @@ body {
 
 @media only screen and (max-width: 840px) {
 
+
+    /* /\/\/\/\/\/\/\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ */
+
+    @keyframes halfIntroSmallAn {
+        from{width: 100%}
+        to{width:20%};
+    }
+    @keyframes fullIntroSmallAn {
+        from{width: 20%}
+        to{width: 100%};
+    }
+    
+    .introCardHalf {
+        border-right: 1px solid rgb(226, 226, 226);
+        animation: halfIntroSmallAn 0.6s forwards;
+        height: 100vh;
+        background: white;
+        min-width: 80px;
+    }
+    .introCardFull {
+        animation: fullIntroSmallAn 0.6s forwards;
+    }
+
+    .introBio {
+        width: 80%;
+    }
+
+    @keyframes introImgConSmallAn {
+        from{ width: 240px}
+        to{ width: 60px}
+    }
+
+    .introImgConSmall > img {
+        animation: 1s introImgConSmallAn forwards;
+    }
+
+    @keyframes mxIntArwConAn {
+        from{height: 30px; line-height: 30px; }
+        to {height: 240px; line-height: 240px; }
+        
+    }
+    
+    .maxIntroArrowCon {
+        animation: mxIntArwConAn 1s forwards;
+    }
+
+    @keyframes mIntArwConAn {
+        from {height: 240px; line-height: 240px; }
+        to{height: 30px; line-height: 30px; }
+    }
+    
+    .minIntroArrowCon {
+        animation: mIntArwConAn 1s forwards;
+    }
+
+    
+
+    .introArrowSmall {
+        padding-left: 2px;
+        line-height: 30px;
+        text-align: center;
+        height: 30px;
+        display: block;
+    }
+
+    .introLinkSmall {
+        margin: 4px 0% !important;
+        text-indent: 2px;
+        display: block;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .boldNameSmall {
+        font-size: 14px;
+    }
+
+
+
+
+
+
     .portItemName {
         font-size: 22px;
     }
