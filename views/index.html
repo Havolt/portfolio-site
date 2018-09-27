@@ -38,7 +38,7 @@
                 <div v-bind:class="{linksVisible}" class="introLinksCon">
                     <div class="introLinksAll" v-bind:class="{mIntLinks, maxIntLinks}">
                         <div class="introLinks" v-for="item in introLinks">
-                            <div  v-bind:value="this.place" >
+                            <div v-bind:value="this.place" >
                                 <div v-bind:class="item.classes" class="introLinkTxt" @click="item.func(item.place)">{{item.text}} </div>
                             <div class="introLinksFakeBorder"></div></div>
                         </div> 
