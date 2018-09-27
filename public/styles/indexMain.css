@@ -760,7 +760,7 @@ body {
     }
     
     .maxIntroArrowCon {
-        animation: mxIntArwConAn 1s forwards;
+        animation: mxIntArwConAn 1s;
     }
 
     @keyframes introImgConSmallAn {
@@ -856,6 +856,32 @@ body {
 }
 
 @media only screen and (max-width: 550px) {
+
+    .skillItems{
+        
+        font-size: 14px;
+        color: rgb(102, 102, 102);
+        display: inline-block;
+        width: 30%;
+        margin: 0 1.5%;
+    }
+    
+    .skillItems > i {
+        margin-bottom: 10px;
+        font-size: 52px;
+        color: rgb(0, 90, 150);
+    }
+
+    
+.aboutMePara {
+    width: 90%;
+    margin: 20px auto;
+    font-size: 16px;
+    color: rgb(56, 56, 56);
+}
+
+
+
     .introLinks:nth-child(1) {
         margin-left: 12%;
     }

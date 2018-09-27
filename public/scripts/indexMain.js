@@ -234,11 +234,11 @@ const vueApp = new Vue({
             }
         },
         //toggle display of bio section
-        showBio: function(fromArrow) {
-            console.log(fromArrow)
+        showBio: function(fromMinArrow, fromMaxArrow) {
             if(this.arrowAllowClick) {
                 this.arrowAllowClick = false;
                 if(!this.rightArrowHide){
+                    console.log(fromMaxArrow)
                     vueApp.removeIntTxt(vueApp.intTxtAnimData);
                     this.boldNameSmall = true;
                     this.introImgConSmall = true;
@@ -256,7 +256,7 @@ const vueApp = new Vue({
                     
                 } else {
                     setTimeout(() => {
-                        if(fromArrow) {
+                        if(fromMinArrow) {
                             vueApp.intTxtAnimate(vueApp.intTxtAnimData)
                         }
                         this.boldNameSmall = false;
