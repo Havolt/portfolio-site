@@ -13,7 +13,8 @@ const vh = new Vue({
             heading: '',
             icon: '',
             paragraph: [],
-            links: []
+            links: [],
+            github: ''
         },
 
         //Drop Down Section
@@ -85,6 +86,7 @@ const vh = new Vue({
             <div v-bind:class="{headInfoOpen: infoOpen, headInfoClose: infoClose}" class="headInfoSec">
                 <div class="headInfoHeading">{{headInfo.heading}}</div>
                 <div v-for="item in headInfo.paragraph" class="headInfoPara">{{item}}</div>
+                <div class="headInfoPara headInfoParaLink"><a v-bind:href="headInfo.github" target="_blank">You can find the code for this project here.</a></div>
                 <div @click="toggleInfo" class="headInfoArrow fa fa-angle-up"></div>
             </div>
         </div>
@@ -107,6 +109,7 @@ const vh = new Vue({
                 el.description.map((el) => {
                     vh.headInfo.paragraph.push(el);
                 })
+                vh.headInfo.github = el.github;
             }
             else {
                 vh.headInfo.links.push(el);
