@@ -50,6 +50,7 @@ const vueApp = new Vue({
         boldNameSmall: false,
         removingLetters: false,
         addingLetters: false,
+        introImgConSmallMax: false,
 
         //Portfolio Section
         portFadeIn: false, 
@@ -235,13 +236,14 @@ const vueApp = new Vue({
         },
         //toggle display of bio section
         showBio: function(fromMinArrow, fromMaxArrow) {
+            //When expanding arrow is pressed
             if(this.arrowAllowClick) {
                 this.arrowAllowClick = false;
                 if(!this.rightArrowHide){
-                    console.log(fromMaxArrow)
                     vueApp.removeIntTxt(vueApp.intTxtAnimData);
                     this.boldNameSmall = true;
                     this.introImgConSmall = true;
+                    this.introImgConSmallMax = false;
                     this.introArrowSmall = true;
                     this.introLinkSmall = true;
                     this.introCardHalf = true;
@@ -254,7 +256,10 @@ const vueApp = new Vue({
                         this.arrowAllowClick = true;
                     }, 1000);
                     
-                } else {
+                } 
+                //When retracting bio arrow pressed
+                else {
+                    
                     setTimeout(() => {
                         if(fromMinArrow) {
                             vueApp.intTxtAnimate(vueApp.intTxtAnimData)
@@ -268,6 +273,11 @@ const vueApp = new Vue({
                         this.introCardFull = true;
                         this.bioVisibleSk = false;
                         this.arrowAllowClick = true;
+                        if(fromMinArrow) {
+                            this.introImgConSmallMax = true;
+                        }else {
+                            this.introImgConSmallMax = false;
+                        }
                     }, 600);
                     setTimeout(() => {this.bioVisibleRev = true}, 300);
                     this.bioVisibleRevSk = true;

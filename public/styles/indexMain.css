@@ -773,6 +773,16 @@ body {
         animation: 1s introImgConSmallAn forwards;
     }
 
+    @keyframes introImgConSmallMaxAn {
+        from{ width: 60px}
+        to{ width: 240px}
+    }
+
+    .introImgConSmallMax > img {
+        margin: -3vh auto 20px auto;
+        animation: 1s introImgConSmallMaxAn forwards;
+    }
+
 
     .introArrowSmall {
         padding-left: 2px;
