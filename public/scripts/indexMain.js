@@ -41,7 +41,7 @@ const vueApp = new Vue({
         linksVisible: false,
         introCardHalf: false,
         introCardFull: true,
-        rightArrowHide: false,
+        rightArrowHide: true,
         leftArrowHide: true,
         arrowAllowClick: true,
         introImgConSmall : false,
@@ -644,6 +644,7 @@ const vueApp = new Vue({
     toggleDisplay(document.querySelector('#vApp'));
     vueApp.preLoadPortImages()
     setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 10);
+    setTimeout(() => {vueApp.rightArrowHide = false;}, 200);
     setTimeout(() => {vueApp.scrollAllow = true;}, 1500);
 })()
 
