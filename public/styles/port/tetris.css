@@ -1,0 +1,433 @@
+body{
+    background: #F5EEE3;
+    font-family:arial;
+}
+
+#app {
+    padding-top: 60px;
+    min-width: 457px;
+    overflow-x: hidden;
+}
+
+.tetrisContain{
+    margin: 0 auto;
+    width: fit-content;
+    max-width: 1000px;
+    position: relative;
+}
+
+.tetrisBoard{
+    width: 380px;
+    height: 684px;
+    margin-top: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.tetrisBoardDark{
+    left: 0;
+    font-family: monospace;
+    margin-left: 0;
+    position: absolute;
+    background: rgba(53, 43, 43, 0.6);
+    font-size: 4.5em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 1px black;
+    text-align: center;
+    line-height: 520px;
+}
+
+.tetrisBoardHide{
+    display: none;
+}
+
+.tile{
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgb(129, 129, 129);
+    float: left;
+    background: white;
+}
+
+.firstTileX{
+    clear: both;
+}
+
+.cyanTile{
+    background: cyan;
+}
+.blueTile{
+    background: blue;
+}
+.orangeTile{
+    background: orange;
+}
+.yellowTile{
+    background: yellow;
+}
+.greenTile{
+    background: green;
+}
+.purpleTile{
+    background: purple;
+}
+.redTile{
+    background: red;
+}
+
+.prevTile{
+    width: 28px;
+    height: 28px;
+}
+
+.statsContain{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.previewBlockTitle{
+    margin-top: 30px;
+    position: relative;
+    color: #726252;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.previewBlockContain{
+    background: rgb(247, 247, 247);
+    position: relative;
+    border: 1px solid rgb(129, 129, 129);
+    margin: 0 auto 40px auto;
+    width: 120px;
+    height: 120px;
+}
+
+.stats{
+    font-size: 2em;
+    color: #726252;
+    position: relative;
+    margin-left: 20px;
+}
+
+.optionButtons{
+    font-size: 1.8em;
+    width: 240px;
+    height: 50px;
+    text-align: center;
+    background: rgb(233, 223, 207);
+    color: #5c4b3a;
+    border: 1px solid #b69b80;
+    line-height: 48px;
+    position: relative;
+    user-select: none;
+}
+
+.soundButton{
+    margin-bottom: 30px;
+}
+
+.optionButtons:hover{
+    background: rgb(206, 204, 201);
+    cursor: pointer;
+}
+
+.controlsContain{
+    position: fixed;
+    background: rgba(53, 43, 43, 0.85);
+    width: 750px;
+    height: 250px;
+    left: 0;
+    right: 0;
+    top: 12%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.controlsContainHide{
+    display: none;
+}
+
+.controlsTitle{
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    margin-top: 14px;
+    font-weight: bold;
+}
+
+.controlsArea{
+    width: 110px;
+}
+
+.controlsIcon{
+    background: rgb(243, 226, 208);
+    padding-top: 8px;
+    margin: 0 auto;
+    border: 1px solid #5C4B3A;
+    color: #5C4B3A;
+    display: block;;
+    font-size: 2.5em;
+    width: 55px;
+    height: 57px;
+    text-align: center;
+    border-radius: 2px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.controlsArea{
+    display: inline-block;
+}
+
+.controlsText{
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.crossSection{
+    color: white;
+    text-shadow: 0 0 1px black;
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    font-size: 1.8em;
+}
+
+.crossSection:hover{
+    cursor: pointer;
+    color: rgb(131, 33, 33);
+    text-shadow: 0 0 1px white;
+}
+
+.rotateSection{
+    position: absolute;
+    left: 25px;
+    bottom: 15px;
+}
+
+.arrowsSection{
+    position: absolute;
+    right: 25px;
+    bottom: 57px;
+}
+
+.cKeyContain{
+    position: absolute;
+}
+
+.difficultyWarning{
+    width: 500px;
+    height: 190px;
+    background: rgba(53, 8, 8, 0.95);
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    position: fixed;
+    top: 22%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+.difficultyWarningText{
+    text-align: center;
+    font-size: 1.4em;
+    margin: 20px auto 0 auto;
+    width: 80%;
+}
+
+.difficultyWarningButton{
+    width: 140px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    margin: 20px 25px 0 25px;
+    font-size: 2.7em;
+    text-align: center;
+    display: inline-block;
+}
+
+.difficultyWarningButton:hover{
+    cursor: pointer;
+    background: rgba(80, 74, 177, 0.562);
+}
+
+.hideDiv{
+    display: none;
+}
+
+.difficultyMenu{
+    width: 500px;
+    height: 360px;
+    background: rgba(53, 8, 8, 0.95);
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    position: fixed;
+    top: 22%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+.difficultyMenuText{
+    margin-top: 30px;
+    font-size: 2.8em;
+    margin-bottom: 42px;
+}
+
+.difficultyMenuButton{
+    width: 340px;
+    height: 56px;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    margin: 15px auto 0 auto;
+    font-size: 2.4em;
+    text-align: center;
+    line-height:  52px;
+}
+
+.difficultyMenuButton:hover{
+    cursor: pointer;
+    background: rgba(80, 74, 177, 0.562);
+}
+
+.dmbEasy:hover{
+    background: rgba(77, 177, 74, 0.562);
+}
+
+.dmbHard:hover{
+    background: rgba(177, 74, 74, 0.562);
+}
+
+@media only screen and (max-width: 750px) {
+
+    .tetrisBoard{
+        margin-left: 0px;
+    }
+
+    .statsContain{
+        margin-left: 10px;
+    }
+
+    .stats{
+        font-size: 1.6em;
+        margin-left: 30px; 
+    }
+
+    .tetrisBoardDark{
+        left: 0px;
+    }
+
+    .controlsContain{
+        width: 600px;
+    }
+
+}
+
+@media only screen and (max-width: 670px) {
+
+    .tetrisContain{
+        margin: 0 auto;
+        width: fit-content;
+    }
+    .statsContain{
+        margin-left: 0px;
+        background: rgba(88, 88, 88, 0.658);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        height: 684px;
+    }
+
+    .previewBlockTitle{
+        color: white;
+    }
+
+    .previewBlockContain{
+        margin-bottom: 44px;
+        margin-left: 0;
+        border: 4px solid rgba(37, 37, 37, 0.795);
+        
+    }
+
+    .stats{
+        color: white;
+        margin-left: 2px;
+        font-size: 1.1em;
+        margin-bottom: 4px;
+    }
+    
+    .optionButtons{
+        width: 128px;
+        height: 46px;
+        font-size: 1.2em;
+        background: rgb(235, 235, 235);
+        border: 1px solid rgb(102, 102, 102);
+    }
+
+    .optionButtons:hover{
+        background: rgba(120, 159, 218, 0.795);
+        color: white;
+    }
+}
+
+@media only screen and (max-height: 720px) {
+    .tile{
+        width: 29px;
+        height: 29px;
+    }
+
+    .prevTile{
+        width: 28px;
+        height: 28px;
+    }
+
+    .tetrisBoard{
+        height: 558px;
+        width: 310px;
+    }
+
+    .tetrisBoardDark{
+        font-size: 4em;
+    }
+
+    .previewBlockTitle{
+        margin-top: 0px;
+    }
+
+    .previewBlockContain{
+        margin-bottom: 28px;
+    }
+
+    .optionButtons{
+        font-size: 1.5em;
+        width: 200px;
+        height: 45px
+    }
+
+    .stats{
+        font-size: 1.6em;
+    }
+
+}
+
+@media only screen and (max-height: 720px) and (max-width: 670px) {
+
+
+
+    .statsContain{
+        height: 558px;;
+    }
+
+    .optionButtons{
+        width: 144px;
+    }
+
+    .stats{
+        font-size: 1.2em;
+    }
+}

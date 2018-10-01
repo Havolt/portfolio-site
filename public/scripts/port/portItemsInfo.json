@@ -18,7 +18,8 @@
             "description": [
                 "Note: This game requires the use of a keyboard to play.",
                 "This is my own version of Tetris. It uses many of the elements seen in common variations of Tetris such as score multipliers for multiple stacks removed at once and the ability to rotate pieces.",
-                "There is a timer in the game, along with a list of controls and multiple difficulty levels. I have also implemented a pause timer. I hope you enjoy playing my rendition of this classic video game."
+                "There is a timer in the game, along with a list of controls and multiple difficulty levels. I have also implemented a pause timer. I hope you enjoy playing my rendition of this classic video game.",
+                "To move the current piece use the left and right arrow keys. To rotate the piece use the 'Z' and 'C' keys."
             ],
             "github" : "https://github.com/Havolt/tetris"
         },
