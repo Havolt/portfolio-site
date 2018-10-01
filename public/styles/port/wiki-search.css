@@ -1,0 +1,190 @@
+
+body, html{
+background-color: #f7f7f7;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+#app{
+    width: 100%;
+    margin: 0 auto;
+}
+
+#searchContainer{
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 674px;
+}
+
+#searchTitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 52px;
+    text-align: center;
+    font-size: bold;
+    margin: 20px auto;
+}
+
+
+#searchBar{
+    border-top-left-radius: 2px;
+    height: 50px;
+    width: 624px;
+    border: 1px solid #4578cc;
+    display: inline-block;
+    font-size: 36px;
+    text-indent: 6px;
+    box-sizing: border-box;
+}
+
+#searchBar:focus{
+    outline: none;
+}
+
+#searchButton{
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    font-size: 36px;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #4578cc;
+    background: #4578cc;
+    color: white;
+    display: inline-block;
+}
+
+#searchButton:hover{
+    cursor: pointer;
+    background-color: #2b5eb1;
+    border: 1px solid #2b5eb1;
+}
+
+#searchButton:focus{
+    outline: none;
+}
+
+#randomButton{
+    width: 70px;
+    font-size: 26px;
+    margin: 0px 0 68px 0;
+    display: block;
+    height: 38px;
+    background-color: #4578cc;
+    border: none;
+    color: white;
+    box-sizing: border-box;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+#randomButton:hover{
+    background-color: #2b5eb1;
+    cursor: pointer;
+}
+
+#randomButton:focus{
+    outline: none;
+}
+
+
+#listContainer{
+    margin: 0 auto 16px auto;
+    width: 90%;
+}
+
+.listItemClass{
+    width: 100%;
+    min-height: 66px;
+    padding: 14px 6px;
+    margin-bottom: 8px;
+}
+
+.listItemClass:nth-child(odd){
+    background-color: #ebe9e9;
+}
+
+.listItemClass:nth-child(even){
+    background-color: #cfcfcf;
+}
+
+.listItemClass:hover{
+    cursor: pointer;
+    background: rgb(110, 110, 110);
+    color: white;
+}
+
+.listItemClass:hover > p {
+    color: white;
+}
+
+
+h3 {
+    margin-left: 5%;
+    font-size: 22px;
+    }
+
+p {
+    font-style: italic;
+    margin-left: 2%;
+    color: #3b3f44;
+}
+
+@media only screen and (max-width: 820px) { 
+    
+    #searchContainer {
+        width: 504px;
+    }
+    
+    #searchTitle {
+        font-size: 44px;
+        margin: 20px auto;
+    }
+    
+    
+    #searchBar{
+        width: 454px;
+        font-size: 36px;
+        text-indent: 6px;
+    }
+    
+}
+
+@media only screen and (max-width: 540px) { 
+    
+    #searchContainer{
+        width: 320px;
+    }
+    
+    #searchTitle {
+        font-size: 32px;
+        margin: 20px auto;
+    }
+    
+    
+    #searchBar{
+        height: 50px;
+        width: 270px;
+        font-size: 32px;
+        text-indent: 6px;
+    }
+
+    #searchButton{
+        font-size: 32px;
+        height: 50px;
+        width: 50px;
+    }
+    
+    #randomButton{
+        width: 60px;
+    }
+
+    #listContainer{
+        margin: 0 auto 16px auto;
+        width: 100%;
+    }
+        
+    .listItemClass{
+        width: 98%;
+        min-height: 66px;
+        padding: 14px 1%;
+        margin-bottom: 8px;
+    }
+}
