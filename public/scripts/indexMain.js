@@ -239,6 +239,7 @@ const vueApp = new Vue({
             //When expanding arrow is pressed
             if(this.arrowAllowClick) {
                 this.arrowAllowClick = false;
+                
                 if(!this.rightArrowHide){
                     vueApp.removeIntTxt(vueApp.intTxtAnimData);
                     this.boldNameSmall = true;
@@ -365,6 +366,7 @@ const vueApp = new Vue({
             }
             vueApp.toggleIntro(true, false);
             vueApp.intLinksUnder(pos, vueApp.introLinks);
+            vueApp.introImgConSmallMax = false;
             vueApp.contactFadeOut = true;
             vueApp.portFadeOut = false;
             vueApp.portFadeOutRev = false;
@@ -441,6 +443,7 @@ const vueApp = new Vue({
                 vueApp.portFadeOutRev = true;
             }
             vueApp.contactFadeOut = false;
+            vueApp.introImgConSmallMax = false;
             setTimeout(() => {
                 if(vueApp.portfolioBool) {
                     vueApp.contactFadeInRev = true;

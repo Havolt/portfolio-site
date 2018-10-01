@@ -811,23 +811,21 @@ body {
     }
 
 
-
-
-
-
     .portItemName {
         font-size: 22px;
     }
 
     .contactInfo {
         display: block;
-        width: 90%;
+        width: 80%;
         padding-top: 0;
+        margin: 0 auto;
     }
 
     .contactForm {
         display: block;
-        width: 90%;
+        width: 80%;
+        margin: 0 auto;
     }
 
     .contactItem {
@@ -889,13 +887,20 @@ body {
     }
 
     
-.aboutMePara {
-    width: 90%;
-    margin: 20px auto;
-    font-size: 16px;
-    color: rgb(56, 56, 56);
-}
+    .aboutMePara {
+        width: 90%;
+        margin: 20px auto;
+        font-size: 16px;
+        color: rgb(56, 56, 56);
+    }
 
+    .contactInfo {
+        width: 100%;
+    }
+
+    .contactForm {
+        width: 100%;
+    }
 
 
     .introLinks:nth-child(1) {
@@ -918,7 +923,8 @@ body {
 
     .portItemName {
         padding: 4px 0;
+        text-indent: 8px;
         font-size: 22px;
-        text-indent: 0px;
+        
     }
  }
