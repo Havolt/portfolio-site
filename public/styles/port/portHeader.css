@@ -160,6 +160,7 @@ a{
 .headListMain {
     width: 90%;
     max-width: 280px;
+    min-width: 230px;
     font-size: 20px;
     margin: 14px auto;
     border-radius: 2px;
