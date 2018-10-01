@@ -18,6 +18,15 @@ onload = () => {
         document.head.appendChild(styleS);
 
         let pathName = window.location.pathname.split('').splice(6).join('');
+        
+        const styleS2 = document.createElement("link");
+        styleS2.type = "text/css";
+        styleS2.rel = "stylesheet";
+        styleS2.href = `/styles/port/${pathName}.css`;
+        document.head.appendChild(styleS2);
+        console.log(pathName)
+
+        
         scriptLoad([`/port/${pathName}.js`,'/port/portHeader.js'])
     }
 }
