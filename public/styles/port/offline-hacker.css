@@ -1,0 +1,11 @@
+
+#app {
+    width: fit-content;
+    padding-top: 100px;
+    margin: 0 auto;
+}
+
+.gameCanvas {
+    width: 720px;
+    height: 480px;
+}
