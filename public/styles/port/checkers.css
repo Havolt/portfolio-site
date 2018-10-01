@@ -1,0 +1,72 @@
+html, body{
+    background-color: #f7f7f7;
+    font-family: arial, sans-serif;
+  }
+  
+  #app{
+    padding-top: 80px;
+  }
+
+  #boardApp {
+    width: 560px;
+    height: 560px;
+    border: 5px solid #67759B;
+    margin: 0 auto;
+  }
+  
+  .allTile{
+    width: 70px;
+    height: 70px;
+    float: left;
+  }
+  
+  .darkTile{
+    background-color: #A67D5D;
+  }
+  
+  .lightTile{
+    background-color: #E8D0AA;
+  }
+  
+  .allPiece{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px auto;
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .darkPiece{
+    background-color: #512D28;
+  }
+  
+  .lightPiece{
+    background-color: #F4C242;
+  }
+  
+  #textArea{
+    width: 400px;
+    height: 70px;
+    background-color: #67759B;
+    margin: 0px auto;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-left: 5px solid #67759B;
+    border-right: 5px solid #67759B;
+    border-bottom: 5px solid #67759B;
+  }
+  
+  #textMove{
+    padding-top: 2px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  #textMand{
+    margin: 0;
+    text-align: center;
+  }
+  
