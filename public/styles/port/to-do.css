@@ -16,11 +16,16 @@
 
 .newListInput{
     width: 60%;
-    height: 50px;
+    height: 52px;
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
     vertical-align: bottom;
     display: inline-block;
+    text-indent: 4px;
+}
+
+.newListInput:focus{
+    outline: none;
 }
 
 .newListButton{
@@ -36,13 +41,13 @@
     border-bottom: #03656E 2px solid;
     border-right: #03656E 2px solid;
     color: white;
-    font-size: 1.2em;
+    font-size: 22px;
+    font-weight: bold;
     display: inline-block;
 }
 
 .newListButton:hover{
     cursor: pointer;
-    
 }
 
 .newListButton:active{
@@ -54,10 +59,9 @@
 
 .listContain{
     font-family: Arial, Helvetica, sans-serif;
-    
     width: 90%;
     margin: 40px auto 0px auto;
-    
+    z-index: 1;
 }
 
 .listItem{
@@ -68,6 +72,7 @@
     border: 1px solid rgb(173, 217, 221);
     overflow: hidden;
     position: relative;
+    
 }
 
 .listItemGold{
@@ -108,7 +113,7 @@
 
 .listItemCross{
     position: absolute;
-    padding: 0px 3px 0px 3px;
+    padding: 0px 4px 0px 4px;
     right: 5px;
     top: 5px;
     font-size: 1.1em;
@@ -251,6 +256,7 @@
     height: 180px;
     background: #f7f7f7;
     z-index: 2;
+    border: 1px solid rgb(129, 129, 129);
 }
 
 .clearAllTop{
@@ -261,8 +267,8 @@
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
 }
 
 .clearAllButton{
@@ -290,12 +296,15 @@
     color: white;
 }
 
+.clearAllYesButton:hover{
+    background: #8f5050;
+}
+
 .clearAllYesButton:active{
     border-bottom: #c98080 1px solid;
     border-right: #c98080 1px solid;
     border-left: #963939 1px solid;
 }
-
 
 .clearAllNoButton{
     background: #e1e1e1;
@@ -303,6 +312,10 @@
     border-right: #bbbbbb 1px solid;
     border-left: #f1f1f1 1px solid;
 }
+
+.clearAllNoButton:hover{
+    background: #c4c4c4;
+ }
 
 .clearAllNoButton:active{
     border-bottom: #f1f1f1 1px solid;
@@ -318,7 +331,6 @@
         margin-top: 7px;
     }
     .clearButton{
-        font-size: 1.1em;
         padding-bottom: 6px;
         width: 14%;
         margin-left: 5%;
@@ -407,7 +419,6 @@
         margin: 0;
     }
 
-
     .optionsButton:hover{
         padding: 0;
         background: rgba(68, 68, 68, 0.6);
@@ -420,7 +431,7 @@
     .optionsSelect:hover{
         background: #24919B;
     }
-    
+
     .optionsMenuHide{
         display: none;
     }
