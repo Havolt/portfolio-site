@@ -1,0 +1,944 @@
+*{
+    margin: 0; 
+    padding: 0;
+    font-family: arial;
+}
+
+html, body{
+    background: #f7f7f7;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+#app {
+    padding-top: 40px;
+}
+
+.sectionAboutDiv{
+    width: 100vw;
+}
+
+.sectionTitle{
+    padding-top: 40px;
+    font-size: 2.1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.main{
+    height: 100%;
+}
+
+.hidden{
+    display: none;
+}
+
+.sectionParagraph{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.portButton{
+        border-left: 2px solid #6173da;
+        border-top: 2px solid #6173da;
+        border-bottom: 2px solid #3c4ca7;
+        border-bottom: 2px solid #3c4ca7;
+        padding: 8px 8px;
+        color: white;
+        font-size: 1.6em;
+        width: fit-content;
+        border-radius: 4px;
+        background: rgb(57, 107, 187) ;
+}
+
+.portButton:hover{
+    border-left: 2px solid #3c4ca7 ; 
+    border-top: 2px solid #3c4ca7;
+    border-bottom: 2px solid #6173da;
+    border-bottom: 2px solid #6173da;
+    text-shadow: -1px -2px 1px rgb(47, 86, 150) ;
+    cursor: pointer;
+}
+
+
+
+/* New File */ 
+
+
+.introDiv{
+    height: 100vh;
+    background: linear-gradient(to bottom , #222222, #555555);
+    overflow-y: auto;
+}
+
+.intLogoDiv{
+    margin:  5vh auto 0 auto;
+    padding-left: 1px;
+    width: 61px;
+    height: 62px;
+    background: rgb(57, 107, 187);
+    color: #e6e6e6;
+    font-size: 2.4em;
+    border-radius: 5px;
+    line-height: 57px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    z-index: 10;
+    user-select: none;
+}
+
+.intText{
+    color: #fcfcfc;
+    font-size: 1.9em;
+    max-width: 360px;
+    margin: 30vh auto 0 auto;
+    vertical-align: middle;
+    text-align: center;
+    user-select: none;
+}
+
+.intButton{
+    margin: 6vh auto 0 auto;
+}
+
+
+.intMoreContain{
+    width: fit-content;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: #dfdfdf;
+    user-select: none;
+}
+
+.intMoreContain:hover{
+    cursor: pointer;
+    color: white;
+}
+
+.intMoreText{
+    font-size: 1.5em;
+    margin-bottom: -12px;
+    user-select: none;
+    
+}
+
+
+.intMoreArrow{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.8em;
+    user-select: none;
+}
+
+
+.intStar{
+    position: absolute;
+    background: white;
+    z-index: 1;
+}
+
+.intStarSmall{
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+}
+
+.intStarMedium{
+    width: 3px;
+    height: 3px;
+    border-radius: 3px;
+    box-shadow: 0 0 8px rgb(187, 187, 187);
+}
+
+.intStarLarge{
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 18px  rgb(211, 211, 211);
+}
+
+
+
+
+/* New File */
+
+
+
+.aboutDiv{
+    background: #f8f8f8;
+    overflow: auto;
+}
+
+.aboutIntro{
+    margin-bottom: 40px;
+}
+
+.aboutParagraph{
+    font-size: 1em;
+}
+
+.aboutParagraphHidden{
+    display: none;
+}
+
+
+
+
+.aboutProfilePic{
+    width: 60%;
+    margin: 40px auto 0 auto;
+}
+
+.aboutPPImg{
+    border-radius: 5px;
+    width: 100%;
+}
+
+.aboutListItem{
+    margin-bottom: 40px;
+}
+
+.aboutListIcon{
+    font-size: 6em;
+    text-align: center;
+    color: rgb(57, 107, 187);
+}
+
+.aboutListTitle{
+    font-size: 1.7em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.aboutListParagraph{
+    font-size: 1em;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.abliCode{
+    font-size: 4.8em;
+}
+
+.abliDesign{
+    margin-bottom: 8px;
+    font-size: 4.3em;
+
+}
+
+@media only screen and (min-width: 650px) {
+
+    .aboutIntroTitle{
+        font-size: 1.5em;
+    }
+
+
+    .aboutIntroText{
+        display: inline-block;
+        width: 58%;
+    }
+
+    .aboutIntro{
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
+
+    .aboutTitle{
+        padding-top: 50px;
+    }
+    
+    .aboutParagraph{
+        font-size: 1em;
+    }
+
+    .aboutParagraphHidden{
+        display: block;
+    }
+    
+    .aboutProfilePic{
+        width: 30%;
+        margin-left: 10%;   
+        display: inline-block;
+        float: left;
+        max-width: 300px;
+    }
+
+    .aboutListContain{
+        display: inline-flex;
+        margin: 35px 5% 70px 5%;
+    }
+
+    .aboutListItem{
+        width: 30%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    .abliCode{
+        font-size: 6em;
+    }
+
+    .abliDesign{
+        font-size: 5.5em;
+    }
+
+
+    
+
+}
+
+@media only screen and (min-width: 650px) and (max-width: 850px) {
+
+    .aboutTitle{
+        padding-top: 8%;
+    }
+
+    .aboutProfilePic{
+        padding-top: 2%;
+    }
+
+    .aboutListContain{
+        margin-top: 50px;
+    }
+
+}
+
+
+
+
+/* New File */
+
+
+
+
+.projectDiv{
+    background: #ededed;
+    overflow-y: hidden;
+}
+
+
+.projectItem{
+    width: 72%;
+    margin: 40px auto 0 auto;
+    position: relative;
+}
+
+.projectParagraph{
+    font-size: 1em;
+}
+
+
+
+.projectItemImgTetris{
+    background: url("/imgs/proj-tetris.png");
+}
+
+.projectItemImgNC-Creepy{
+    background: url("/imgs/proj-nocontext.png");
+}
+
+.projectItemImgCheckers{
+    background: url("/imgs/proj-checkers.png");
+}
+
+.projectItemImgTo-Do{
+    background: url("/imgs/proj-todo.png");
+}
+
+.projectItemImgCalculator{
+    background: url("/imgs/proj-calculator.png");
+}
+
+.projectItemImgWiki-API{
+    background: url("/imgs/proj-wikipedia.png");
+}
+
+.projectItemImgSnake{
+    background: url("/imgs/proj-snake.png");
+}
+
+.projectItemImgPlatformer{
+    background: url("/imgs/proj-platformer.png");
+}
+
+.projectItemImg{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    height: 0;
+    padding-top: 58.82%;
+    background-size: cover;
+}
+
+.projectItem:hover > .projectItemImg{
+    background-size: 150%;
+    transition: background 10s;
+    background-position: center;
+}
+
+.projectItemImgOver{
+    width: 100%;
+    padding-top: 58.82%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    border-radius: 10px;
+    background: rgba(12, 112, 143, 0.85);
+}
+
+
+.projectItemImgOverTitle{
+    position: absolute;
+    color: white;
+    font-size: 3em;
+    user-select: none;
+    top: 34%;
+    right: 0;
+    left: 0;
+    text-align: center;
+    margin: auto;
+}
+
+.projectItemImgOverTitle > i{
+    font-size: 0.75em;
+}
+
+.projectItemImgOverTitle{
+    font-family: monospace;
+}
+
+.projectIIOTCheckers > i{
+    font-size: 0.65em;
+}
+
+
+
+.projectItemDesc{
+    width: 80%;
+    margin: 15px auto 0 auto;
+    font-size: 0.9em;
+    text-align: center;
+    color: rgb(65, 65, 65);
+}
+
+.projectMore{
+    border-top: 1px solid rgb(209, 209, 209);
+    padding-top: 30px;
+    margin-top: 40px;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.projectMoreButton{
+    margin: 15px auto 0 auto;
+    font-size: 1.5em;
+    padding: 2px 24px;
+}
+
+.projectDarken{
+    background: rgba(75, 75, 75, 0.85);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 100;
+    opacity: 0.1;
+    overflow-y: scroll;
+}
+
+.projectInfoDiv{
+    min-width: 310px;
+    width: 80vw;
+    background: rgb(243, 243, 243);
+    border-radius: 10px;
+    margin: 20px auto 0 auto;
+    padding-bottom: 40px;
+    
+}
+
+.projectInfoCross{
+    font-size: 1.4em;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    color: white;
+}
+
+.projectInfoCross:hover{
+    color: rgb(248, 122, 122);
+    cursor: pointer;
+}
+
+.projectInfoTitle{
+    font-size: 1.9em;
+    text-align: center;
+    padding-top: 25px;
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.projectInfoImg{
+    width: 60%;
+    border: 2px solid rgba(57, 107, 187, 0.5);
+    display: block;
+    margin: 20px auto;
+}
+
+.projectInfoDescription{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1em;
+}
+
+.projectInfoButton{
+    font-size: 1.2em;
+    margin: 24px auto 0 auto;
+}
+
+.projectSectionsContain{
+    overflow-y: hidden;
+}
+
+.projectItemImgOver:hover{
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 700px) {
+
+    .projectTitle{
+        padding-top: 60px;
+        font-size: 3.5em;
+    }
+
+    .projectParagraph{
+        font-size: 1.1em;
+    }
+
+
+    .projectInfoDiv{
+        width: 60vw;
+    }
+
+    .projectInfoTitle{
+        padding-top: 50px;
+    }
+
+    .projectInfoDescription{
+
+        width: 70%;
+        margin-bottom: 40px;
+        font-size: 1.1em;
+    }
+
+    .projectInfoImg{
+        margin-top: 40px;
+    }
+
+    .projectSectionsContain{
+        width: 90%;
+        margin: 50px auto;
+        padding-bottom: 100px;
+    }
+
+    .projectSection{
+        display: inline-flex;
+        width: 100%;
+    }
+
+    .projectItemContain{
+        width: 31%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .projectMore{
+        display: none;
+    }
+
+    .projectItemImgOverTitle{
+        font-size: 2.5em;
+    }
+
+   .projectItem{
+       margin: 10px 10%;
+       width: 80%;
+   }
+
+   .projectItemImg{
+       width: 100%;
+   }
+
+   .projectItemDesc{
+       width: 86%;
+       margin-left: 7%;
+       margin-right: 7%;
+       font-size: 1em;
+   }
+
+   .projectItemImgOver{
+       width: 100%;
+   }
+
+   .mainProjectSection{
+       margin-bottom: 20px;
+   }
+}
+
+
+
+@media only screen and (min-width: 700px) and (max-width: 930px) {
+
+    .projectIIOCalculator{
+        font-size: 0.8em;
+    }
+
+    .projectIIOWiki-API{
+        font-size: 0.8em;
+    }
+
+    .projectIIONC-Creepy{
+        font-size: 0.9em;
+    }
+
+    .projectIIOPlatformer{
+        font-size: 0.8em;
+    }
+
+    .projectItemImgOverTitle{
+        font-size: 2em;
+    }
+
+   
+    
+}
+
+@media only screen and (min-width: 930px) and (max-width: 1190px) {
+
+
+    .projectIIOCalculator{
+        font-size: 0.9em;
+    }
+
+    .projectIIOWiki-API{
+        font-size: 0.9em;
+    }
+
+    .projectIIONC-Creepy{
+        font-size: 0.9em;
+    }
+}
+
+
+@media only screen and (min-width: 1190px) {
+
+    .projectItemImgOverTitle{
+        font-size: 2.8em;
+    }
+
+}
+
+
+@media only screen and (min-width: 1400px) {
+
+
+    .projectItemImgOverTitle{
+        font-size: 3.4em;
+    }
+}
+
+
+
+/* New File */
+
+
+
+.contactDiv{
+    background: #f8f8f8;
+    position: relative;
+    overflow-y: auto;
+}
+
+.contactContain{
+    width: 86%;
+    margin: 40px auto 50px auto;  
+}
+
+.contactIcon{
+    font-size: 5em;
+    color: rgb(73, 73, 73);
+    text-align: center;
+    margin-bottom: 5px;
+
+}
+
+.contactTitle{
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.contactPara{
+    text-align: center;
+    font-size: 0.9em;
+    color: rgb(58, 58, 58);
+}
+
+.contactButton{
+    margin: 40px auto 0 auto;
+    padding: 4px 30px;
+}
+
+.contactContainBlue{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background: rgb(57, 107, 187);
+    color: white;
+}
+
+.ccBlueCross{
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    font-size: 1.6em;
+}
+
+.ccBlueCross:hover{
+    color: #444;
+    text-shadow: 0 0 1px #eee;
+    cursor: pointer;
+}
+
+.ccBlueTitle{
+    font-size: 1.1em;
+    color: white;
+    text-align: center;
+    width: 70%;
+    margin: 40px auto 0 auto;
+}
+
+.ccBlueName{
+    position: relative;
+    border: 2px solid #444;
+    width: 80%;
+    margin: 20px auto 10px auto;
+    display: block;
+    height: 30px;
+    text-indent: 4px;
+}
+
+.ccBlueEmail{
+    position: relative;
+    border: 2px solid #444;
+    width: 80%;
+    margin: 0 auto 10px auto;
+    display: block;
+    height: 30px;
+    text-indent: 4px;
+}
+
+.ccBlueText{
+    position: relative;
+    border: 2px solid #444;
+    width: 80%;
+    margin: 0 auto 10px auto;
+    display: block;
+    padding-top: 4px;
+    height: 91px;
+    resize: none;
+    padding-left: 2px;
+}
+
+.ccBlueSubmit{
+    font-size: 1.6em;
+    margin: 20px auto 0 auto;
+    display: block;
+    padding: 2px 20px;
+    background: rgb(93, 146, 231);
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.ccBlueSubmit:hover{
+    background: #1953AE;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 800px) {
+
+    .contactContain{
+        padding-bottom: 50px;
+    }
+
+    .contactIcon{
+        margin-top: 60px;
+        font-size: 6.5em;
+    }
+
+    .contactTitle{
+        font-size: 2em;
+        margin-top: 20px;
+        margin-bottom: 24px;
+    }
+
+    .contactPara{
+        font-size: 1.1em;
+    }
+
+    .contactButton{
+        margin: 60px auto 0px auto;
+        padding: 5px 32px;
+        font-size: 2em;
+    }
+
+    .ccBlueCross{
+        font-size: 2em;
+    }
+    
+    .ccBlueTitle{
+        font-size: 1.6em;
+        width: 50%;
+        margin: 40px auto 0 auto;
+    }
+    
+    .ccBlueName{
+        font-size: 1.4em;
+        width: 60%;
+        margin: 20px auto 10px auto;
+        height: 40px;
+    }
+    
+    .ccBlueEmail{
+        font-size: 1.4em;
+        width: 60%;
+        margin: 0 auto 10px auto;
+        height: 40px;
+    }
+    
+    .ccBlueText{
+        width: 60%;
+        margin: 0 auto 10px auto;
+        height: 140px;
+        font-size: 1.4em;
+    }
+    
+    .ccBlueSubmit{
+        font-size: 2em;
+        padding: 4px 22px;
+    }
+
+ }
+
+
+
+ /* New File */
+
+
+
+ .footerDiv{
+    border-top: 2px solid rgb(57, 107, 187);
+    background: #444;
+}
+
+.footerLinksDiv{
+    width: fit-content;
+    margin: 10vh auto 0 auto;
+}
+
+.footerLink{
+    margin: 0 6px 0 6px;
+    color: white;
+    border-radius: 50%;
+    background: rgb(43, 43, 43);
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    box-shadow: 0 0 1px rgb(153, 153, 153);
+    vertical-align: top;
+}
+
+.footerLink:hover{
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.footerLink{
+    display: inline-block;
+    font-size: 1.1em;
+}
+
+.footerLinkLinkedin{
+    height: 27px;
+    padding-top: 5px;
+}
+
+.footerLinkTwitter{
+    height: 25px;
+    padding-top: 7px;
+}
+
+.footerLinkGithub{
+    height: 29px;
+    padding-top: 3px;
+    font-size: 1.4em;
+}
+
+.footerLinkInstagram{
+    height: 27px;
+    padding-top: 5px;
+    font-size: 1.2em;
+}
+
+.footerLinkFacebook{
+    font-size: 1.15em;
+    height: 26px;
+    padding-top: 6px;
+}
+
+.footerLinkLinkedin:hover{
+    background: #0274B3;
+}
+
+.footerLinkTwitter:hover{
+    background: #1DA1F2;
+}
+
+.footerLinkGithub:hover{
+    color: rgb(43, 43, 43);
+    background: white;
+}
+
+
+.footerLinkInstagram:hover{
+    background: linear-gradient(#5A46C7, #FEC053)
+}
+
+.footerLinkFacebook:hover{
+    background: #3B5999;
+}
+
+.copyrightDiv{
+    text-align: center;
+    margin-top: 18px;
+    padding-bottom: 46px;
+    color: rgb(199, 199, 199);
+}
