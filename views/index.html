@@ -48,7 +48,9 @@
             <!--Container for bio section-->
             <div v-bind:class="{bioVisible: bioVisible , bioVisibleRev: bioVisibleRev , displayNone: !bioVisible}" class="introBio">
                 <div class="aboutMeTitle">{{aboutTitle}}</div>
-                <div class="aboutMePara">{{aboutPara}}</div>
+                <div class="aboutMePara">
+                    <p v-for="item in aboutPara">{{item}}</p>
+                </div>
 
                 <div v-bind:class="{bioVisibleSk: bioVisibleSk , bioVisibleRevSk: bioVisibleRevSk , displayNone: !bioVisibleSk}" class="skillsContain">
                     <div class="skillItems" v-for="item in skillList">

@@ -94,7 +94,9 @@ const vueApp = new Vue({
         bioVisibleRev: true,
         bioVisibleRevSk: true,
         aboutTitle: 'About Me',
-        aboutPara: ' I hold a bachelor\'s degree in multimedia and have a passion for front-end web development but in the past few years I\'ve been delving into back-end with Node.js. I\'ve always had a strong interest in programming since I started delving into the code of The Elder Scrolls III: Morrowind. When I\'m not making websites I can be found running, reading or making video games.',
+        aboutPara: [ `I'm an Irish programmer and hold a bachelor\'s degree in multimedia. I have a strong passion for front-end web development and creating fun web games.`,
+        `My programming language of expertise is JavaScript where I have gained a strong knowledge of Node, Vue and multiple other frameworks. I also have good experience with CSS and put a strong focus on responsive design in my work. I've been programming for multiple years now and have gained a lot of knowledge of web design and programming paradigms.`,
+        `When I\'m not making websites I can be found running, reading or visiting new places.`],
         skillList: [
             {
                 icon: 'fas fa-mobile',

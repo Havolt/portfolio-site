@@ -81,7 +81,8 @@
             "route": "prev-portfolio",
             "icon" : "fas fa-briefcase",
             "description": [
-                "I utilized this old portfolio during most of 2018. I feel the layout is a bit dated now looking back at it but there are some items on it I feel would still hold up if they were given a more modern touch up with css."
+                "Note: All external functionality has been removed from this older portfolio. Social media links and contact can be found on the main page of my current portfolio.",
+                "This portfolio was used by me during most of 2018. I wished to go for a simple aesthetic and a single page layout. The site was one of my first attempts at making a responsively designed site for all screen sizes."
             ],
             "github" : "https://github.com/Havolt/portfolio"
         }
