@@ -72,7 +72,7 @@
             "route": "calculator",
             "icon" : "fas fa-calculator",
             "description": [
-                "This app is purely a simple calculator. It can string multiple operations together like most common modern calculators. It has the ability to work with decimal numbers and numbers and operations can be done by either utilizing the buttons on the calculator or through the use of they keyboard."
+                "This app is purely a simple calculator. It can string multiple operations together like most common modern calculators. It has the ability to work with decimal numbers and numbers and operations can be done by either utilizing the buttons on the calculator or through the use of the keyboard. To clear the screen using the keyboard use the 'Backspace', 'C' or 'Delete' keys."
             ],
             "github" : "https://github.com/Havolt/Calculator"
         },
