@@ -55,6 +55,7 @@ body, html{
     border: none;
     width: 95%;
     font-size: 3.4em;
+    color: black;
   }
   
   #calcMainDisp:focus{

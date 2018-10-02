@@ -238,8 +238,8 @@
       for(i = 0; i < tempNum.length; i++){
         if(tempNum[i] == '.'){
           for(var j = tempNum.length-1; j > i; j--){
-            if(tempNum[j] == '0' && endNum){
-
+            if((tempNum[j] == '0' && endNum) && tempNum.length < 1){
+              
               tempNum.pop();
               if(j == i+1){
                 tempNum[i].pop();
@@ -280,7 +280,7 @@
       calcMainDisp.value = '';
       firstNum = false;
     }
-    if(!isNaN(parseInt(event.key))  && afterEqual == false ){
+    if(!isNaN(parseInt(event.key)) && afterEqual == false ){
       numToMainDisp(event.key);
     }
     else if(event.key == '+'){
@@ -304,6 +304,11 @@
     else if(event.key == '=' || event.key == "Enter"){
       equalsFunc();
     }
+    if(calcMainDisp.value == '') {
+      console.log('dont wanna be here')
+      calcMainDisp.value = '0'
+      firstNum = true;
+    }
   }
 
  (function init(){
@@ -317,4 +322,5 @@
    decimalButton.addEventListener('click', decimalFunc);
    clearButton.addEventListener('click', clearFunc);
    equalsButton.addEventListener('click', equalsFunc);
+   document.querySelector('#calcMainDisp').disabled="disabled";
  })();
