@@ -86,7 +86,7 @@ body {
 }
 
 .aboutMeTitle {
-    margin-top: 4vh;
+    margin-top: 5vh;
     font-size: 34px;
     font-weight: bold;
     text-align:center;
@@ -875,7 +875,20 @@ body {
 
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 680px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .introCardHalf {
+        height: inherit;
+        min-height: 100vh;
+    }
+
+    .introBio {
+        min-height: 100vh;
+    }
 
     .skillItems{
         

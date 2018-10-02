@@ -508,7 +508,6 @@ const vueApp = new Vue({
             }
         },
         touchSort: function() {
-
             if(vueApp.touchCheckList.length == 1) {
                 vueApp.touchCheck(vueApp.touchCheckList[0].arr, vueApp.touchCheckList[0].ctx);
             } 
@@ -524,6 +523,7 @@ const vueApp = new Vue({
                     sizeArr.push(c);
                 })
                 if(sizeArr[0] > sizeArr[1]) {
+                    console.log(vueApp.touchCheckList[0]);
                     vueApp.touchCheck(vueApp.touchCheckList[0].arr, vueApp.touchCheckList[0].ctx);
                 }else {
                     vueApp.touchCheck(vueApp.touchCheckList[1].arr, vueApp.touchCheckList[1].ctx);
@@ -557,7 +557,7 @@ const vueApp = new Vue({
                 } 
             })
 
-            if(fullSwipe) {
+            if(fullSwipe && window.innerHeight > 635) {
                 if((direction == 1) && ((vueApp.menuCurrPos*2) < vueApp.portItemsAll.length+1) && context == 'menu') {
                     vueApp.changeMenuPos((vueApp.menuCurrPos/2)+1);
                 }
