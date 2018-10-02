@@ -6,17 +6,17 @@
 
 html, body{
     background: #f7f7f7;
-    max-width: 100vw;
-    overflow-x: hidden;
+    
 }
 
 #app {
+    width: 100%;
     padding-top: 40px;
     z-index: 1;
 }
 
 .sectionAboutDiv{
-    width: 100vw;
+    width: 100%;
 }
 
 .sectionTitle{
@@ -53,6 +53,7 @@ html, body{
         width: fit-content;
         border-radius: 4px;
         background: rgb(57, 107, 187) ;
+        user-select: none;
 }
 
 .portButton:hover{
@@ -73,6 +74,8 @@ html, body{
     height: 100vh;
     background: linear-gradient(to bottom , #222222, #555555);
     overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
 }
 
 .intLogoDiv{
@@ -450,7 +453,7 @@ html, body{
 
 .projectDarken{
     background: rgba(75, 75, 75, 0.85);
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
@@ -462,7 +465,7 @@ html, body{
 
 .projectInfoDiv{
     min-width: 310px;
-    width: 80vw;
+    width: 80%;
     background: rgb(243, 243, 243);
     border-radius: 10px;
     margin: 80px auto 0 auto;
@@ -538,7 +541,7 @@ html, body{
 
 
     .projectInfoDiv{
-        width: 60vw;
+        width: 60%;
     }
 
     .projectInfoTitle{

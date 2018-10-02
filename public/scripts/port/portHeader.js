@@ -26,11 +26,13 @@ const vh = new Vue({
             this.infoClose = !this.infoOpen;
         },
         toggleDrop: function() {
+            
             this.dropDownBool = !this.dropDownBool;
         }
+        
     },
     template: `
-    <div> 
+    <div > 
         <div class="headContain">
                     <div class="headLogo">
                         <a href="/">
@@ -93,6 +95,23 @@ const vh = new Vue({
     `
 });
 
+function clickOffDropDown() {
+    if(!document.querySelector('#app')) {
+        setTimeout(() => {clickOffDropDown()}, 2000)
+    }else {
+        document.body.addEventListener('click', (e) => {
+            if(e.target.parentElement !== document.querySelector('.headListMainTxt') && 
+               e.target !== document.querySelector('.headListMainTxt') &&
+               e.target.parentElement !== document.querySelector('.headListMainSmall') &&
+               e.target !== document.querySelector('.headListMainSmall') &&
+               e.target.parentElement !== document.querySelector('.headListMainSmallTxt')
+               ) {
+                vh.dropDownBool = false;
+            }
+        })
+    }
+}
+
 
 (function initSettings(){
 
@@ -103,7 +122,6 @@ const vh = new Vue({
     .then((json) => {
         json.items.map((el) => {
             if(el.route == pathName) {
-                console.log('yes!')
                 vh.headInfo.heading = el.name;
                 vh.headInfo.icon = el.icon;
                 el.description.map((el) => {
@@ -117,4 +135,6 @@ const vh = new Vue({
         })
 
     });
+
+    clickOffDropDown();
 })();
