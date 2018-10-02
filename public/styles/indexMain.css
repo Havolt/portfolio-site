@@ -875,6 +875,8 @@ body {
 
 }
 
+
+
 @media only screen and (max-width: 680px) {
 
     body {
@@ -950,4 +952,54 @@ body {
         font-size: 22px;
         
     }
+ }
+
+ @media only screen and (min-width: 1600px) {
+
+    .introTxt {
+        font-size: 38px;
+    }
+
+    .introLinks {
+        font-size: 44px;
+    }
+   
+
+    .aboutMeTitle {
+        font-size: 52px;
+    }
+
+    .aboutMePara > p {
+        font-size: 24px;
+    }
+
+    .skillItems{
+        
+        font-size: 26px;
+        
+    }
+    
+    .skillItems > i {
+        
+        font-size: 90px;
+    }
+
+    .formInput {
+        font-size: 32px;
+    }
+
+    .formTextArea {
+        font-size: 32px;
+        height: 280px;
+    }
+
+    .formButton {
+        font-size: 34px;
+    }
+
+    .contactItem {
+        font-size: 36px;
+    }
+    
+
  }
