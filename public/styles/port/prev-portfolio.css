@@ -12,6 +12,7 @@ html, body{
 
 #app {
     padding-top: 40px;
+    z-index: 1;
 }
 
 .sectionAboutDiv{
@@ -464,7 +465,7 @@ html, body{
     width: 80vw;
     background: rgb(243, 243, 243);
     border-radius: 10px;
-    margin: 20px auto 0 auto;
+    margin: 80px auto 0 auto;
     padding-bottom: 40px;
     
 }
@@ -472,7 +473,7 @@ html, body{
 .projectInfoCross{
     font-size: 1.4em;
     position: absolute;
-    top: 3%;
+    top: 70px;
     right: 3%;
     color: white;
 }
@@ -506,8 +507,14 @@ html, body{
 }
 
 .projectInfoButton{
+    opacity: 0.4;
     font-size: 1.2em;
     margin: 24px auto 0 auto;
+    user-select: none;
+}
+
+.projectInfoButton:hover{
+   cursor: not-allowed;
 }
 
 .projectSectionsContain{
@@ -768,19 +775,19 @@ html, body{
 }
 
 .ccBlueSubmit{
+    text-align: center;
     font-size: 1.6em;
     margin: 20px auto 0 auto;
     display: block;
     padding: 2px 20px;
-    background: rgb(93, 146, 231);
-    color: white;
-    border: 2px solid white;
+    background: rgba(82, 94, 114, 0.4);
+    color: rgb(128, 128, 128);
+    border: 2px solid rgb(167, 167, 167);
     border-radius: 5px;
 }
 
 .ccBlueSubmit:hover{
-    background: #1953AE;
-    cursor: pointer;
+    cursor: not-allowed;
 }
 
 @media only screen and (min-width: 800px) {
@@ -877,7 +884,7 @@ html, body{
 }
 
 .footerLink:hover{
-    cursor: pointer;
+    cursor: not-allowed;
     border-radius: 50%;
 }
 

@@ -272,7 +272,7 @@ function addProjectFunctions(divs){
 
 function projectLinkButtons(lnk){
     window.open(lnk, '_self');
-}
+};
 
 
 
@@ -311,7 +311,7 @@ function projectLinkButtons(lnk){
     creEl('div', 'projectMore', 'projectDiv', 0);
     creEl('div', ['portButton','projectMoreButton'], 'projectMore', 0, 'Show More');
 
-    creEl('div', ['projectDarken', 'hidden'], 'site', 0);
+    creEl('div', ['projectDarken', 'hidden'], 'app', 0);
     creEl('div', 'projectInfoDiv', 'projectDarken', 0);
     creEl('div', 'projectInfoCross', 'projectInfoDiv', 0, '<i class="fa fa-times"></i>');
     creEl('div', 'projectInfoTitle', 'projectInfoDiv', 0);
@@ -321,7 +321,7 @@ function projectLinkButtons(lnk){
 
     addProjectFunctions(document.getElementsByClassName('projectItemImgOver'))
 
-    document.getElementsByClassName('projectInfoButton')[0].addEventListener('click', function(){projectLinkButtons(projectData.link)})
+    //document.getElementsByClassName('projectInfoButton')[0].addEventListener('click', function(){projectLinkButtons(projectData.link)})
 
     document.getElementsByClassName('projectMoreButton')[0].addEventListener('click', function(){
 
@@ -336,7 +336,7 @@ function projectLinkButtons(lnk){
         projectData.showingMore = !projectData.showingMore;
 
     })
-})()
+})();
 
 
 
@@ -363,8 +363,8 @@ function showContact(sec){
 
 //gives form elements correct data to send information to formspree
 function setFormData(){
-    document.getElementsByClassName('ccBlueForm')[0].action="https://formspree.io/markfitz815@gmail.com";
-    document.getElementsByClassName('ccBlueForm')[0].method="POST"
+    //document.getElementsByClassName('ccBlueForm')[0].action="https://formspree.io/markfitz815@gmail.com";
+    //document.getElementsByClassName('ccBlueForm')[0].method="POST"
     document.getElementsByClassName('ccBlueName')[0].type="text";
     document.getElementsByClassName('ccBlueName')[0].name="name";
     document.getElementsByClassName('ccBlueName')[0].placeholder="Name";
@@ -373,7 +373,7 @@ function setFormData(){
     document.getElementsByClassName('ccBlueEmail')[0].placeholder="Email address";
     document.getElementsByClassName('ccBlueText')[0].name="text";
     document.getElementsByClassName('ccBlueText')[0].placeholder="Tell me a little about your company and the position you feel I would be right for.";
-    document.getElementsByClassName('ccBlueSubmit')[0].type="submit";
+    //document.getElementsByClassName('ccBlueSubmit')[0].type="submit";
     document.getElementsByClassName('ccBlueSubmit')[0].value="Send";
 }
 
@@ -382,11 +382,12 @@ function shakeBox(div, size, runner){
     runner++;
     if(runner < 8){setTimeout(function(){shakeBox(div, -size, runner)}, 80)}
     else{div.style.left="0px"}
-}
+};
 
 
 //initializes contact section
 (function initContactSec(){
+    
     creEl('div', ['contactDiv', 'sectionMainDiv'], 'app', 0);
     creEl('div', 'contactContain', 'contactDiv', 0);
     creEl('div','contactIcon', 'contactContain', 0, '<i class="fa fa-envelope-square"></i>')
@@ -459,7 +460,7 @@ function shakeBox(div, size, runner){
 function createFooterLink(linkName,  inHL, linkDestination){
     creEl('div', ['footerLink', 'footerLink'+ linkName], 'footerLinksDiv', 0);
     creEl('div', ['footerLinkIcon', 'footerLinkIcon'+linkName], 'footerLink'+ linkName, 0, '<i class="fab fa-'+inHL+'"></i>');
-    openWebPage('footerLink'+linkName, 0, linkDestination)
+    //openWebPage('footerLink'+linkName, 0, linkDestination)
 }
 
 //initializes the footer section of the wepage
