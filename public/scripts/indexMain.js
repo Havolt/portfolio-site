@@ -1,5 +1,5 @@
 //Place scripts needed to load after Vue here
-const scripts = ['introSec.js'];
+
 
 //Toggles if element has the displayNone class
 function toggleDisplay(el) {
@@ -641,13 +641,23 @@ const vueApp = new Vue({
     }
 });
 
-//Initial functions when app is loaded
-(function initFunctions() {
-    scriptLoad(scripts);
+function siteReady() {
     toggleDisplay(document.querySelector('#vApp'));
-    vueApp.preLoadPortImages()
     setTimeout(() => {vueApp.intTxtAnimate(vueApp.intTxtAnimData)}, 10);
     setTimeout(() => {vueApp.rightArrowHide = false;}, 200);
     setTimeout(() => {vueApp.scrollAllow = true;}, 1500);
+}
+
+//Initial functions when app is loaded
+(function initFunctions() {
+    vueApp.preLoadPortImages()
+    document.querySelector('.introImg').addEventListener('load', () =>{
+        document.querySelector('#loadApp').classList.add('displayNone');
+        console.log('im here')
+        setTimeout(() => {
+            siteReady()
+        }, 220);
+    })
+    
 })()
 

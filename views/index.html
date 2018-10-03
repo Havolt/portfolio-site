@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<div  @touchmove="touchHandler" @wheel="scrollHandler" class="displayNone" id="vApp">
+<div @touchmove="touchHandler" @wheel="scrollHandler" class="displayNone" id="vApp">
     <!--Entire site container-->
     <div class="siteSec">
         <!--Entire intro container-->
@@ -119,6 +119,15 @@
         </div>
     </div>
     <div class="hImg"></div>
+</div>
+
+<div id="loadApp">
+    <div class="pageLoadGeneral">
+        <div class="pageLoadSpinner">
+            <i class="fas fa-spinner"></i>
+        </div>
+        <div class="pageLoadText">Loading..</div>
+    </div>
 </div>
 
 
