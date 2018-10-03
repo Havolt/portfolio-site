@@ -82,7 +82,7 @@ body {
 /* Bio section */
 
 .introBio {
-    width: 50%;
+    width: 55%;
 }
 
 .aboutMeTitle {
@@ -667,10 +667,10 @@ body {
 
 @keyframes halfIntroAn {
     from{width: 100%}
-    to{width:50%};
+    to{width:40%};
 }
 @keyframes fullIntroAn {
-    from{width: 50%}
+    from{width: 40%}
     to{width: 100%};
 }
 
@@ -732,6 +732,18 @@ body {
 
 .displayNone {
     display: none;
+}
+
+@media only screen and (min-width: 841px) {
+    
+    .introLinkSmall:nth-child(1) { 
+        margin-left: 10%;
+    }
+    
+    .introLinkSmall:nth-child(2) { 
+        float: right;
+        margin-right: 10%;
+    }
 }
 
 @media only screen and (max-width: 840px) {
@@ -810,6 +822,10 @@ body {
         display: block;
         font-size: 16px;
         width: 100%;
+    }
+
+    .introLinkSmall:nth-child(1) { 
+        margin-left: 10%;
     }
 
     .boldNameSmall {
