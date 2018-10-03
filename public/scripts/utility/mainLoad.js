@@ -24,9 +24,7 @@ onload = () => {
         styleS2.rel = "stylesheet";
         styleS2.href = `/styles/port/${pathName}.css`;
         document.head.appendChild(styleS2);
-        console.log(pathName)
 
-        
         scriptLoad([`/port/${pathName}.js`,'/port/portHeader.js'])
     }
 }

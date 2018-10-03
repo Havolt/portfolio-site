@@ -501,7 +501,6 @@ function scrollToAbout(height, speed){
         setTimeout(function(){showContact(document.getElementsByClassName('contactContainBlue')[0])}, 200)
     }
     else if(window.scrollY < height){
-        console.log(window.innerHeight)
         window.scrollTo(0, scrollY + 30);
         setTimeout(function(){scrollToAbout(height, speed)}, speed)
     }

@@ -211,7 +211,6 @@ function createShapeDataCaller(obj){
             if(comm == 4 || comm == 5){tetrisObj.playerPiece.trueMap = rotatedArrTrue}
             if(comm == 4 || comm == 5){tetrisObj.playerPiece.direction = nextDirection}
             if((comm == 4 || comm == 5) && soundOn){rotateSound()}
-            //if(comm == 4 || comm == 5){console.log(tetrisObj.playerPiece)}
         }
     } 
 
@@ -350,7 +349,6 @@ function createShapeDataCaller(obj){
             let addPoints = completeRowTiles.length * 10;
             addPoints = addPoints * Number(completeRowTiles.length.toString().split('').shift())
             score += addPoints;
-            console.log(score)
         }
     }
 
@@ -456,9 +454,6 @@ function createShapeDataCaller(obj){
                                 if(mapArr[restArr[j][l]+10].permanent && !samePiece){possibleGrav = false}
                             }else{possibleGrav = false}
                             
-                        }
-                        if(possibleGrav){
-                            console.log(restArr[j]);
                         }
                         
                     }
@@ -772,7 +767,6 @@ function createShapeDataCaller(obj){
         playerPieceSelect(tetrisObj.playerPiece, tetrisObj.nextPiece, tetrisObj.pieceTypes);
         pauseGame = false;
         gameEngine(tetrisObj.timer);
-        console.log(tetrisObj);
     }
 
 

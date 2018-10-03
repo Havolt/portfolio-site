@@ -1,11 +1,17 @@
 
+
 #app {
     width: fit-content;
     padding-top: 100px;
     margin: 0 auto;
 }
 
+.fixWidth {
+    max-width: 100%;
+}
+
 .gameCanvas {
-    width: 720px;
-    height: 480px;
+    width: 100%;
+    max-width: 720px;
+    max-height: 480px;
 }

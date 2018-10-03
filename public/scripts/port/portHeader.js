@@ -32,7 +32,7 @@ const vh = new Vue({
         
     },
     template: `
-    <div > 
+    <div class="headAll"> 
         <div class="headContain">
                     <div class="headLogo">
                         <a href="/">

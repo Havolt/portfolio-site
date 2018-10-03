@@ -305,7 +305,6 @@
       equalsFunc();
     }
     if(calcMainDisp.value == '') {
-      console.log('dont wanna be here')
       calcMainDisp.value = '0'
       firstNum = true;
     }

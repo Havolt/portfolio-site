@@ -7,7 +7,6 @@
 
 function scriptLoad(items) {
     if(typeof items === 'object'){
-        console.log(items)
         items.map((el) => {
             const newScr = document.createElement('script');
             newScr.src = "/scripts/" + el;

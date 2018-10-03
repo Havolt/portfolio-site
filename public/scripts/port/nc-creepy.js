@@ -58,7 +58,6 @@ function createEl(obj){
     });
     if(obj.inHL){newEl.innerHTML = obj.inHL};
     if(obj.inType){newEl.type = obj.inType};
-    console.log(obj)
     document.querySelector(obj.append).appendChild(newEl);
 }
 

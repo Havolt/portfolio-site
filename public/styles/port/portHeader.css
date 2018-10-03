@@ -23,12 +23,21 @@ a{
     display: inline-block;
 }
 
+.headAll {
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+}
+
 .headContain {
+    position: absolute;
     background: white;
     display: flex;
-    position: fixed;
     height: 56px;
     padding-top: 4px;
+    width: 100vw;
+    border-bottom: 1px solid rgb(177, 177, 177);
+    z-index: 1000;
 }
 
 .headContain > div {
@@ -45,11 +54,6 @@ a{
     cursor: pointer;
 }
 
-.headContain {
-    width: 100%;
-    border-bottom: 1px solid rgb(177, 177, 177);
-    z-index: 1000;
-}
 
 .headPic {
     display: table-cell;
@@ -95,7 +99,9 @@ a{
 }
 
 .headInfoSec {
-    position: fixed;
+    padding-bottom: 5px;
+    position: absolute;
+    width: 100%;
     top: 60px;
     left: 0;
     right: 0;
@@ -104,13 +110,14 @@ a{
     text-align: center;
     background: white;
     z-index: 999;
+    overflow-y: auto;
 }
 
 .headInfoHeading {
     font-size: 40px;
     font-weight: bold;
     text-align: center;
-    margin: 42px 0px;
+    margin: 22px 0px;
     
 }
 
@@ -325,6 +332,16 @@ a{
     
     .headText {
         display: none;
+    }
+
+    .headInfoHeading {
+        font-size: 22px;
+        margin: 12px auto;
+    }
+
+    .headInfoPara {
+        margin: 6px auto;
+        font-size: 14px;
     }
 
 

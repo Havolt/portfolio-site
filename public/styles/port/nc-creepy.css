@@ -261,6 +261,14 @@ html, body{
 }
 
 @media only screen and (max-width: 600px) {
+
+    #app {
+        padding-top: 60px;
+    }
+
+    html, body {
+        background: #f7f7f7;
+    }
   
     .app{
         width: 100%;
@@ -304,6 +312,12 @@ html, body{
 
     .footerSec{
         height: 48px;
+    }
+
+    .optionsMenu {
+        margin-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;        
     }
 
 }

@@ -402,7 +402,6 @@ const vueApp = new Vue({
                 return false;
             } 
             else {
-                console.log('ready for sending')
                 vueApp.buttonDisabled = true;
                 
                 fetch('/form', {
@@ -523,7 +522,6 @@ const vueApp = new Vue({
                     sizeArr.push(c);
                 })
                 if(sizeArr[0] > sizeArr[1]) {
-                    console.log(vueApp.touchCheckList[0]);
                     vueApp.touchCheck(vueApp.touchCheckList[0].arr, vueApp.touchCheckList[0].ctx);
                 }else {
                     vueApp.touchCheck(vueApp.touchCheckList[1].arr, vueApp.touchCheckList[1].ctx);

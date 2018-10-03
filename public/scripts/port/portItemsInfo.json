@@ -50,7 +50,7 @@
             "route": "offline-hacker",
             "icon" : "far fa-keyboard",
             "description": [
-                "Note: This game requires a keyboard to play and has a fixed resolution.",
+                "Note: This game requires a keyboard to play and is best played on screen with a resolution of over 720 x 480.",
                 "Offline Hacker was my entry for the JS13kGames competition which is a JavaScript coding competition for HTML5 game developers. The competition hasa rule which limits the size of the entered games to under 13 kilobytes.",
                 "Offline Hacker is a typing game. The goal is to prevent the words that appear on-screen from moving all the way to the right hand side of the screen. To do this the player must type the words as fast as they can to destroy them.",
                 "The player will have three lives. As the user's score gets higher the game will in-turn keep getting faster. Offline Hacker is drawn to the screen using canvas. I've tried to emulate the aesthetic of older computers with the use of green text on a black background."

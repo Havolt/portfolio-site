@@ -331,11 +331,9 @@ function updatePiece(checkerPos, tilePos, takenPos, takeThisPiece){
   //New Stuff
   if(lightArr.length == 0){
     alert('Dark Wins');
-    console.log('Dark Wins')
   }
   else if(darkArr.length == 0){
     alert('Light Wins');
-    console.log('Light Wins')
   }
   else{
     if(!anotherMove){
