@@ -5,6 +5,7 @@
 }
 
 body {
+    height: 100%;
     overflow: hidden;
 }
 
@@ -527,7 +528,7 @@ body {
 }
 
 .okText {
-    background: rgb(96, 202, 26);
+    background: rgb(46, 222, 126);
     font-weight: bold;
     border-radius: 2px;
     padding: 8px 4px;

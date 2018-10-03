@@ -195,7 +195,7 @@ const vueApp = new Vue({
             document.querySelector('#vApp').removeChild(document.querySelector('.hImg'));
         },
         scrollHandler: function(e, touchInp) {
-            if(this.scrollAllow) {
+            if(this.scrollAllow && (window.innerHeight > document.querySelector('.siteSec').offsetHeight)) {
                 if(e.wheelDeltaY < 0 || touchInp == 1) {
                     if(!this.portfolioBool && !this.contactBool)  {
                         this.portfolioFunc(0);
@@ -557,7 +557,7 @@ const vueApp = new Vue({
                 } 
             })
 
-            if(fullSwipe && window.innerHeight > 635) {
+            if(fullSwipe) {
                 if((direction == 1) && ((vueApp.menuCurrPos*2) < vueApp.portItemsAll.length+1) && context == 'menu') {
                     vueApp.changeMenuPos((vueApp.menuCurrPos/2)+1);
                 }
