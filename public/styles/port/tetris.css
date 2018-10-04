@@ -137,6 +137,7 @@ body{
 .controlsContain{
     position: fixed;
     background: rgba(53, 43, 43, 0.85);
+    max-width: 100%;
     width: 750px;
     height: 250px;
     left: 0;
@@ -160,6 +161,7 @@ body{
 
 .controlsArea{
     width: 110px;
+    
 }
 
 .controlsIcon{
@@ -207,9 +209,11 @@ body{
     position: absolute;
     left: 25px;
     bottom: 15px;
+
 }
 
 .arrowsSection{
+ 
     position: absolute;
     right: 25px;
     bottom: 57px;
@@ -324,7 +328,21 @@ body{
     }
 
     .controlsContain{
-        width: 600px;
+        width: 100%;
+    }
+
+    .controlsArea {
+        max-width: 80px;
+    }
+
+    .arrowsSection{
+        top: 85px;
+        bottom: 0;
+    }
+
+    .rotateSection{
+        top: 85px;
+        bottom: 0;
     }
 
 }
@@ -431,3 +449,14 @@ body{
         font-size: 1.2em;
     }
 }
+
+@media only screen and (max-width: 530px) {
+
+    .tetrisContain {
+        margin: 0 auto;
+        max-width: 100%;
+        overflow-x: hidden;
+        white-space: nowrap;
+    }
+
+ }
