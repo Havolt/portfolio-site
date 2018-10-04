@@ -1,3 +1,8 @@
+.titleContain {
+    padding-top: 18px;
+    padding-bottom: 32px;
+}
+
 
 .toDoTitle{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -13,6 +18,8 @@
     display: block;
     text-align: center;
 }
+
+
 
 .newListInput{
     width: 60%;
@@ -47,6 +54,7 @@
 }
 
 .newListButton:hover{
+    background: rgb(41, 170, 182);
     cursor: pointer;
 }
 
@@ -107,8 +115,7 @@
     margin-left: 5%;
     display: inline-block;
     width: 76%;
-    overflow-x:hidden;
-    text-overflow: ellipsis;
+    overflow-x: auto;
 }
 
 .listItemCross{
@@ -116,14 +123,12 @@
     padding: 0px 4px 0px 4px;
     right: 5px;
     top: 5px;
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: #787878;
 }
 
 .listItemCross:hover{
-    background: rgb(129, 63, 63);
-    color: #f1f1f1;
-    border-radius: 50%;
+    color: rgb(126, 37, 37);
     cursor: pointer;
 }
 
@@ -347,6 +352,21 @@
 
     .newListInput{
       border: 2px solid rgb(187, 187, 187);
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    
+    .listItemCross {
+        z-index: 10;
+    }
+    
+    .listItemFav {
+        right: 0px;
+        top: 12px;
+        padding-right: 20px;
+        background: white;
+        z-index: 1;
     }
 }
 
