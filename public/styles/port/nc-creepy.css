@@ -287,7 +287,6 @@ html, body{
     }
   
     
-
     .mainText{
         padding-top: 30px;
         font-size: 1.1em;
@@ -317,10 +316,6 @@ html, body{
     .searchSec{
         padding-bottom: 20px;
     }
-
-    .mainText{
-        padding-top: 5px;
-    } 
 
     .footerSec{
         height: 48px;

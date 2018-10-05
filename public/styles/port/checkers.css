@@ -1,6 +1,8 @@
 html, body{
     background-color: #f7f7f7;
     font-family: arial, sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
   }
   
   #app{
@@ -70,3 +72,55 @@ html, body{
     text-align: center;
   }
   
+
+  @media only screen and (max-width: 570px) {
+
+
+    #boardApp {
+      width: 320px;
+      height: 320px;
+      border: 2px solid #67759B;
+    }
+    
+    .allTile{
+      width: 40px;
+      height: 40px;
+      float: left;
+    }
+    
+    .darkTile{
+      background-color: #A67D5D;
+    }
+    
+    .lightTile{
+      background-color: #E8D0AA;
+    }
+    
+    .allPiece{
+      width: 30px;
+      height: 30px;
+      margin: 5px auto;
+      color: white;
+      font-size: 1.8em;
+    }
+
+    #textArea{
+      width: 240px;
+      height: 50px;
+      background-color: #67759B;
+      margin: 0px auto;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      border-left: 3px solid #67759B;
+      border-right: 3px solid #67759B;
+      border-bottom: 3px solid #67759B;
+    }
+
+    #textMove {
+      font-size: 20px;
+    }
+
+    #textMand {
+      font-size: 16px;
+    }
+  }
