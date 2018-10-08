@@ -11,7 +11,50 @@
 }
 
 .gameCanvas {
+    box-shadow: 2px 2px 8px rgb(107, 107, 107);
+    border: 3px solid green;
     width: 100%;
     max-width: 720px;
-    max-height: 480px;
+    max-height: 480px; 
+}
+
+@media only screen and (min-width: 1030px) and (min-height: 640px) {
+
+    .gameCanvas {
+        width: 1024px;
+        height: 576px; 
+        max-width: 1024px;
+        max-height: 576px;
+    }
+
+}
+
+@media only screen and (min-width: 1300px) and (min-height: 800px) {
+
+    #app {
+        padding-top: 70px;
+    }
+
+    .gameCanvas {
+        width: 1280px;
+        height: 720px; 
+        max-width: 1280px;
+        max-height: 720px;
+    }
+
+}
+
+@media only screen and (min-width: 1620px) and (min-height: 1000px) {
+
+    #app {
+        padding-top: 70px;
+    }
+
+    .gameCanvas {
+        width: 1600px;
+        height: 900px; 
+        max-width: 1600px;
+        max-height: 900px;
+    }
+
 }
