@@ -366,8 +366,7 @@ body{
     }
 
     .previewBlockContain{
-        margin-bottom: 44px;
-        margin-left: 0;
+        margin: 0 auto 44px auto;
         border: 4px solid rgba(37, 37, 37, 0.795);
         
     }
@@ -387,9 +386,15 @@ body{
         border: 1px solid rgb(102, 102, 102);
     }
 
+   
+
     .optionButtons:hover{
         background: rgba(120, 159, 218, 0.795);
         color: white;
+    }
+
+    .difficultyBoard {
+        font-size: 1em;
     }
 }
 
@@ -431,6 +436,10 @@ body{
         font-size: 1.6em;
     }
 
+    .difficultyBoard {
+        font-size: 1em;
+    }
+
 }
 
 @media only screen and (max-height: 720px) and (max-width: 670px) {
@@ -448,9 +457,21 @@ body{
     .stats{
         font-size: 1.2em;
     }
+
+    .difficultyBoard {
+        font-size: 1em;
+    }
 }
 
 @media only screen and (max-width: 530px) {
+
+    #app {
+        min-width: 0px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
 
     .tetrisContain {
         margin: 0 auto;
@@ -459,4 +480,6 @@ body{
         white-space: nowrap;
     }
 
+    
+ 
  }
