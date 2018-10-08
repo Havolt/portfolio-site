@@ -75,7 +75,7 @@ body {
     max-height: 240px;
     width: fit-content;
     max-width: 100%;
-    margin: 10vh auto 25px auto;
+    margin: 18vh auto 25px auto;
 }
 
 .introImgCon > img { 
@@ -124,7 +124,7 @@ body {
 }
 
 .aboutMeTitle {
-    margin-top: 5vh;
+    margin-top: 12vh;
     font-size: 34px;
     font-weight: bold;
     text-align:center;
@@ -599,7 +599,7 @@ body {
 }
 
 @keyframes mIntImgConAn {
-    from{margin: 10vh auto 25px auto;}
+    from{margin: 18vh auto 25px auto;}
     to{margin: 2vh auto 4px auto;}
 }
 
@@ -640,7 +640,7 @@ body {
 
 @keyframes mxIntImgConAn {
     from{margin: 2vh auto 4px auto;}
-    to{margin: 10vh auto 25px auto;}
+    to{margin: 18vh auto 25px auto;}
 }
 
 .maxIntroImgCon {
@@ -941,6 +941,25 @@ body {
         height: inherit;
         min-height: 100vh;
     }
+
+    .introImgCon {
+        margin: 9vh auto 25px auto;
+    }
+
+    @keyframes mxIntImgConAn {
+        from{margin: 2vh auto 4px auto;}
+        to{margin: 9vh auto 25px auto;}
+    }
+
+    @keyframes mIntImgConAn {
+        from{margin: 9vh auto 25px auto;}
+        to{margin: 2vh auto 4px auto;}
+    }
+
+    .aboutMeTitle {
+        margin-top: 6vh;
+    }
+    
 
     .introBio {
         min-height: 100vh;
