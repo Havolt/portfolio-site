@@ -89,6 +89,10 @@ body {
     margin: 0 5%;
 }
 
+.nameLast {
+    margin-left: -8px;
+}
+
 .boldName {
     font-weight: bold;
 }
