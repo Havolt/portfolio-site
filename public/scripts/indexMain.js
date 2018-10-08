@@ -653,7 +653,6 @@ function siteReady() {
     vueApp.preLoadPortImages()
     document.querySelector('.introImg').addEventListener('load', () =>{
         document.querySelector('#loadApp').classList.add('displayNone');
-        console.log('im here')
         setTimeout(() => {
             siteReady()
         }, 220);

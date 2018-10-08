@@ -8,7 +8,7 @@ let loadNum = {count: 0, runTrue : true, cover: false};
 let callInProgress = false;
 let randCallInProgress = false;
 let userCall = false;
-let callLimit = 25;
+let callLimit = 30;
 let lmtAtmpts = 0;
 let textFade = {val: 1, change: +1};
 //Array of terms that should return bad request
@@ -91,7 +91,6 @@ function searchRedd(e){
         }else{
             if(threadArr[1] == undefined){
                 searchRedd();
-                
             }else{
                 document.querySelector('.mainText').innerHTML = '';
                 randComment();

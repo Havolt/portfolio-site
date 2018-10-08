@@ -117,6 +117,7 @@ let listObj = {
                 }
             })
             creEl('div', 'listItemText', document.getElementsByClassName('listItem')[listRunner], listObj.itemData[i].text);
+            document.querySelectorAll('.listItemText')[document.querySelectorAll('.listItemText').length-1].title = listObj.itemData[i].text;            
             creEl('div', 'listItemCross', document.getElementsByClassName('listItem')[listRunner], '<i class="fa fa-times"></i>');
             document.getElementsByClassName('listItemCross')[listRunner].addEventListener('click', function(){
                 let deletedNum = listObj.itemData[i].number;

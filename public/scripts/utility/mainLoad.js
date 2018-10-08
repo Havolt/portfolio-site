@@ -1,12 +1,18 @@
-
+console.log(`Hello and thank you for showing interest in my portfolio.\nPlease get in touch if you are interested in my work.`)
 
 if(typeof Vue === 'undefined') {
     const newVue = document.createElement('script');
     newVue.src="/scripts/utility/vue.js";
     document.body.appendChild(newVue);
+    Vue.config.productionTip = false;
+} else {
+    Vue.config.productionTip = false;
 }
 
+
+
 onload = () => {
+    
     let checkPort = window.location.pathname.split('').splice(0, 6).join('');
     if(window.location.pathname == '/'){
         scriptLoad('indexMain.js')
