@@ -931,6 +931,21 @@ body {
         text-align: left;
     }
 
+    .contactForm {
+        position: relative;
+    }
+
+    @keyframes conCompleteAn {
+        from{width: 0%}
+        to{width: 100%}
+    }
+    
+    .contactComplete {
+        left: 0;
+        top: 0;
+        animation: conCompleteAn 1s forwards;
+    }
+
 }
 
 
