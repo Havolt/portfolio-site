@@ -94,9 +94,9 @@ const vueApp = new Vue({
         bioVisibleRev: true,
         bioVisibleRevSk: true,
         aboutTitle: 'About Me',
-        aboutPara: [ `I'm an Irish programmer and hold a bachelor\'s degree in multimedia and multiple certificates in web development. I have a strong passion for front-end web development and creating fun web games.`,
+        aboutPara: [ `I hold a bachelor\'s degree in multimedia and multiple certificates in web development. I have a strong passion for front-end web development and creating fun web games.`,
         `My programming language of expertise is JavaScript where I have gained a strong knowledge of Node, Vue and multiple other frameworks. I also have good experience with CSS and put a strong focus on responsive design in my work. I've been programming for multiple years now and have gained a lot of knowledge of web design and programming paradigms.`,
-        `When I\'m not making websites I can be found running, reading or visiting new places.`],
+        `When I\'m not making websites I can be found running, reading or sipping some green tea.`],
         skillList: [
             {
                 icon: 'fas fa-mobile',

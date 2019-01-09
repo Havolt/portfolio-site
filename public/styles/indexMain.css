@@ -22,7 +22,8 @@ body {
 .pageLoadGeneral {
     display: inline-block;
     width: 100%;
-    margin: 30vh auto;
+    margin: 35vh auto;
+    line-height: 500%;
     vertical-align: center;
 }
 
@@ -826,7 +827,7 @@ body {
     }
     
     .maxIntroArrowCon {
-        animation: mxIntArwConAn 1.5s;
+        animation: mxIntArwConAn 1s;
     }
 
     @keyframes introImgConSmallAn {
