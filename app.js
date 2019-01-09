@@ -23,7 +23,7 @@ var transporter = nodemailer.createTransport({
     },
     auth: {
         user: 'markfitz101@hotmail.com', 
-        pass: 'Renzokuken1990'
+        pass: ''
     }
 });
 
