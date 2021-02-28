@@ -2,11 +2,8 @@ console.log(`Hello and thank you for showing interest in my portfolio.\nPlease g
 
 if(typeof Vue === 'undefined') {
     const newVue = document.createElement('script');
-    newVue.src="/scripts/utility/vue.js";
+    newVue.src="public/scripts/utility/vue-prod.js";
     document.body.appendChild(newVue);
-    Vue.config.productionTip = false;
-} else {
-    Vue.config.productionTip = false;
 }
 
 

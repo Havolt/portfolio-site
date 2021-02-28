@@ -57,7 +57,7 @@ app.post('/form', (req, res) => {
 
 for(let i = 0; i < portfolioLinks.length; i++) {
     app.get(`/port/${portfolioLinks[i]}`, (req, res) => {
-        res.sendFile(__dirname + `/views/port/${portfolioLinks[i]}.html`)
+        res.sendFile(path.resolve(`${__dirname}/../views/port/${portfolioLinks[i]}.html`))
     })
 }
 
