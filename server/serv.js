@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
+const path = require('path')
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const nodemailer = require('nodemailer');
@@ -11,7 +12,7 @@ app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
     console.log('requested main page');
-    res.sendFile(__dirname + '/views/index.html');
+    res.sendFile(path.resolve(__dirname + '/../views/index.html'));
 });
 
 var transporter = nodemailer.createTransport({
