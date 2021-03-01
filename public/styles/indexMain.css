@@ -176,27 +176,29 @@ body {
 
 .introLinksCon {
     opacity: 0;
+    
 }
 
 .introLinksAll {
     font-size: 28px;
     margin-top: 0px;
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
 }
 
 .introLinks {
     color: rgb(31, 134, 202);
-    display: inline-block;
-    width: 25%;
     text-align: center;
     user-select: none;
 }
 
 .introLinks:nth-child(1){
-    margin-left: 25%;
+    padding-right: 4vw;
 }
 
 .introLinks:nth-child(2){
-    margin-right: 25%;
+    padding-left: 4vw;
 }
 
 .introLinks:hover {
@@ -779,17 +781,6 @@ body {
     display: none;
 }
 
-@media only screen and (min-width: 841px) {
-    
-    .introLinkSmall:nth-child(1) { 
-        margin-left: 10%;
-    }
-    
-    .introLinkSmall:nth-child(2) { 
-        float: right;
-        margin-right: 10%;
-    }
-}
 
 @media only screen and (max-width: 840px) {
 
@@ -861,16 +852,22 @@ body {
         display: block;
     }
 
+    .introLinksAll {
+        flex-direction: column;
+    }
+
     .introLinkSmall {
         margin: 4px 0% !important;
         text-indent: 2px;
         display: block;
         font-size: 16px;
         width: 100%;
+        
     }
 
-    .introLinkSmall:nth-child(1) { 
+    .introLinkSmall:nth-child(1), .introLinkSmall:nth-child(2) { 
         margin-left: 10%;
+        padding: 0;
     }
 
     .boldNameSmall {
