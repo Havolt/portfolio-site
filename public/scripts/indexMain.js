@@ -94,8 +94,8 @@ const vueApp = new Vue({
         bioVisibleRev: true,
         bioVisibleRevSk: true,
         aboutTitle: 'About Me',
-        aboutPara: [ `I hold a bachelor\'s degree in multimedia and multiple certificates in web development. I have a strong passion for front-end web development and creating fun web games.`,
-        `My programming language of expertise is JavaScript where I have gained a strong knowledge of Node, Vue and multiple other frameworks. I also have good experience with CSS and put a strong focus on responsive design in my work. I've been programming for multiple years now and have gained a lot of knowledge of web design and programming paradigms.`,
+        aboutPara: [ `I have been programming for many years now with projects done for major companies such as Walmart, American Express, Renault, SquareSpace, Deutsche Bank and many more. I have a strong passion for front-end web development and creating fun web games.`,
+        `Most of my programming time is spent with JavaScript where I've a great knowledge of back-end work with Node and on the front-end have a lot of experience with multiple frameworks such as Vue. `,
         `When I\'m not making websites I can be found running, reading or sipping some green tea.`],
         skillList: [
             {
