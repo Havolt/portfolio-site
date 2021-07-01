@@ -9,8 +9,7 @@ const portfolioLinks = ['to-do', 'calculator', 'checkers', 'nc-creepy', 'offline
 
 const options = {
     key: fs.readFileSync('/etc/letsencrypt/live/markfz.com/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/markfz.com/cert.pem'),
-    ca: fs.readFileSync('/etc/letsencrypt/live/mark.com/chain.pem')
+    cert: fs.readFileSync('/etc/letsencrypt/live/markfz.com/cert.pem')
   };
 
 app.use(express.static('public'))
