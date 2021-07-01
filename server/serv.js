@@ -34,21 +34,21 @@ var transporter = nodemailer.createTransport({
 app.post('/form', (req, res) => {
     let parseObj = JSON.stringify(req.body.name) + '\n' + JSON.stringify(req.body.email) + '\n' + JSON.stringify(req.body.comment) + '\n \n \n';
     
-    const mailOpt = {
-        from: 'Portfolio ✔ <markfitz101@hotmail.com>',
-        to: 'markfitz815@gmail.com',
-        subject: "Portfolio Message",
-        text: 'Hello ' + parseObj,
-        html: "<p>Hello " + parseObj + " </p>",
-        bcc: "markfitz815@gmail.com"
-    };
-    transporter.sendMail(mailOpt, function(error, inf){
-        if(error){
-            console.log(error);
-        }else{
-            console.log('Message sent: ' + inf.response);
-        }
-    });    
+    // const mailOpt = {
+    //     from: 'Portfolio ✔ <markfitz101@hotmail.com>',
+    //     to: 'markfitz815@gmail.com',
+    //     subject: "Portfolio Message",
+    //     text: 'Hello ' + parseObj,
+    //     html: "<p>Hello " + parseObj + " </p>",
+    //     bcc: "markfitz815@gmail.com"
+    // };
+    // transporter.sendMail(mailOpt, function(error, inf){
+    //     if(error){
+    //         console.log(error);
+    //     }else{
+    //         console.log('Message sent: ' + inf.response);
+    //     }
+    // });    
     fs.appendFile('comments.txt', parseObj, function(err) {
         if(err) throw err;
     })
