@@ -1,11 +1,17 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 443;
+const port = process.env.PORT || 8080;
 const path = require('path')
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const nodemailer = require('nodemailer');
 const portfolioLinks = ['to-do', 'calculator', 'checkers', 'nc-creepy', 'offline-hacker', 'prev-portfolio', 'tetris', 'wiki-search'];
+
+const options = {
+    key: fs.readFileSync('/etc/letsencrypt/live/markfz.com/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/markfz.com/cert.pem'),
+    ca: fs.readFileSync('/etc/letsencrypt/live/mark.com/chain.pem')
+  };
 
 app.use(express.static('public'))
 app.use(bodyParser.json());
